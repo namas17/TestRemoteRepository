@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <LocalizationTables>
+        <LocalizationTable
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         description="Advanced Grid example localization table"
+         documentationContent=""
+         homeMashup=""
+         languageCommon="AdvancedGrid"
+         languageNative="AdvancedGrid"
+         name="ag"
+         projectName=""
+         tags="Applications:GridAdvanced">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Localization tokens and usage"
+                 isMultiRow="true"
+                 name="LocalizationTokens"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Translation context"
+                             baseType="STRING"
+                             description="Translation context"
+                             name="context"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Token name"
+                             baseType="STRING"
+                             description="Token name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Token usage"
+                             baseType="STRING"
+                             description="Token usage"
+                             name="usage"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Localized value"
+                             baseType="STRING"
+                             description="Localized value"
+                             name="value"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            averageCost
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            AVERAGE COST:
+                            ]]>
+                            </value>
+                        </Row><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            functionCalculations
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            (function calculations do not include rows that are not visible in grid&#44; unless you perform your own server side calculations like in back-order column)
+                            ]]>
+                            </value>
+                        </Row><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            invalidBoolean
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            Invalid boolean value provided
+                            ]]>
+                            </value>
+                        </Row><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            invalidDate
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            Invalid date provided
+                            ]]>
+                            </value>
+                        </Row><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            invalidNumber
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            Invalid number provided
+                            ]]>
+                            </value>
+                        </Row><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            invalidNumberNotEmpty
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            Invalid number; number can't be empty
+                            ]]>
+                            </value>
+                        </Row><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            notEmpty
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            Value can't be empty
+                            ]]>
+                            </value>
+                        </Row><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            onBackOrder
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            ON BACK-ORDER!
+                            ]]>
+                            </value>
+                        </Row><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            totalCost
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            TOTAL COST:
+                            ]]>
+                            </value>
+                        </Row><Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            totalUnits
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            TOTAL UNITS:
+                            ]]>
+                            </value>
+                        </Row></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </LocalizationTable>
+    </LocalizationTables>
+</Entities>

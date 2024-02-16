@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="TestMaps"
+         projectName="GitTest"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="JSONtoInfotable">
+                        <ResultType
+                         aspect.dataShape="RegionById"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description=""
+                             name="id_supplier"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="jsonIP"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="location">
+                        <ResultType
+                         baseType="LOCATION"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description=""
+                             name="id_supplier"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RegionAllData">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="RegionById"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="data"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="gls_coordinates"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="JSONtoInfotable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(RegionById)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "RegionById"
+                                        });
+                                        
+                                        var json = Things["TestDBConnector"].getPolygon({
+                                            id_supplier: id_supplier
+                                        });
+                                        
+                                        
+                                        //var res = json.rows[0].polygon;
+                                        ////result = FromJSON(res);
+                                        //var obj = JSON.parse(res);
+                                        ////logger.debug("JSON"+ res);
+                                        ////logger.debug("obj.rows.length  "+obj.rows.length);
+                                        //for(var i=0; i<obj.rows.length ; i++){  
+                                        //    var id = obj.rows[i].id;
+                                        //    var regions =obj.rows[i].region.rows;
+                                        //    var newEntry = new Object();
+                                        //    newEntry.id = id;
+                                        //    let region = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        //            infoTableName: "InfoTable",
+                                        //            dataShapeName: "Region"
+                                        //    });
+                                        ////    logger.debug("regions.length  "+regions.length);
+                                        //    for(var j=0; j<regions.length; j++){  
+                                        ////        logger.debug("regions[j]  "+regions[0].order);
+                                        //        var location = regions[j].location;
+                                        //        var order = regions[j].order;
+                                        ////        logger.debug("order  "+order);
+                                        //        var regNewEntry = new Object();
+                                        //        regNewEntry.location = location;
+                                        //        regNewEntry.order = order;  
+                                        //        region.AddRow(regNewEntry);
+                                        //    }
+                                        //    newEntry.region = region;
+                                        //    result.AddRow(newEntry);
+                                        //}
+                                        //
+                                        //
+                                        //logger.debug("result  "+ result.ToJSON());
+                                        
+                                        result = Resources["InfoTableFunctions"].FromJSON({
+                                            json : json.rows[0].polygon
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="location">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var loc = Things["TestDBConnector"].test({
+                                        	id_supplier: id_supplier /* INTEGER */
+                                        });
+                                        
+                                        result = loc.rows[0].gls_coordinates;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="RegionAllData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try{
+                                        result = data.ToJSON();
+                                        logger.debug("result all data"+result);
+                                        Things["TestDBConnector"].insertPolygon({
+                                            polygon_shape: result,
+                                            gls_coordinates: gls_coordinates
+                                        });
+                                        }
+                                        catch(e){
+                                            logger.debug(e.lineNumber+e+":::");
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

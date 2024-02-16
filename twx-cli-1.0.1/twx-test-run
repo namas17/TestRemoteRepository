@@ -1,0 +1,30 @@
+#!/bin/bash
+
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+# Test 1: Test call function
+twx-test/twx-call-test.sh
+if [ $? -ne 0 ]; then exit 1; fi
+
+# Test 2: Import a single XML file
+twx-test/twx-import-single-entity-test.sh
+if [ $? -ne 0 ]; then exit 1; fi
+
+# Test 3: Import a directory containing XML files
+twx-test/twx-import-folder-test.sh
+if [ $? -ne 0 ]; then exit 1; fi
+
+# Test 4: Import an extension
+twx-test/twx-import-extension-test.sh
+if [ $? -ne 0 ]; then exit 1; fi
+
+# Test 5: Import a directory containing XML files
+twx-test/twx-eval-test.sh
+if [ $? -ne 0 ]; then exit 1; fi
+
+# Test 6: Upload/Download a file
+twx-test/twx-upload-download-test.sh
+if [ $? -ne 0 ]; then exit 1; fi
+
+printf "All tests completed ${GREEN}successfully${NC}\n"

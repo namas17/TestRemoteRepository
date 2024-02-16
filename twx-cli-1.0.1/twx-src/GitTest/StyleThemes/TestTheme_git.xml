@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <StyleThemes>
+        <StyleTheme
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="TestTheme_git"
+         projectName="GitTest"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "CustomCss" : {
+                "value" : "/* Minimum Primary Button Height */\nptcs-button:not([no-wc-style])[variant=primary]{\n\tmin-height: 28px !important;\n} \n/* Minimum Secondary Button Height */\nptcs-button:not([no-wc-style])[variant=secondary]{\n\tmin-height: 28px !important;\n} \n\n/* Container Overflow */\n.customContainerOverFlow .widget-flexcontainer{\n\toverflow: hidden;    \n}\n\n/* Visulaisation Border */\n.customVisualizationBorder  canvas{\n    box-sizing: border-box;\n    /* border: black; */\n    border-style: solid;\n    border-width: 1px;\n}\n\n/* Advanced Grid and Tree Grid Design */\n.customGridTreeView .objbox table tbody tr td .treegrid_cell img:nth-last-child(2){\n    display:none;\n}\n.customGridWithoutHeader .xhdr{\n    display: none !important;\n}\n.customGridHeader .xhdr{\n    background-color: white;\n    border-bottom: 2px solid black !important;\n}\n.customGridRowWithBottomBorder .objbox table tbody tr td{\n\tborder-bottom:1px solid #c0c0c0 !important;\n}"
+              },
+              "props" : [ {
+                "name" : "e-button-primary-radius",
+                "value" : "20px"
+              }, {
+                "name" : "global-text-label-fontsize",
+                "value" : "12px"
+              }, {
+                "name" : "e-button-primary-backgroundcolor",
+                "value" : "#004f93"
+              }, {
+                "name" : "e-button-primary-bordercolor",
+                "value" : "#004f93"
+              }, {
+                "name" : "e-button-primary-hover-backgroundcolor",
+                "value" : "#004f93"
+              }, {
+                "name" : "e-button-primary-hover-bordercolor",
+                "value" : "#004f93"
+              }, {
+                "name" : "e-button-primary-fontcolor",
+                "value" : "#ffffff"
+              }, {
+                "name" : "e-button-primary-pressed-backgroundcolor",
+                "value" : "#004f93"
+              }, {
+                "name" : "e-button-primary-pressed-bordercolor",
+                "value" : "#004f93"
+              }, {
+                "name" : "e-button-secondary-backgroundcolor",
+                "value" : "#ffffff"
+              }, {
+                "name" : "e-button-secondary-bordercolor",
+                "value" : "#ffffff"
+              }, {
+                "name" : "e-button-secondary-hover-backgroundcolor",
+                "value" : "#ffffff"
+              }, {
+                "name" : "e-button-secondary-hover-bordercolor",
+                "value" : "#ffffff"
+              }, {
+                "name" : "e-button-secondary-radius",
+                "value" : "20px"
+              }, {
+                "name" : "e-button-secondary-pressed-backgroundcolor",
+                "value" : "#ffffff"
+              }, {
+                "name" : "e-button-secondary-pressed-bordercolor",
+                "value" : "#ffffff"
+              }, {
+                "name" : "e-grid-bordercolor",
+                "value" : ""
+              }, {
+                "name" : "e-grid-cell-bordercolor",
+                "value" : ""
+              }, {
+                "name" : "e-grid-vert-right-border-color",
+                "value" : ""
+              }, {
+                "name" : "e-grid-vert-left-border-color",
+                "value" : ""
+              }, {
+                "name" : "e-grid-horz-bottom-border-color",
+                "value" : ""
+              }, {
+                "name" : "e-grid-horz-top-border-color",
+                "value" : ""
+              }, {
+                "name" : "e-grid-body-horz-border-color",
+                "value" : ""
+              }, {
+                "name" : "e-grid-body-vert-border-color",
+                "value" : ""
+              }, {
+                "name" : "e-grid-horz-top-border-width",
+                "value" : "0px"
+              }, {
+                "name" : "e-grid-horz-bottom-border-width",
+                "value" : "0px"
+              }, {
+                "name" : "e-grid-body-horz-border-width",
+                "value" : "0px"
+              }, {
+                "name" : "e-grid-header-horz-border-width",
+                "value" : "0px"
+              }, {
+                "name" : "e-grid-header-vert-border-width",
+                "value" : "0px"
+              }, {
+                "name" : "e-grid-borderthickness",
+                "value" : "2px"
+              }, {
+                "name" : "e-grid-cell-borderthickness",
+                "value" : "1px"
+              }, {
+                "name" : "e-button-transparent-backgroundcolor",
+                "value" : ""
+              }, {
+                "name" : "e-button-transparent-hover-backgroundcolor",
+                "value" : ""
+              }, {
+                "name" : "e-button-transparent-hover-bordercolor",
+                "value" : ""
+              }, {
+                "name" : "e-button-transparent-hover-fontcolor",
+                "value" : ""
+              }, {
+                "name" : "e-button-transparent-pressed-backgroundcolor",
+                "value" : ""
+              }, {
+                "name" : "e-button-transparent-pressed-bordercolor",
+                "value" : ""
+              }, {
+                "name" : "e-button-transparent-pressed-fontcolor",
+                "value" : ""
+              } ],
+              "version" : "0.1"
+            }
+            ]]>
+            </content>
+            <preview></preview>
+        </StyleTheme>
+    </StyleThemes>
+</Entities>
