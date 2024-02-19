@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="IK.DashboardCountArticlesPartsMaterials.StateDefinition"
+         projectName="IKEA.CVM"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "IK.SD.Expired",
+                "defaultValue" : "With verifications expired",
+                "description" : "",
+                "displayString" : "Expired",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "IK.SD.ExpiresLessThan30Days",
+                "defaultValue" : "With verifications expiring <30 days",
+                "description" : "",
+                "displayString" : "Expires <30 days",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "IK.SD.ExpiresWithin30To90Days",
+                "defaultValue" : "With verifications expiring within 30-90 days",
+                "description" : "",
+                "displayString" : "Expires within 30-90 days",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "IK.SD.ExpiresGreaterThan90Days",
+                "defaultValue" : "With verifications expiring >90 days",
+                "description" : "",
+                "displayString" : "Expires >90 days",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "IK.SD.NoDataInDashbaord",
+                "defaultValue" : "No data",
+                "description" : "",
+                "displayString" : "No data",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "IK.SD.NoDataInDashbaord",
+                "description" : "",
+                "displayString" : "No data",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

@@ -1,0 +1,2460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="IK.RequirementPreviewer.Thing"
+         projectName="IKEA.CVM"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="ikea"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="password"
+                     ordinal="5"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="cvmtest15"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="username"
+                     ordinal="5"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="checkVerificationDatatype">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.RequirementPreview.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRows"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getAllRequirementCollections">
+                        <ResultType
+                         aspect.dataShape="IK.KeyValue.DataShape"
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getAllRequirements">
+                        <ResultType
+                         aspect.dataShape="PTC.ALM.ILM.Resource.wrv&amp;sConnectorThing.RequirementPreviewerIntegrityRequirementDataShape"
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getAvailableColumns">
+                        <ResultType
+                         aspect.dataShape="IK.ColumnDefinition.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getComplianceStatus">
+                        <ResultType
+                         aspect.dataShape="GenericStringList"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getConfigurationForGrid">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedColumns"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCountries">
+                        <ResultType
+                         aspect.dataShape="IK.KeyValue.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getGenus">
+                        <ResultType
+                         aspect.dataShape="IK.KeyValuePair.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getIllegalLoggingRisk">
+                        <ResultType
+                         aspect.dataShape="GenericStringList"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="country_id"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="region_id"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="subregion_id"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getOwnerFromRVS">
+                        <ResultType
+                         aspect.dataShape="GenericStringList"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getOwners">
+                        <ResultType
+                         aspect.dataShape="GenericStringList"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="allRequirements"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="requirementCollectionId"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getRegions">
+                        <ResultType
+                         aspect.dataShape="IK.KeyValue.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="countryId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getRequirementCollections">
+                        <ResultType
+                         aspect.dataShape="PTC.ALM.ILM.Resource.IK.WRVSConnectorForRequirementSpecialist.ThingIntegrityRequirement Specification DocumentDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="allRequirementCollections"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="allRequirements"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="owners"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getRequirements">
+                        <ResultType
+                         aspect.dataShape="IK.RequirementPreview.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="allRequirements"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="id"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="owners"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="searchText"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getRequirementText">
+                        <ResultType
+                         baseType="HTML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="id_rvs"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetSelectedRowsFromGrid">
+                        <ResultType
+                         aspect.dataShape="IK.RequirementPreview.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="data"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSpecies">
+                        <ResultType
+                         aspect.dataShape="IK.SpeciesDetail.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description=""
+                             name="genus_id"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSubregions">
+                        <ResultType
+                         aspect.dataShape="IK.KeyValue.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="regionId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getTasks">
+                        <ResultType
+                         aspect.dataShape="IK.RequirementPreview.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.RequirementPreview.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="tasks"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getTasksforPreview">
+                        <ResultType
+                         aspect.dataShape="IK.RequirementPreview.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="tasks"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="resetGrid">
+                        <ResultType
+                         aspect.dataShape="IK.RequirementPreview.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="checkVerificationDatatype">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " checkVerificationDatatype -> ";
+                                        
+                                        try {
+                                        	let params = {
+                                        		t: selectedRows /* INFOTABLE */ ,
+                                        		columns: "verification_data_format" /* STRING */
+                                        	};
+                                        	// result: INFOTABLE
+                                        	let distinctRows = Resources["InfoTableFunctions"].Distinct(params);
+                                        
+                                        	result = true;
+                                        	if (distinctRows.getRowCount() == 1) {
+                                        		if (distinctRows.rows[0].verification_data_format == "No Verification Method Defined") {
+                                        			if (selectedRows.getRowCount() != 1) {
+                                        				result = false;
+                                        			}
+                                        		}
+                                        	} else {
+                                        		result = false;
+                                        	}
+                                        
+                                        	logger.info(FN + "Verification datatype checked for selected rows [" + result + "] successfully.");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getAllRequirementCollections">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getAllRequirementCollections -> ";
+                                        
+                                        let initialTime = new Date().getTime();
+                                        try {
+                                        	let resourceProvider = Things["IK.CVM.Configuration"].getSpecificationDocumentResourceProviderRequirementPreviewer();
+                                        	let requirementCollections = Things[resourceProvider].getObjects({
+                                        		query: {
+                                        			"filters": {
+                                        				"filters": [{
+                                        					"type": "EQ",
+                                        					"fieldName": "State",
+                                        					"value": "Open"
+                                        				}, {
+                                        					"type": "EQ",
+                                        					"fieldName": "Project",
+                                        					"value": "/Library/Generic Requirements"
+                                        				}],
+                                        				"type": "AND"
+                                        			}
+                                        		}
+                                        	});
+                                        
+                                        
+                                        	let params = {
+                                        		name: "AllRequirementCollections" /* STRING */ ,
+                                        		value: requirementCollections /* INFOTABLE */
+                                        	};
+                                        	// no return
+                                        	Resources["CurrentSessionInfo"].SetGlobalSessionInfoTableValue(params);
+                                        	logger.info(FN + "[" + requirementCollections.getRowCount() + "] requirement collections from RVS is loaded. Total execution time [" + (new Date().getTime() - initialTime) + "]");
+                                        
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getAllRequirements">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getAllRequirements -> ";
+                                        let initialTime = new Date().getTime();
+                                        
+                                        let resourceProvider = Things["IK.CVM.Configuration"].getRequirementResourceProviderRequirementPreviewer();
+                                        try {
+                                        	let requirements = Things[resourceProvider].getObjects({
+                                        		query: {
+                                        			"filters": {
+                                        				"filters": [{
+                                        						"type": "EQ",
+                                        						"fieldName": "Project",
+                                        						"value": "/Library/Generic Requirements"
+                                        					}, {
+                                        						"type": "EQ",
+                                        						"fieldName": "Category",
+                                        						"value": "Generic Requirement"
+                                        					},
+                                        					{
+                                        						"type": "NE",
+                                        						"fieldName": "ID",
+                                        						"value": "48653"
+                                        					},
+                                        					{
+                                        						"type": "NE",
+                                        						"fieldName": "ID",
+                                        						"value": "48801"
+                                        					}, {
+                                        						"type": "NE",
+                                        						"fieldName": "ID",
+                                        						"value": "48803"
+                                        					},
+                                        					{
+                                        						"type": "NE",
+                                        						"fieldName": "ID",
+                                        						"value": "4359"
+                                        					},
+                                        					{
+                                        						"type": "NE",
+                                        						"fieldName": "ID",
+                                        						"value": "45836"
+                                        					},
+                                        					{
+                                        						"type": "LIKE",
+                                        						"fieldName": "RequirementReceiver",
+                                        						"value": "%Product Lifecycle%"
+                                        					},
+                                        					{
+                                        						"type": "NE",
+                                        						"fieldName": "State",
+                                        						"value": "Obsolete"
+                                        					}
+                                        				],
+                                        				"type": "AND"
+                                        			}
+                                        		}
+                                        
+                                        	});
+                                        
+                                        	let params = {
+                                        		name: "AllRequirements" /* STRING */ ,
+                                        		value: requirements /* INFOTABLE */
+                                        	};
+                                        	// no return
+                                        	Resources["CurrentSessionInfo"].SetGlobalSessionInfoTableValue(params);
+                                        	logger.info(FN + "[" + requirements.getRowCount() + "] requirements from RVS loaded successfully. Total execution time [" + (new Date().getTime() - initialTime) + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getAvailableColumns">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let FN = me.name + " getAvailableColumns -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.ColumnDefinition.DataShape"
+                                        });
+                                        
+                                        try {
+                                        
+                                        	result.AddRow({
+                                        		name: "Requirement ID", // STRING
+                                        		configuration: {
+                                        			"targets": 1, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": "requirement_id", // {string} the data field name.
+                                        			"title": "Requirement ID", // *{string} the column display name.
+                                        			"autoWidth": true,
+                                        			"width": "*",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"hidden": false, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": true,
+                                        			"columnFormatter": {
+                                        				"type": "string",
+                                        				"horizontalAlign": "right",
+                                        				"verticalAlign": "top",
+                                        				"headerHorizontalAlign": "right",
+                                        				"headerVerticalAlign": "top",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": false // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		},
+                                        		state: "enabled"
+                                        	});
+                                        	result.AddRow({
+                                        		name: "Requirement type", // STRING
+                                        		configuration: {
+                                        			"targets": 2, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": "requirement_type", // {string} the data field name.
+                                        			"title": "Requirement type", // *{string} the column display name.
+                                        			"autoWidth": true,
+                                        			"width": "*",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"hidden": false, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": true,
+                                        			"columnFormatter": {
+                                        				"type": "string",
+                                        				"horizontalAlign": "left",
+                                        				"verticalAlign": "top",
+                                        				"headerHorizontalAlign": "left",
+                                        				"headerVerticalAlign": "top",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": false // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		},
+                                        		state: "disabled"
+                                        	});
+                                        	result.AddRow({
+                                        		name: "Requirement Subtype", // STRING
+                                        		configuration: {
+                                        			"targets": 3, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": "requirement_subtype", // {string} the data field name.
+                                        			"title": "Requirement Subtype", // *{string} the column display name.
+                                        			"autoWidth": true,
+                                        			"width": "*",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"hidden": false, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": true,
+                                        			"columnFormatter": {
+                                        				"type": "string",
+                                        				"horizontalAlign": "left",
+                                        				"verticalAlign": "top",
+                                        				"headerHorizontalAlign": "left",
+                                        				"headerVerticalAlign": "top",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": false // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		},
+                                        		state: "disabled"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		name: "Requirement description", // STRING
+                                        		configuration: {
+                                        			"targets": 4, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": "requirement_description", // {string} the data field name.
+                                        			"title": "Requirement description", // *{string} the column display name.
+                                        			"autoWidth": true,
+                                        			"width": "*",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"hidden": false, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": true,
+                                        			"columnFormatter": {
+                                        				"type": "HTML",
+                                        				"horizontalAlign": "left",
+                                        				"verticalAlign": "top",
+                                        				"headerHorizontalAlign": "left",
+                                        				"headerVerticalAlign": "top",
+                                        				"format": "unsanitized",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": false // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		} // JSON
+                                        	});
+                                        	result.AddRow({
+                                        		name: "Requirement owner", // STRING
+                                        		configuration: {
+                                        			"targets": 5, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": "requirement_owner", // {string} the data field name.
+                                        			"title": "Requirement owner", // *{string} the column display name.
+                                        			"autoWidth": true,
+                                        			"width": "*",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"hidden": false, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": true,
+                                        			"columnFormatter": {
+                                        				"type": "string",
+                                        				"horizontalAlign": "left",
+                                        				"verticalAlign": "top",
+                                        				"headerHorizontalAlign": "left",
+                                        				"headerVerticalAlign": "top",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": false // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		},
+                                        		state: "disabled"
+                                        	});
+                                        	result.AddRow({
+                                        		name: "Requirement status", // STRING
+                                        		configuration: {
+                                        			"targets": 6, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": "requirement_status", // {string} the data field name.
+                                        			"title": "Requirement status", // *{string} the column display name.
+                                        			"autoWidth": true,
+                                        			"width": "*",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"hidden": false, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": true,
+                                        			"columnFormatter": {
+                                        				"type": "HTML",
+                                        				"horizontalAlign": "left",
+                                        				"verticalAlign": "top",
+                                        				"headerHorizontalAlign": "left",
+                                        				"headerVerticalAlign": "top",
+                                        				"format": "unsanitized",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": false // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		} // JSON
+                                        	});
+                                        	result.AddRow({
+                                        		name: "Verification data type", // STRING
+                                        		configuration: {
+                                        			"targets": 7, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": "verification_data_format", // {string} the data field name.
+                                        			"title": "Verification data type", // *{string} the column display name.
+                                        			"autoWidth": true,
+                                        			"width": "*",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"hidden": false, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": true,
+                                        			"columnFormatter": {
+                                        				"type": "string",
+                                        				"horizontalAlign": "left",
+                                        				"verticalAlign": "top",
+                                        				"headerHorizontalAlign": "left",
+                                        				"headerVerticalAlign": "top",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": false // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		} // JSON
+                                        	});
+                                        	result.AddRow({
+                                        		name: "Verification valid from", // STRING
+                                        		configuration: {
+                                        			"targets": 8, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": "requirement_valid_from", // {string} the data field name.
+                                        			"title": "Verification valid from", // *{string} the column display name.
+                                        			"autoWidth": true,
+                                        			"width": "*",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"hidden": false, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": true,
+                                        			"columnFormatter": {
+                                        				"type": "string",
+                                        				"horizontalAlign": "left",
+                                        				"verticalAlign": "top",
+                                        				"headerHorizontalAlign": "left",
+                                        				"headerVerticalAlign": "top",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": false // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		} // JSON
+                                        	});
+                                        	result.AddRow({
+                                        		name: "Verification valid to", // STRING
+                                        		configuration: {
+                                        			"targets": 9, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": "requirement_valid_to", // {string} the data field name.
+                                        			"title": "Verification valid to", // *{string} the column display name.
+                                        			"autoWidth": true,
+                                        			"width": "*",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"hidden": false, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": true,
+                                        			"columnFormatter": {
+                                        				"type": "string",
+                                        				"horizontalAlign": "left",
+                                        				"verticalAlign": "top",
+                                        				"headerHorizontalAlign": "left",
+                                        				"headerVerticalAlign": "top",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": false // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		} // JSON
+                                        	});
+                                        
+                                        	logger.info(FN + "Available columns loaded in dropdown successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getComplianceStatus">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getComplianceStatus -> ";
+                                        
+                                        let params = {
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "GenericStringList"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(GenericStringList)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        try {
+                                        	// GenericStringList entry object
+                                        	result.AddRow({
+                                        		item: "FSC Certified Completed"
+                                        	});
+                                        	logger.info(FN + " Compliance status loaded successfully.");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getConfigurationForGrid">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getConfigurationForGrid -> ";
+                                        
+                                        try {
+                                        	let fieldsDefinition = DataShapes["IK.RequirementPreview.DataShape"].GetFieldDefinitions();
+                                        	let remainingColumns = [];
+                                        	fieldsDefinition.rows.toArray().forEach(row => {
+                                        		remainingColumns.push(row.name);
+                                        	});
+                                        	let colDefs = []; // custom widget
+                                        
+                                        	let targets = 0; //1
+                                        	if (selectedColumns !== undefined) {
+                                        		selectedColumns.rows.toArray().forEach(row => {
+                                        			let conf = JSON.parse(row.configuration);
+                                        			conf.targets = targets++;
+                                        			colDefs.push(conf);
+                                        			remainingColumns.splice(remainingColumns.indexOf(row.configuration.fieldName), 1);
+                                        		});
+                                        
+                                        	}
+                                        	remainingColumns.forEach(row => {
+                                        		let colDefaultConf = {
+                                        			"targets": targets++, // {integer} the index of the column to which this data applies.
+                                        			"fieldName": row, // {string} the data field name.
+                                        			"title": row, // *{string} the column display name.
+                                        			"autoWidth": false,
+                                        			"width": "30px",
+                                        			"overflow": "wrapped", // *{string} cell overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			"headerTextAlignment": "center", // *{string} header text alignment. Options: 'left', 'right', 'center'.
+                                        			"textAlignment": "center", // *{string} cell text alignment. Options: 'left', 'right', 'center'.
+                                        			"hidden": true, // *{boolean} hide column. If context menu is enabled, end-user can unhide column. Data of this column will be available for state formatting.
+                                        			"inLayout": false,
+                                        			"columnFormatter": {
+                                        				"type": "string",
+                                        				"cellEditor": { // optional: defines cell-editing options for this column
+                                        					"enabled": true // *{boolean} to indicate whether cell editing is enable for this column
+                                        				}
+                                        			}
+                                        		};
+                                        		colDefs.push(colDefaultConf);
+                                        
+                                        	});
+                                        	result = {
+                                        		"cellEditingEnabled": true, // {boolean} Optional. Specifies whether Cell editing is enabled by default for the grid, required for auto-save use-case. Disable for manual save; enable 'editButtons' in config below instead.
+                                        		"columns": { // Required
+                                        			"idFieldName": "id", // {string} Required. The name of the 'id' column containing the primary key.
+                                        			"header": { // Optional
+                                        				"titleCase": "", // *{string} header title case setting. Options: 'lower', 'upper', 'camel'
+                                        				"overflow": "wrapped" // *{string} header overflow setting. Options: 'fitted', 'wrapped', 'clipped', 'ellipsis'
+                                        			},
+                                        			"columnDefs": colDefs,
+                                        			"enableSorting": false, // Optional. Enable sorting capabilities for the grid.
+                                        			"multiColumnSortOrder": [ // Optional. Sorts grid by multiple columns. The most prominent column is listed last.
+                                        				{
+                                        					"id": 'id', // {string} column 'fieldName'
+                                        					"direction": 'asc' // {string} direction of the sort, e.g. ascending or descending. Options: 'asc', 'des'
+                                        				}
+                                        			]
+                                        		},
+                                        		"rows": { // Optional
+                                        			"selection": "single", // *{string} row selection setting. Options: 'none, 'single', 'multi'
+                                        			"defaultSelectedRows": "", // *{string} default row selection setting starting with row 1. Options: '1', '1,2,3', '1-5,10'
+                                        			"minHeight": "50", // {string} row height setting in px.
+                                        			"autoScroll": true // {boolean} scroll to the selected rows on update or resize
+                                        		},
+                                        		"styles": {
+                                        			"tableWrapperStyle": { // {string} name of the style.
+                                        				"backgroundColor": "#ffffff", // {string} the background style color
+                                        				"secondaryBackgroundColor": "", // {string} the secondary background style color for a gradient.
+                                        				"foregroundColor": "#111111", // {string} the font color.
+                                        				"textDecoration": "", // {string} text decoration settings. Options: 'underline', 'line-through', 'overline'
+                                        				"image": "url", // {string} MediaEntity url
+                                        				"lineColor": "", // {string} the color of the cell outline.
+                                        				"borderStyle": "none", // {string} the style of the cell outline. Options: 'dotted', 'dashed', 'solid', 'double', 'groove', 'ridge', 'inset', 'outset', 'none', hidden.
+                                        				"borderWidth": "1px", // {string} the width of cell border in px.
+                                        				"fontFamily": ["helvetica", "arial"], // {string[]} array of fonts.
+                                        				"fontStyle": "normal", // {string} the style of the font. Options: 'normal', 'italic', 'oblique'
+                                        				"fontSize": "14px", // {string} font size.
+                                        				"fontWeight": "bold" // {string} font weight. Options: 'normal', 'bold', 'bolder', 'lighter', number
+                                        			},
+                                        			"tableHeaderStyle": {
+                                        				"backgroundColor": "#ffffff",
+                                        				"secondaryBackgroundColor": "",
+                                        				"foregroundColor": "#111111",
+                                        				"textDecoration": "",
+                                        				"image": "url",
+                                        				"lineColor": "",
+                                        				"borderStyle": "none",
+                                        				"borderWidth": "1px",
+                                        				"fontFamily": ["helvetica", "arial"],
+                                        				"fontStyle": "normal",
+                                        				"fontSize": "14px",
+                                        				"fontWeight": "bold"
+                                        			},
+                                        			"rowBackgroundStyle": {
+                                        				"backgroundColor": "",
+                                        				"secondaryBackgroundColor": "",
+                                        				"foregroundColor": "#111111",
+                                        				"textDecoration": "",
+                                        				"image": "url",
+                                        				"lineColor": "",
+                                        				"borderStyle": "",
+                                        				"borderWidth": "1px",
+                                        				"fontFamily": ["helvetica", "arial"],
+                                        				"fontStyle": "normal",
+                                        				"fontSize": "14px",
+                                        				"fontWeight": ""
+                                        			},
+                                        			"rowAlternateBackgroundStyle": {
+                                        				"backgroundColor": "",
+                                        				"secondaryBackgroundColor": "",
+                                        				"foregroundColor": "#111111",
+                                        				"textDecoration": "",
+                                        				"image": "",
+                                        				"lineColor": "",
+                                        				"borderStyle": "",
+                                        				"borderWidth": "1px",
+                                        				"fontFamily": ["helvetica", "arial"],
+                                        				"fontStyle": "normal",
+                                        				"fontSize": "14px",
+                                        				"fontWeight": ""
+                                        			},
+                                        			"rowHoverStyle": {
+                                        				"backgroundColor": "#ededee",
+                                        				"secondaryBackgroundColor": "",
+                                        				"foregroundColor": "#111111",
+                                        				"textDecoration": "",
+                                        				"image": "",
+                                        				"lineColor": "",
+                                        				"borderStyle": "none",
+                                        				"borderWidth": "1px",
+                                        				"fontFamily": ["helvetica", "arial"],
+                                        				"fontStyle": "normal",
+                                        				"fontSize": "14px",
+                                        				"fontWeight": ""
+                                        			},
+                                        			"rowSelectedStyle": {
+                                        				"backgroundColor": "#eaf6ff",
+                                        				"secondaryBackgroundColor": "",
+                                        				"foregroundColor": "#111111",
+                                        				"textDecoration": "",
+                                        				"image": "",
+                                        				"lineColor": "",
+                                        				"borderStyle": "none",
+                                        				"borderWidth": "1px",
+                                        				"fontFamily": ["helvetica", "arial"],
+                                        				"fontStyle": "normal",
+                                        				"fontSize": "14px",
+                                        				"fontWeight": ""
+                                        			},
+                                        			"cellBorderStyle": {
+                                        				"backgroundColor": "",
+                                        				"secondaryBackgroundColor": "",
+                                        				"foregroundColor": "#111111",
+                                        				"textDecoration": "",
+                                        				"image": "url",
+                                        				"lineColor": "",
+                                        				"borderStyle": "",
+                                        				"borderWidth": "1px",
+                                        				"fontFamily": ["helvetica", "arial"],
+                                        				"fontStyle": "normal",
+                                        				"fontSize": "14px",
+                                        				"fontWeight": ""
+                                        			},
+                                        			"rowBorderStyle": {
+                                        				"backgroundColor": "",
+                                        				"secondaryBackgroundColor": "",
+                                        				"foregroundColor": "#111111",
+                                        				"textDecoration": "",
+                                        				"image": "url",
+                                        				"lineColor": "",
+                                        				"borderStyle": "",
+                                        				"borderWidth": "1px",
+                                        				"fontFamily": ["helvetica", "arial"],
+                                        				"fontStyle": "normal",
+                                        				"fontSize": "14px",
+                                        				"fontWeight": ""
+                                        			},
+                                        		},
+                                        		"search": { // Optional search capabilities
+                                        			"multiColumn": { // Optional global grid search control
+                                        				"enabled": false, // {boolean} enable the grid search toolbar
+                                        				"location": "top-left" // {string} location of grid search toolbar. Options: 'top-right', 'top-left', 'bottom-right', 'bottom-left'
+                                        			}
+                                        		},
+                                        		"resetButton": { // Optional reset button that allows the end-user to reset the user specific grid settings. It clears all the grid cookie values.
+                                        			"enabled": false, // {boolean} show the reset button in the Mashup.
+                                        			"location": "top-left" // {string} Location of the reset button. Options:  top-right', 'top-left', 'bottom-right', 'bottom-left'
+                                        		},
+                                        		"editButtons": { // Optional edit buttons to start allow edit, save and cancel edits.
+                                        			"enabled": false, // {boolean} show the 'Edit' button initially and once clicked, show 'Save' and 'Cancel' buttons
+                                        			"location": "top-right", // {string} Location of the edit buttons. Options:  top-right', 'top-left', 'bottom-right', 'bottom-left'
+                                        			"enableAddDeleteButtons": false // {boolean} Optional. Specifies whether 'Add' and 'Delete' buttons are enabled in the grid edit toolbar.
+                                        		}
+                                        	};
+                                        	logger.info(FN + "[" + selectedColumns.getRowCount() + "] columns configuration applied to the grid successfully.");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCountries">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getCountries -> ";
+                                        let params = {
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.KeyValue.DataShape"
+                                        };
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        try {
+                                        	let databaseThing = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let countries = Things[databaseThing].getCountries();
+                                        	countries.rows.toArray().forEach(row => {
+                                        		// IK.KeyValue.DataShape entry object
+                                        		if (row.COUNTRY_NAME) {
+                                        			result.AddRow({
+                                        				key: row.COUNTRY_ID, // STRING
+                                        				value: row.COUNTRY_NAME // STRING
+                                        			});
+                                        		}
+                                        
+                                        	});
+                                        	logger.info(FN + "Countries fetched successfully.");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getGenus">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getGenus -> ";
+                                        let params = {
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "IK.KeyValuePair.DataShape"
+                                        };
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        try{
+                                        	let databaseThing = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                            let genus = Things[databaseThing].getGenus();
+                                            genus.rows.toArray().forEach(row => {
+                                                result.AddRow({
+                                        			key: row.GENUS_ID, // STRING [Primary Key]
+                                        			value: row.GENUS_NAME // STRING
+                                        		});
+                                            });
+                                            logger.info(FN +"Genus fetched successfully.");
+                                        }catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getIllegalLoggingRisk">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getIllegalLoggingRisk -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "GenericStringList"
+                                        });
+                                        try {
+                                        	let illegalLogging;
+                                        	let databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	if (country_id && !region_id && !subregion_id) {
+                                        		illegalLogging = Things[databaseConnector].getIllegalLoggingByCountry({
+                                        			country_id: country_id
+                                        		});
+                                        	} else if (country_id && region_id && !subregion_id) {
+                                        		illegalLogging = Things[databaseConnector].getIllegalLoggingByCountryRegion({
+                                        			country_id: country_id,
+                                        			region_id: region_id
+                                        		});
+                                        	} else if (country_id && region_id && subregion_id) {
+                                        		illegalLogging = Things[databaseConnector].getIllegalLoggingByCountryRegionSubregion({
+                                        			country_id: country_id,
+                                        			region_id: region_id,
+                                        			subregion_id: subregion_id
+                                        		});
+                                        	}
+                                        	for (let i = 0; i < illegalLogging.getRowCount(); i++) {
+                                        		result.AddRow({
+                                        			item: illegalLogging.rows[i].ILLEGAL_LOGGING
+                                        		});
+                                        	}
+                                        
+                                        	logger.info(FN + "executed sucessfully ");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getOwnerFromRVS">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getOwnerFromRVS -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "GenericStringList"
+                                        });
+                                        
+                                        try {
+                                        	let params = {
+                                        		proxyScheme: undefined /* STRING {"defaultValue":"http"} */ ,
+                                        		headers: {
+                                        			"Content-Type": "application/json"
+                                        		} /* JSON */ ,
+                                        		ignoreSSLErrors: undefined /* BOOLEAN */ ,
+                                        		useNTLM: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        		workstation: undefined /* STRING {"defaultValue":""} */ ,
+                                        		useProxy: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        		withCookies: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        		proxyHost: undefined /* STRING {"defaultValue":""} */ ,
+                                        		url: 'https://cvmdev.plus.ikeadt.com:7001/rws/odata/ptc/ilm/resources/filteredresources' /* STRING */ ,
+                                        		content: {
+                                        			"adminType": "field",
+                                        			"name": "Owner",
+                                        			"fieldList": "multiValued,picks"
+                                        		} /* JSON */ ,
+                                        		timeout: undefined /* NUMBER {"defaultValue":60} */ ,
+                                        		proxyPort: undefined /* INTEGER {"defaultValue":8080} */ ,
+                                        		password: me.password /* STRING */ ,
+                                        		domain: undefined /* STRING {"defaultValue":""} */ ,
+                                        		username: me.username /* STRING */
+                                        	};
+                                        
+                                        	// result: JSON
+                                        	let json = Resources["ContentLoaderFunctions"].PostJSON(params);
+                                        	logger.debug("result -- " + JSON.stringify(json));
+                                        	let owners = json.value[0].picks;
+                                        	for (let i = 0; i < owners.length; i++) {
+                                        		result.AddRow({
+                                        			item: owners[i].label
+                                        		});
+                                        	}
+                                        	logger.info(FN + "All Owners fetched successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getOwners">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getOwners -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "GenericStringList"
+                                        });
+                                        try {
+                                        	let liveItemIds = [];
+                                        	if (requirementCollectionId) {
+                                        		allRequirements = Resources["CurrentSessionInfo"].GetGlobalSessionValues();
+                                        		allRequirements = allRequirements.rows[0].AllRequirements;
+                                        		let ownerList = [];
+                                        		let emptyOwnersCount = 0;
+                                        		for (let i = 0; i < allRequirements.getRowCount(); i++) {
+                                        			let row = allRequirements.rows[i];
+                                        			if (row.DocumentID == requirementCollectionId) {
+                                        				liveItemIds.push(row.LiveItemID);
+                                        				let owner = row.Owner;
+                                        				if (owner && owner.getRowCount() > 0) {
+                                        					for (let j = 0; j < owner.getRowCount(); j++) {
+                                        						let requirementOwner = owner.rows[j].Owner;
+                                        						if (!ownerList.includes(requirementOwner)) {
+                                        							result.AddRow({
+                                        								item: requirementOwner
+                                        							});
+                                        							ownerList.push(requirementOwner);
+                                        						}
+                                        					}
+                                        				} else {
+                                        					emptyOwnersCount += 1;
+                                        				}
+                                        			}
+                                        		}
+                                        		if (liveItemIds && liveItemIds.length > 0) {
+                                        			for (let i = 0; i < allRequirements.getRowCount(); i++) {
+                                        				let row = allRequirements.rows[i];
+                                        				if (liveItemIds.indexOf(row.LiveItemID) != -1) {
+                                        					let owner = row.Owner;
+                                        					if (owner && owner.getRowCount() > 0) {
+                                        						for (let j = 0; j < owner.getRowCount(); j++) {
+                                        							let requirementOwner = owner.rows[j].Owner;
+                                        							if (!ownerList.includes(requirementOwner)) {
+                                        								result.AddRow({
+                                        									item: requirementOwner
+                                        								});
+                                        								ownerList.push(requirementOwner);
+                                        							}
+                                        						}
+                                        					} else {
+                                        						emptyOwnersCount += 1;
+                                        					}
+                                        				}
+                                        			}
+                                        		}
+                                        		if (emptyOwnersCount > 0) {
+                                        			result.AddRow({
+                                        				item: "(Blank)"
+                                        			});
+                                        		}
+                                        		logger.info(FN + "Owners loaded successfully for collection ID [" + requirementCollectionId + "]");
+                                        	} else {
+                                        		let rvsHostName = Things["IK.CVM.Configuration"].rvsHostName;
+                                        		let params = {
+                                        			proxyScheme: undefined /* STRING {"defaultValue":"http"} */ ,
+                                        			headers: {
+                                        				"Content-Type": "application/json"
+                                        			} /* JSON */ ,
+                                        			ignoreSSLErrors: undefined /* BOOLEAN */ ,
+                                        			useNTLM: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        			workstation: undefined /* STRING {"defaultValue":""} */ ,
+                                        			useProxy: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        			withCookies: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        			proxyHost: undefined /* STRING {"defaultValue":""} */ ,
+                                        			url: rvsHostName + 'rws/odata/ptc/ilm/resources/filteredresources' /* STRING */ ,
+                                        			content: {
+                                        				"adminType": "field",
+                                        				"name": "Owner",
+                                        				"fieldList": "multiValued,picks"
+                                        			} /* JSON */ ,
+                                        			timeout: undefined /* NUMBER {"defaultValue":60} */ ,
+                                        			proxyPort: undefined /* INTEGER {"defaultValue":8080} */ ,
+                                        			password: me.password /* STRING */ ,
+                                        			domain: undefined /* STRING {"defaultValue":""} */ ,
+                                        			username: me.username /* STRING */
+                                        		};
+                                        
+                                        		// result: JSON
+                                        		let json = Resources["ContentLoaderFunctions"].PostJSON(params);
+                                        		let owners = json.value[0].picks;
+                                        		result.AddRow({
+                                        			item: "(Blank)"
+                                        		});
+                                        		for (let i = 0; i < owners.length; i++) {
+                                        			result.AddRow({
+                                        				item: owners[i].label
+                                        			});
+                                        		}
+                                        		logger.info(FN + "Owners loaded successfully without collection ID");
+                                        	}
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getRegions">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getRegions -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.KeyValue.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	// result: INFOTABLE dataShape: ""
+                                        	let databaseThing = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let regions = Things[databaseThing].getRegions({
+                                        		countryId: countryId /* STRING */
+                                        	});
+                                        	regions.rows.toArray().forEach(row => {
+                                        		if (row.REGION_NAME) {
+                                        			result.AddRow({
+                                        				key: row.REGION_ID, // STRING 
+                                        				value: row.REGION_NAME // STRING
+                                        			});
+                                        		}
+                                        	});
+                                        	logger.info(FN + "Regions fetched successfully for country[" + countryId + "].");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getRequirementCollections">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getRequirementCollections -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "PTC.ALM.ILM.Resource.IK.WRVSConnectorForRequirementSpecialist.ThingIntegrityRequirement Specification DocumentDataShape"
+                                        });
+                                        
+                                        try {
+                                        	allRequirementCollections = Resources["CurrentSessionInfo"].GetGlobalSessionValues();
+                                        	allRequirementCollections = allRequirementCollections.rows[0].AllRequirementCollections;
+                                        
+                                        	if (owners && owners.getRowCount() > 0) {
+                                        		allRequirements = Resources["CurrentSessionInfo"].GetGlobalSessionValues();
+                                        		allRequirements = allRequirements.rows[0].AllRequirements;
+                                        		let ownersArray = [];
+                                        		for (let i = 0; i < owners.getRowCount(); i++) {
+                                        			ownersArray.push(owners.rows[i].item);
+                                        		}
+                                        		let documentIdsArray = [];
+                                        		for (let i = 0; i < allRequirements.getRowCount(); i++) {
+                                        			let requirement = allRequirements.rows[i];
+                                        			let owner = requirement.Owner;
+                                        			if (owner && owner.getRowCount() > 0) {
+                                        				let documentId = requirement.DocumentID + "";
+                                        				for (let j = 0; j < owner.getRowCount(); j++) {
+                                        					let requirementOwner = owner.rows[j].Owner;
+                                        					if (ownersArray.includes(requirementOwner)) {
+                                        						if (!documentIdsArray.includes(documentId)) {
+                                        							documentIdsArray.push(documentId);
+                                        						}
+                                        					}
+                                        				}
+                                        
+                                        			}
+                                        		}
+                                        		let query = {
+                                        			"filters": {
+                                        				"type": "IN",
+                                        				"fieldName": "key",
+                                        				"values": documentIdsArray
+                                        			}
+                                        		};
+                                        		let params = {
+                                        			t: allRequirementCollections /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        		result = Resources["InfoTableFunctions"].Query(params);
+                                        		logger.info(FN + "Requirement collection loaded for [" + owners.getRowCount() + "] Owners");
+                                        
+                                        	} else {
+                                        		result = allRequirementCollections;
+                                        		logger.info(FN + "Requirement collections loaded without Owners");
+                                        	}
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getRequirements">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getRequirements -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.RequirementPreview.DataShape"
+                                        });
+                                        let initialTime = new Date().getTime();
+                                        let versionedRequirementArray = [];
+                                        let checkVersionItem = false;
+                                        
+                                        let dataBaseThing = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        
+                                        try {
+                                        	allRequirements = Resources["CurrentSessionInfo"].GetGlobalSessionValues();
+                                        	allRequirements = allRequirements.rows[0].AllRequirements;
+                                        	if (searchText) {
+                                        		let query = {
+                                        			"filters": {
+                                        				"filters": [{
+                                        					"type": "LIKE",
+                                        					"fieldName": "Text",
+                                        					"value": "%" + searchText + "%"
+                                        				}, {
+                                        					"type": "LIKE",
+                                        					"fieldName": "RequirementTitle",
+                                        					"value": "%" + searchText + "%"
+                                        				}],
+                                        				"type": "OR"
+                                        			}
+                                        		};
+                                        		let params = {
+                                        			t: allRequirements /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        		let requirements = Resources["InfoTableFunctions"].Query(params);
+                                        		getRequirementsData(requirements);
+                                        		logger.info(FN + "Requirements filtered for search text [" + searchText + "]");
+                                        
+                                        	} else if (owners && owners.getRowCount() > 0) {
+                                        		let filters = [];
+                                        		for (let i = 0; i < owners.getRowCount(); i++) {
+                                        			let owner = owners.rows[i].item;
+                                        			if (owner == "(Blank)") {
+                                        				filters.push({
+                                        					"type": "MissingValue",
+                                        					"fieldName": "Owner"
+                                        				});
+                                        			} else {
+                                        				filters.push({
+                                        					"type": "LIKE",
+                                        					"fieldName": "Owner",
+                                        					"value": "%" + owner + "%"
+                                        				});
+                                        			}
+                                        		}
+                                        		let query = {
+                                        			"filters": {
+                                        				"filters": filters,
+                                        				"type": "OR"
+                                        			}
+                                        		};
+                                        		if (id) {
+                                        			checkVersionItem = true;
+                                        			query = {
+                                        				"filters": {
+                                        					"type": "AND",
+                                        					"filters": [{
+                                        							"filters": filters,
+                                        							"type": "OR"
+                                        						},
+                                        						{
+                                        							"type": "EQ",
+                                        							"fieldName": "DocumentID",
+                                        							"value": id
+                                        						}
+                                        
+                                        					]
+                                        				}
+                                        			};
+                                        		}
+                                        
+                                        		let params = {
+                                        			t: allRequirements /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        		let requirements = Resources["InfoTableFunctions"].Query(params);
+                                        		getRequirementsData(requirements);
+                                        		logger.info(FN + "Requirements filtered for [" + owners.getRowCount() + "] Owners and collection id [" + id + "]");
+                                        
+                                        	} else {
+                                        		checkVersionItem = true;
+                                        		let query = {
+                                        			"filters": {
+                                        				"type": "EQ",
+                                        				"fieldName": "DocumentID",
+                                        				"value": id
+                                        			}
+                                        		};
+                                        		let params = {
+                                        			t: allRequirements /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        		let requirements = Resources["InfoTableFunctions"].Query(params);
+                                        		getRequirementsData(requirements);
+                                        		logger.info(FN + "Requirements loaded for collection id [" + id + "]");
+                                        	}
+                                        
+                                        	let time = new Date().getTime();
+                                        	if (checkVersionItem) {
+                                        		let query = {
+                                        			"filters": {
+                                        				"filters": [{
+                                        					"type": "IN",
+                                        					"fieldName": "LiveItemID",
+                                        					"values": versionedRequirementArray
+                                        				}, {
+                                        					"type": "MissingValue",
+                                        					"fieldName": "DocumentID"
+                                        				}],
+                                        				"type": "AND"
+                                        			}
+                                        		};
+                                        		let params = {
+                                        			t: allRequirements /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        		let requirements = Resources["InfoTableFunctions"].Query(params);
+                                        
+                                        		checkVersionItem = false;
+                                        		getRequirementsData(requirements);
+                                        	}
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err + "for Document ID : " + id);
+                                        }
+                                        
+                                        
+                                        function getRequirementsData(requirements) {
+                                        	for (let i = 0; i < requirements.getRowCount(); i++) {
+                                        		let sp = requirements.rows[i];
+                                        		let verifiedBy = sp.VerifiedBy;
+                                        		if (verifiedBy && verifiedBy.getRowCount() > 0) {
+                                        			if (verifiedBy && sp.VerificationDataformat && verifiedBy.getRowCount() == sp.VerificationDataformat.getRowCount()) {
+                                        				for (let v = 0; v < verifiedBy.rows.length; v++) {
+                                        					let newEntry = new Object();
+                                        					newEntry.requirement_id = sp.DocumentID ? sp.ID : (sp.LiveItemID + "-" + sp.MajorVersionID + "." + sp.MinorVersionID + " (" + sp.ID + ")");
+                                        					newEntry.verification_data_format = sp.VerificationDataformat.rows[v].get("Verification Data format");
+                                        					newEntry.requirement_valid_from = sp.ValidFromDate ? dateFormat(sp.ValidFromDate, "YYYY-MM-dd") : " ";
+                                        					newEntry.requirement_valid_to = (sp.ValidToDate && sp.ValidToDate.length > 0) ? dateFormat(new Date(sp.ValidToDate), "YYYY-MM-dd") : undefined;
+                                        					newEntry.requirement_status = sp.State;
+                                        					newEntry.verified_by = sp.VerifiedBy;
+                                        					newEntry.live_item_id = sp.LiveItemID;
+                                        					if (checkVersionItem) {
+                                        						versionedRequirementArray.push(sp.LiveItemID);
+                                        					}
+                                        					newEntry.major_version_id = sp.MajorVersionID;
+                                        					newEntry.minor_version_id = sp.MinorVersionID;
+                                        					newEntry.versions = sp.Versions;
+                                        					let requirement_owner = "";
+                                        					if (sp.Owner) {
+                                        						for (let i = 0; i < sp.Owner.getRowCount(); i++) {
+                                        
+                                        							if (i == sp.Owner.getRowCount() - 1) {
+                                        								requirement_owner = requirement_owner + sp.Owner.rows[i].Owner;
+                                        							} else {
+                                        								requirement_owner = requirement_owner + sp.Owner.rows[i].Owner + ", ";
+                                        							}
+                                        						}
+                                        					}
+                                        					newEntry.requirement_owner = requirement_owner;
+                                        					newEntry.requirement_title = sp.RequirementTitle;
+                                        					newEntry.requirement_description = "<a onClick=\"getRequirementText('" + sp.ID + "','root_mashupcontainer-17_ptcsbutton-148')\" style=\"text-decoration: underline;cursor:pointer;\" > " + sp.RequirementTitle + "</a>";
+                                        					newEntry.requirement_type = sp.RequirementType;
+                                        					newEntry.requirement_subtype = sp.RequirementSubtype && sp.RequirementSubtype.rows.length > 0 ? sp.RequirementSubtype.rows[0].get("Requirement Subtype") : "";
+                                        					newEntry.requestor = "-";
+                                        					newEntry.applies_to_material = "-";
+                                        					newEntry.applies_to_name = "-";
+                                        					newEntry.declarant = "-";
+                                        					newEntry.part_number = "-";
+                                        					if (newEntry.verification_data_format == "Self Declaration") {
+                                        						newEntry.validation_mashup_name = "IK.RequirementPreviewSelfDeclarationPopup.Mashup";
+                                        						newEntry.popup_height = 600;
+                                        						newEntry.popup_width = 1500;
+                                        						newEntry.verification_statement = "<label style=\"top: -16px; position: relative; z-index: 8; left: 10px; display: inline-block; background: white; padding: 0 5px; width: fit-content; font :normal normal normal 9px/15px Noto IKEA Latin;color:#767676;\">Select</label><select name=\"" + newEntry.unique_id + "#_#Select\" id=\"" + newEntry.unique_id + "#_#Select\" style=\"position:relative; left:-35px; width:80%; height:26px ; border-radius:2px; border:1px solid #929292; font-size:11px;\" onchange=\"setDropDownValue('" + newEntry.unique_id + "#_#Select','" + newEntry.unique_id + "')\"><option disabled selected value></option><option value=\"Fulfils\">Fulfils</option><option value=\"Not applicable\">Not applicable</option></select>";
+                                        					} else if (newEntry.verification_data_format == "Test Report") {
+                                        						newEntry.test_method = "";
+                                        						let testLabs = Things[dataBaseThing].getAllTestLabDetails();
+                                        						let options = "";
+                                        						for (let i = 0; i < testLabs.getRowCount(); i++) {
+                                        							options += "<option style=\"font-size:14px;\"value=\"" + testLabs.rows[i].LAB_NUMBER + "\">" + testLabs.rows[i].LAB_NAME + "</option>";
+                                        						}
+                                        						newEntry.test_data_to_be_reported = "-";
+                                        						newEntry.validation_mashup_name = "IK.RequirementPreviewTestReportPopup.Mashup";
+                                        						newEntry.popup_height = 600;
+                                        						newEntry.popup_width = 1500;
+                                        						newEntry.test_labs = "<label style=\"top: -14px; position: relative; z-index: 8; left: 10px; display: inline-block; background: white; padding: 0 5px; width: fit-content; font :normal normal normal 9px/15px Noto IKEA Latin;color:#767676;\">Select</label><select name=\"" + newEntry.unique_id + "#_#Select\" id=\"" + newEntry.unique_id + "#_#Select\" style=\"position: relative;font :normal normal normal 14px/20px Noto IKEA Latin; top:-22px; width:90%; height:32px ; border-radius:2px; border:1px solid #929292;\"><option disabled selected value>" + options + "</select>";
+                                        						newEntry.batch_number = "<input type=text id=\"" + newEntry.unique_id + "#_#BatchNumber\" style=\"position:relative; left:0px; width:90% ; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#BatchNumber','" + newEntry.unique_id + "', 'BatchNumber')\" />";
+                                        						newEntry.material_description = "<input type=text id=\"" + newEntry.unique_id + "#_#MaterialDescription\" style=\"position:relative; left:0px; width:90%; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#MaterialDescription','" + newEntry.unique_id + "', 'MaterialDescription')\" />";
+                                        						newEntry.material_identification_code = "<input type=text id=\"" + newEntry.unique_id + "#_#MaterialIdentificationCode\" style=\"position:relative; left:0px; width:90%; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#MaterialIdentificationCode','" + newEntry.unique_id + "', 'MaterialIdentificationCode')\" />";
+                                        						newEntry.sample_description = "<input type=text id=\"" + newEntry.unique_id + "#_#SampleDescription\" style=\"position:relative; left:0px; width:90%; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#SampleDescription','" + newEntry.unique_id + "', 'SampleDescription')\" />";
+                                        						newEntry.additional_information = "<input type=text id=\"" + newEntry.unique_id + "#_#AdditionalInformation\" style=\"position:relative; left:0px; width:90%; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#AdditionalInformation','" + newEntry.unique_id + "', 'AdditionalInformation')\" />";
+                                        						newEntry.action = "<img style=\"cursor: pointer;\" height=\"24px !important\" width=\"24px !important\" src='/Thingworx/MediaEntities/IK.UploadIcon.Media' onclick=\"\"/>";
+                                        					} else if (newEntry.verification_data_format == "Certificate") {
+                                        						newEntry.certification_method = "";
+                                        						let testLabs = Things[dataBaseThing].getAllTestLabDetails();
+                                        						let options = "";
+                                        						for (let i = 0; i < testLabs.getRowCount(); i++) {
+                                        							options += "<option style=\"font-size:14px;\"value=\"" + testLabs.rows[i].LAB_NUMBER + "\">" + testLabs.rows[i].LAB_NAME + "</option>";
+                                        						}
+                                        						newEntry.validation_mashup_name = "IK.RequirementPreviewCertificatePopup.Mashup";
+                                        						newEntry.popup_height = 600;
+                                        						newEntry.popup_width = 1500;
+                                        						newEntry.certifier = "<label style=\"top: -14px; position: relative; z-index: 8; left: 10px; display: inline-block; background: white; padding: 0 5px; width: fit-content; font :normal normal normal 9px/15px Noto IKEA Latin;color:#767676;\">Select</label><select name=\"" + newEntry.unique_id + "#_#Select\" id=\"" + newEntry.unique_id + "#_#Select\" style=\"position: relative;font :normal normal normal 14px/20px Noto IKEA Latin; top:-22px; width:90%; height:34px ; border-radius:2px; border:1px solid #929292;\"><option disabled selected value>" + options + "</select>";
+                                        						newEntry.batch_number = "<input type=text id=\"" + newEntry.unique_id + "#_#BatchNumber\" style=\"position:relative; left:0px; width:90% ; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#BatchNumber','" + newEntry.unique_id + "', 'BatchNumber')\" />";
+                                        						newEntry.material_description = "<input type=text id=\"" + newEntry.unique_id + "#_#MaterialDescription\" style=\"position:relative; left:0px; width:90%; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#MaterialDescription','" + newEntry.unique_id + "', 'MaterialDescription')\" />";
+                                        						newEntry.material_identification_code = "<input type=text id=\"" + newEntry.unique_id + "#_#MaterialIdentificationCode\" style=\"position:relative; left:0px; width:90%; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#MaterialIdentificationCode','" + newEntry.unique_id + "', 'MaterialIdentificationCode')\" />";
+                                        						newEntry.sample_description = "<input type=text id=\"" + newEntry.unique_id + "#_#SampleDescription\" style=\"position:relative; left:0px; width:90%; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#SampleDescription','" + newEntry.unique_id + "', 'SampleDescription')\" />";
+                                        						newEntry.additional_information = "<input type=text id=\"" + newEntry.unique_id + "#_#AdditionalInformation\" style=\"position:relative; left:0px; width:90%; height:32px ; border-radius:2px; border:1px solid #929292; font-size:14px;padding-left:5px;padding-right:5px\" onchange=\"setTestReportVerifyValue('" + newEntry.unique_id + "#_#AdditionalInformation','" + newEntry.unique_id + "', 'AdditionalInformation')\" />";
+                                        						newEntry.action = "<img style=\"cursor: pointer;\" height=\"24px !important\" width=\"24px !important\" src='/Thingworx/MediaEntities/IK.UploadIcon.Media' onclick=\"\"/>";
+                                        					}
+                                        					result.AddRow(newEntry);
+                                        				}
+                                        			}
+                                        		} else {
+                                        			let newEntry = new Object();
+                                        			newEntry.requirement_id = sp.DocumentID ? sp.ID : (sp.LiveItemID + "-" + sp.MajorVersionID + "." + sp.MinorVersionID + " (" + sp.ID + ")");
+                                        			newEntry.verification_data_format = "No Verification Method Defined";
+                                        			newEntry.requirement_valid_from = sp.ValidFromDate ? dateFormat(sp.ValidFromDate, "YYYY-MM-dd") : " ";
+                                        			newEntry.requirement_valid_to = (sp.ValidToDate && sp.ValidToDate.length > 0) ? dateFormat(new Date(sp.ValidToDate), "YYYY-MM-dd") : undefined;
+                                        			newEntry.requirement_status = sp.State;
+                                        			newEntry.verified_by = sp.VerifiedBy;
+                                        			if (checkVersionItem) {
+                                        				versionedRequirementArray.push(sp.LiveItemID);
+                                        			}
+                                        			let requirement_owner = "";
+                                        			if (sp.Owner) {
+                                        				for (let i = 0; i < sp.Owner.getRowCount(); i++) {
+                                        					if (i == sp.Owner.getRowCount() - 1) {
+                                        						requirement_owner = requirement_owner + sp.Owner.rows[i].Owner;
+                                        					} else {
+                                        						requirement_owner = requirement_owner + sp.Owner.rows[i].Owner + ", ";
+                                        					}
+                                        				}
+                                        			}
+                                        			newEntry.requirement_owner = requirement_owner;
+                                        			newEntry.requirement_title = sp.RequirementTitle;
+                                        			newEntry.requirement_description = "<a onClick=\"getRequirementText('" + sp.ID + "','root_mashupcontainer-17_ptcsbutton-148')\" style=\"text-decoration: underline;cursor:pointer;\" > " + sp.RequirementTitle + "</a>";
+                                        			newEntry.requirement_type = sp.RequirementType;
+                                        			newEntry.requirement_subtype = sp.RequirementSubtype && sp.RequirementSubtype.rows.length > 0 ? sp.RequirementSubtype.rows[0].get("Requirement Subtype") : "";
+                                        			mashup = undefined;
+                                        			if (mashup === undefined) {
+                                        				mashup = "IK.RequirementPreviewPlantReportPopup.Mashup";
+                                        				newEntry.popup_height = 600;
+                                        				newEntry.popup_width = 1350;
+                                        			}
+                                        			newEntry.validation_mashup_name = mashup; // STRING
+                                        			result.AddRow(newEntry);
+                                        		}
+                                        	}
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getRequirementText">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getRequirementText -> ";
+                                        
+                                        try {
+                                        	let resourceProvider = Things["IK.CVM.Configuration"].getRequirementResourceProviderRequirementPreviewer();
+                                        	let requirementsData = Things[resourceProvider].getObjectById({
+                                        		id: id_rvs
+                                        	});
+                                        	result = requirementsData.rows[0].Text;
+                                        	logger.info(FN + "service executed successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetSelectedRowsFromGrid">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getSelectedRowsFromGrid -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.RequirementPreview.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	let query = {
+                                        		"filters": {
+                                        			"type": "EQ",
+                                        			"fieldName": "isSelected",
+                                        			"value": true
+                                        		}
+                                        	};
+                                        	params = {
+                                        		t: data /* INFOTABLE */ ,
+                                        		query: query /* QUERY */
+                                        	};
+                                        	result = Resources["InfoTableFunctions"].Query(params);
+                                        	logger.info(FN + "[" + data.getRowCount() + "] selected rows loaded for the grid.");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSpecies">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getSpecies -> ";
+                                        let params = {
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SpeciesDetail.DataShape"
+                                        };
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        try {
+                                        	let databaseThing = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let species = Things[databaseThing].getSpecies({
+                                        		genus_id: genus_id
+                                        	});
+                                        	species.rows.toArray().forEach(row => {
+                                        		result.AddRow({
+                                        			SPECIE_ID: row.SPECIE_ID, // NUMBER
+                                        			SPECIE_NAME: row.SPECIE_NAME, // STRING
+                                        			COMMON_NAME: row.COMMON_NAME, // STRING
+                                        			GENUS_ID: row.GENUS_ID, // NUMBER
+                                        			APPROVAL_DATE: row.APPROVAL_DATE, // DATETIME
+                                        			COMMENTS: row.COMMENTS, // STRING
+                                        			PROTECTION_STATUS: row.PROTECTION_STATUS // STRING
+                                        		});
+                                        
+                                        	});
+                                        	logger.info(FN + "Species fetched successfully for genus id[" + genus_id + "].");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSubregions">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getSubregions -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.KeyValue.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	let databaseThing = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let subregions = Things[databaseThing].getSubregions({
+                                        		regionId: regionId /* STRING */
+                                        	});
+                                        
+                                        	subregions.rows.toArray().forEach(row => {
+                                        		// IK.KeyValue.DataShape entry object
+                                        		if (row.SUBREGION_NAME) {
+                                        			result.AddRow({
+                                        				key: row.SUBREGION_ID, // STRING [Primary Key]
+                                        				value: row.SUBREGION_NAME // STRING
+                                        			});
+                                        		}
+                                        	});
+                                        	logger.info(FN + "Subregions fetch for regin [" + regionId + "].");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getTasks">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getTasks -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.RequirementPreview.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	result = tasks;
+                                        	logger.info(FN + "[" + tasks.getRowCount() + "] Tasks loaded.");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getTasksforPreview">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getTasksforPreview -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.RequirementPreview.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	for (let i = 0; i < tasks.getRowCount(); i++) {
+                                        		let row = tasks.rows[i];
+                                        		row.isSelected = true;
+                                        	}
+                                        	result = tasks;
+                                        	logger.info(FN + "[" + tasks.getRowCount() + "] Selected rows loaded for Custom Grid.");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="resetGrid">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " resetGrid -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.RequirementPreview.DataShape"
+                                        });
+                                        logger.info(FN + "Tasks reset successful");
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="password"></AlertDefinitions>
+                <AlertDefinitions
+                 name="username"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

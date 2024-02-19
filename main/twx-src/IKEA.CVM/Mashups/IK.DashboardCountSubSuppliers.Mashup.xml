@@ -1,0 +1,2150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="IK.DashboardCountSubSuppliers.Mashup"
+         projectName="IKEA.CVM"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="JSON"
+                 description=""
+                 name="bomStructures"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="projectNumber"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.dataShape="IK.ComplianceDashboard.DataShape"
+                 aspect.isMandatory="false"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="requirements"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.dataShape="GenericStringList"
+                 aspect.isMandatory="false"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="selected_ids"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="title"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[{
+  "CustomMashupCss": "",
+  "Data": {
+    "Session": {
+      "DataName": "Session",
+      "EntityName": "",
+      "EntityType": "Session",
+      "Id": "session",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "SessionInterface",
+          "Name": "GetGlobalSessionValues",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetGlobalSessionValues"
+        }
+      ]
+    },
+    "Things_CustomFileRepoistory": {
+      "DataName": "Things_CustomFileRepoistory",
+      "EntityName": "CustomFileRepoistory",
+      "EntityType": "Things",
+      "Id": "2f7fc71f-5af6-400a-8edd-6416fa451476",
+      "RefreshInterval": 0,
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "0bcbc4e4-9325-4ac0-83e4-52749e1d80df",
+          "Name": "DeleteFileAfter30Sec",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "DeleteFileAfter30Sec"
+        }
+      ]
+    },
+    "Things_IK.ComplianceDashboard.Thing": {
+      "DataName": "Things_IK.ComplianceDashboard.Thing",
+      "EntityName": "IK.ComplianceDashboard.Thing",
+      "EntityType": "Things",
+      "Id": "a6c5266d-ae92-42a4-be65-3fcf9d27e629",
+      "RefreshInterval": 0,
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "178090f0-96db-49ef-bd85-ccbd38fe9081",
+          "Name": "getSubsuppliersCountDetails",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "getSubsuppliersCountDetails"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "355283b2-cc71-437b-809a-59a4dd7cff9d",
+          "Name": "filterSubSuppliers",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "filterSubSuppliers"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "da646e81-c071-4ce8-b057-f0fd8fde6e0c",
+          "Name": "exportDataForSubsuppliers",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "exportDataForSubsuppliers"
+        }
+      ]
+    },
+    "UserExtensions": {
+      "DataName": "UserExtensions",
+      "EntityName": "",
+      "EntityType": "UserExtensions",
+      "Id": "UserExtensions",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "UserExtensionInterface",
+          "Name": "GetCurrentUserExtensionProperties",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetCurrentUserExtensionProperties"
+        }
+      ]
+    }
+  },
+  "DataBindings": [
+    {
+      "Id": "2002257824057689",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "selected_ids",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "selected_ids",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceDetails": "AllData",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "getSubsuppliersCountDetails",
+      "TargetSection": "Things_IK.ComplianceDashboard.Thing"
+    },
+    {
+      "Id": "5658186679000112",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "RowsNumber",
+          "SourcePropertyBaseType": "INTEGER",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "count",
+          "TargetPropertyBaseType": "NUMBER",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "infotablerowcount-23",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "expression-24",
+      "TargetSection": ""
+    },
+    {
+      "Id": "1129716256644302",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "LabelText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-24",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcslabel-21",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5493685562710885",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "bomStructures",
+          "SourcePropertyBaseType": "JSON",
+          "SourcePropertyType": "property",
+          "TargetProperty": "bomStructures",
+          "TargetPropertyBaseType": "JSON",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "getSubsuppliersCountDetails",
+      "TargetSection": "Things_IK.ComplianceDashboard.Thing"
+    },
+    {
+      "Id": "4916764372220985",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "requirements",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "requirements",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceDetails": "AllData",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "getSubsuppliersCountDetails",
+      "TargetSection": "Things_IK.ComplianceDashboard.Thing"
+    },
+    {
+      "Id": "6132648668423995",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Text",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "searchText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "ptcstextfield-9",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "filterSubSuppliers",
+      "TargetSection": "Things_IK.ComplianceDashboard.Thing"
+    },
+    {
+      "Id": "7664108522833254",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "data",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getSubsuppliersCountDetails",
+      "SourceSection": "Things_IK.ComplianceDashboard.Thing",
+      "TargetArea": "Data",
+      "TargetId": "filterSubSuppliers",
+      "TargetSection": "Things_IK.ComplianceDashboard.Thing"
+    },
+    {
+      "Id": "3967021057678928",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "Data",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "filterSubSuppliers",
+      "SourceName": "filterSubSuppliers",
+      "SourceSection": "Things_IK.ComplianceDashboard.Thing",
+      "TargetArea": "UI",
+      "TargetId": "gridadvanced-3",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6794900900489691",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "InfotableInput",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "filterSubSuppliers",
+      "SourceSection": "Things_IK.ComplianceDashboard.Thing",
+      "TargetArea": "UI",
+      "TargetId": "infotablerowcount-23",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5034312940998509",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "projectNumber",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "defaultProjectNumber",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "navigationfunction-13",
+      "TargetSection": ""
+    },
+    {
+      "Id": "2121863398257520",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "data",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "filterSubSuppliers",
+      "SourceSection": "Things_IK.ComplianceDashboard.Thing",
+      "TargetArea": "Data",
+      "TargetId": "exportDataForSubsuppliers",
+      "TargetSection": "Things_IK.ComplianceDashboard.Thing"
+    },
+    {
+      "Id": "2753068205676540",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "downloadLink",
+          "SourcePropertyBaseType": "HYPERLINK",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "LinkURL",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "exportDataForSubsuppliers",
+      "SourceSection": "Things_IK.ComplianceDashboard.Thing",
+      "TargetArea": "UI",
+      "TargetId": "ptcslink-27",
+      "TargetSection": ""
+    },
+    {
+      "Id": "2664686074778761",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "downloadLink",
+          "SourcePropertyBaseType": "HYPERLINK",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "URL",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "exportDataForSubsuppliers",
+      "SourceSection": "Things_IK.ComplianceDashboard.Thing",
+      "TargetArea": "UI",
+      "TargetId": "validator-26",
+      "TargetSection": ""
+    },
+    {
+      "Id": "4905914683215121",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "path",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "path",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "exportDataForSubsuppliers",
+      "SourceSection": "Things_IK.ComplianceDashboard.Thing",
+      "TargetArea": "Data",
+      "TargetId": "DeleteFileAfter30Sec",
+      "TargetSection": "Things_CustomFileRepoistory"
+    },
+    {
+      "Id": "5545482220765845",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "title",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "LabelText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcslabel-20",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6800917162340487",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "title",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "tableHeader",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "exportDataForSubsuppliers",
+      "TargetSection": "Things_IK.ComplianceDashboard.Thing"
+    },
+    {
+      "Id": "1103280653128778",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "State",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "neverVerified",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "ptcscheckbox-32",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "filterSubSuppliers",
+      "TargetSection": "Things_IK.ComplianceDashboard.Thing"
+    },
+    {
+      "Id": "1776744437891478",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "State",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "reVerification",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "ptcscheckbox-33",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "filterSubSuppliers",
+      "TargetSection": "Things_IK.ComplianceDashboard.Thing"
+    }
+  ],
+  "DesignTimePermissions": {},
+  "Events": [
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "navigationfunction-13",
+      "EventHandlerService": "Navigate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-12",
+      "EventTriggerSection": "",
+      "Id": "1314049901586176"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-24",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "RowsAreCounted",
+      "EventTriggerId": "infotablerowcount-23",
+      "EventTriggerSection": "",
+      "Id": "4703171124045483"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.ComplianceDashboard.Thing",
+      "EventHandlerService": "filterSubSuppliers",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "getSubsuppliersCountDetails",
+      "EventTriggerSection": "Things_IK.ComplianceDashboard.Thing",
+      "Id": "2638433901728536"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.ComplianceDashboard.Thing",
+      "EventHandlerService": "filterSubSuppliers",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Changed",
+      "EventTriggerId": "ptcstextfield-9",
+      "EventTriggerSection": "",
+      "Id": "804026914798447"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "infotablerowcount-23",
+      "EventHandlerService": "CountRows",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "filterSubSuppliers",
+      "EventTriggerSection": "Things_IK.ComplianceDashboard.Thing",
+      "Id": "6896806519784718"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "ptcslink-27",
+      "EventHandlerService": "Navigate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "True",
+      "EventTriggerId": "validator-26",
+      "EventTriggerSection": "",
+      "Id": "6813653880223313"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "statusmessage-28",
+      "EventHandlerService": "ShowMessage",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "False",
+      "EventTriggerId": "validator-26",
+      "EventTriggerSection": "",
+      "Id": "1172280189084761"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.ComplianceDashboard.Thing",
+      "EventHandlerService": "exportDataForSubsuppliers",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-11",
+      "EventTriggerSection": "",
+      "Id": "2671825399249777"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "validator-26",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "exportDataForSubsuppliers",
+      "EventTriggerSection": "Things_IK.ComplianceDashboard.Thing",
+      "Id": "4738312387231548"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_CustomFileRepoistory",
+      "EventHandlerService": "DeleteFileAfter30Sec",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "exportDataForSubsuppliers",
+      "EventTriggerSection": "Things_IK.ComplianceDashboard.Thing",
+      "Id": "1680436669675556"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.ComplianceDashboard.Thing",
+      "EventHandlerService": "getSubsuppliersCountDetails",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "titleChanged",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "7233618299626088"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "ptcstextfield-9",
+      "EventHandlerService": "ResetToDefaultValue",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "titleChanged",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "461032403674352"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.ComplianceDashboard.Thing",
+      "EventHandlerService": "filterSubSuppliers",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Changed",
+      "EventTriggerId": "ptcscheckbox-32",
+      "EventTriggerSection": "",
+      "Id": "2042196299073320"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.ComplianceDashboard.Thing",
+      "EventHandlerService": "filterSubSuppliers",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Changed",
+      "EventTriggerId": "ptcscheckbox-33",
+      "EventTriggerSection": "",
+      "Id": "1819401951601765"
+    }
+  ],
+  "RunTimePermissions": {},
+  "UI": {
+    "Properties": {
+      "AddToDashboardButton": "SimplePlus",
+      "AddToDashboardButtonStyle": "DefaultAddToDashboardButtonStyle",
+      "Area": "Mashup",
+      "BGImage": "",
+      "BGImageRepeat": "no-repeat",
+      "BGImageSize": "auto",
+      "Columns": 0,
+      "ConfigureGadgetButton": "SimpleGear",
+      "ConfigureGadgetButtonStyle": "DefaultConfigureGadgetButtonStyle",
+      "DisplayName": "Mashup",
+      "EnableParameterEditing": false,
+      "Height": 618,
+      "Id": "mashup-root",
+      "IgnoreWarningsInViewMashup": false,
+      "IsPrintLayout": false,
+      "Left": 0,
+      "MashupToEditGadget": "DefaultMashupToEditGadget",
+      "MinHeight": 0,
+      "MinWidth": 0,
+      "ResponsiveLayout": true,
+      "Rows": 0,
+      "ShowDataLoading": true,
+      "Style": "DefaultMashupStyle",
+      "StyleProperties": {
+        "data": {
+          "ptcstextfield-9": {
+            "parts": {
+              "hint-text": {
+                "$": {
+                  "color": "rgba(117,117,117,1)",
+                  "font-size": "12px"
+                },
+                "hover": {
+                  "color": "#757575",
+                  "font-size": "12px"
+                },
+                "pressed": {
+                  "color": "rgba(117,117,117,1)",
+                  "font-size": "12px"
+                }
+              },
+              "text-box": {
+                "$": {
+                  "background": "#f5f5f5",
+                  "border-color": "#f5f5f5"
+                },
+                "focus": {
+                  "background": "#f5f5f5",
+                  "border-color": "#f5f5f5"
+                },
+                "hover": {
+                  "background": "#f5f5f5",
+                  "border-color": "#f5f5f5"
+                },
+                "pressed": {
+                  "background": "#f5f5f5",
+                  "border-color": "#f5f5f5"
+                }
+              }
+            },
+            "widget": "ptcs-textfield"
+          }
+        },
+        "meta": {
+          "type": "WidgetStyler",
+          "version": "1.0"
+        }
+      },
+      "StyleTheme": "IK.CVM.Theme",
+      "Title": "",
+      "TitleBar": false,
+      "TitleBarStyle": "DefaultTitleBarStyle",
+      "TitleBarText": "Gadget Title Here",
+      "Top": 0,
+      "Type": "mashup",
+      "UseMasterTheme": false,
+      "UseTheme": false,
+      "UseThemeForHybrids": false,
+      "Visible": true,
+      "Width": 1024,
+      "Z-index": 10,
+      "__TypeDisplayName": "Mashup",
+      "_currentParameterDefs": [
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "title"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "projectNumber"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "JSON",
+          "Description": "",
+          "ParameterName": "bomStructures"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "dataShape": "IK.ComplianceDashboard.DataShape",
+            "isMandatory": false
+          },
+          "BaseType": "INFOTABLE",
+          "Description": "",
+          "ParameterName": "requirements"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "dataShape": "GenericStringList",
+            "isMandatory": false
+          },
+          "BaseType": "INFOTABLE",
+          "Description": "",
+          "ParameterName": "selected_ids"
+        }
+      ],
+      "id_index": 34,
+      "supportsAutoResize": true
+    },
+    "Widgets": [
+      {
+        "Properties": {
+          "Area": "UI",
+          "DisplayName": "container-2",
+          "EnableExpandCollapse": false,
+          "ExpandCollapseTabLocation": "inside",
+          "Expanded": true,
+          "Id": "flexcontainer-2",
+          "LastContainer": true,
+          "Overlay": false,
+          "ResponsiveLayout": true,
+          "ShowDataLoading": true,
+          "ShowExpandCollapseTab": false,
+          "SourceURL": "",
+          "Style": "DefaultContainerStyle",
+          "StyleProperties": {},
+          "Type": "flexcontainer",
+          "UseTheme": true,
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "Responsive Container",
+          "align-content": "flex-start",
+          "align-items": "flex-start",
+          "flex-basis": "auto",
+          "flex-direction": "column",
+          "flex-grow": 1,
+          "flex-max-height": "",
+          "flex-max-width": "",
+          "flex-min-height": "",
+          "flex-min-width": "",
+          "flex-shrink": 1,
+          "flex-size": "default",
+          "flex-wrap": "nowrap",
+          "iconClass": "widgets-flexcontainer",
+          "justify-content": "flex-start",
+          "positioning": "responsive",
+          "userCannotRemove": true
+        },
+        "Widgets": [
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-18",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-18",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": true,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-end",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "50px",
+              "flex-max-width": "",
+              "flex-min-height": "50px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisclosureControl": "show-more",
+                  "DisplayName": "ptcs-label-20",
+                  "HorizontalAlignment": "left",
+                  "Id": "ptcslabel-20",
+                  "LabelText": "Label",
+                  "LabelType": "title",
+                  "LastContainer": false,
+                  "Left": 74.02777099609375,
+                  "Margin": "0 10 10 0",
+                  "MultiLine": true,
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "Top": 51.45832824707031,
+                  "Type": "ptcslabel",
+                  "UseTheme": true,
+                  "VerticalAlignment": "flex-start",
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Label",
+                  "overflowShowLessTxt": "[[showLess]]",
+                  "overflowShowMoreTxt": "[[showMore]]"
+                },
+                "Widgets": []
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "infotablerowcount-23",
+                  "Id": "infotablerowcount-23",
+                  "LastContainer": false,
+                  "Left": 132.01388549804688,
+                  "Margin": "5",
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "Top": 21.458328247070312,
+                  "Type": "infotable_row_count",
+                  "Visible": false,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Infotable Row Count"
+                },
+                "Widgets": []
+              },
+              {
+                "Properties": {
+                  "Alignment": "left",
+                  "Area": "UI",
+                  "Disabled": false,
+                  "DisplayName": "ptcs-link-27",
+                  "Id": "ptcslink-27",
+                  "LastContainer": false,
+                  "Left": 259.02777099609375,
+                  "LinkType": "primary",
+                  "Margin": "5",
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "SingleLine": false,
+                  "TabSequence": 0,
+                  "TargetWindow": "_self",
+                  "Text": "Link",
+                  "Top": 31.458328247070312,
+                  "Type": "ptcslink",
+                  "UseTheme": true,
+                  "Visible": false,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Link"
+                },
+                "Widgets": []
+              }
+            ]
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-5",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-5",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": true,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "60px",
+              "flex-max-width": "",
+              "flex-min-height": "60px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-7",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-7",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "center",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "",
+                  "flex-min-height": "",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "default",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer",
+                  "isLocked": false,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": [
+                  {
+                    "Properties": {
+                      "AlternateText": "",
+                      "Area": "UI",
+                      "CustomClass": "customSearchicon",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-icon-8",
+                      "Height": 34,
+                      "Id": "ptcsicon-8",
+                      "LastContainer": false,
+                      "Left": 67.01171875,
+                      "Margin": "0",
+                      "Placeholder": true,
+                      "PreventCaching": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "Size": "small",
+                      "SourceURL": "/Thingworx/MediaEntities/IK.Media.SearchIcon",
+                      "Top": 30.76171875,
+                      "Type": "ptcsicon",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Width": 34,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Icon"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "Counter": false,
+                      "CustomClass": "customSearchTextBox",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-textfield-9",
+                      "HintText": "Search",
+                      "Id": "ptcstextfield-9",
+                      "Label": "",
+                      "LabelAlignment": "left",
+                      "LastContainer": false,
+                      "Left": 117.01171875,
+                      "Margin": "0 5 0 0",
+                      "MaxNumberOfCharacters": 100,
+                      "Password": false,
+                      "ReadOnly": false,
+                      "ResponsiveLayout": false,
+                      "ShowClearText": true,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "TextAlignment": "left",
+                      "Top": 35.76171875,
+                      "Type": "ptcstextfield",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Width": 360,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Text Field"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "CustomClass": "customDashboardCheckBox",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-checkbox-32",
+                      "Id": "ptcscheckbox-32",
+                      "Label": "Never verified",
+                      "LastContainer": false,
+                      "Left": 79.02777099609375,
+                      "Margin": "0 5 0 5",
+                      "PartialState": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "State": true,
+                      "TabSequence": 0,
+                      "Top": 16.458328247070312,
+                      "Type": "ptcscheckbox",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Checkbox"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "CustomClass": "customDashboardCheckBox",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-checkbox-33",
+                      "Id": "ptcscheckbox-33",
+                      "Label": "Reverification",
+                      "LastContainer": false,
+                      "Left": 104.02777099609375,
+                      "Margin": "0 5 0 5",
+                      "PartialState": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "State": true,
+                      "TabSequence": 0,
+                      "Top": 26.458328247070312,
+                      "Type": "ptcscheckbox",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Checkbox"
+                    },
+                    "Widgets": []
+                  }
+                ]
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-10",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-10",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "center",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "",
+                  "flex-min-height": "",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "default",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer",
+                  "isLocked": false,
+                  "justify-content": "flex-end",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": [
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonType": "tertiary",
+                      "ContextID": "",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-button-11",
+                      "Id": "ptcsbutton-11",
+                      "Label": "Export to Excel",
+                      "LabelAlignment": "center",
+                      "LastContainer": false,
+                      "Left": 669.0277709960938,
+                      "Margin": "0 5 5 5",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "Top": 741.4583282470703,
+                      "Type": "ptcsbutton",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonType": "tertiary",
+                      "ContextID": "",
+                      "CustomClass": "customRequirementListButton",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-button-12",
+                      "Icon": "/Thingworx/MediaEntities/IK.RightArrow.Media",
+                      "Id": "ptcsbutton-12",
+                      "Label": "Requirement list",
+                      "LabelAlignment": "center",
+                      "LastContainer": false,
+                      "Left": 894.0277709960938,
+                      "Margin": "0 5 5 5",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "Top": 741.4583282470703,
+                      "Type": "ptcsbutton",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button"
+                    },
+                    "Widgets": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-34",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-34",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": true,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "57px",
+              "flex-max-width": "",
+              "flex-min-height": "57px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "CustomClass": "customLabel12",
+                  "DisclosureControl": "show-more",
+                  "DisplayName": "ptcs-label-21",
+                  "HorizontalAlignment": "left",
+                  "Id": "ptcslabel-21",
+                  "LabelText": "Label",
+                  "LabelType": "label",
+                  "LastContainer": false,
+                  "Left": 169.02777099609375,
+                  "Margin": "0 0 13 0",
+                  "MultiLine": true,
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "Top": 36.45832824707031,
+                  "Type": "ptcslabel",
+                  "UseTheme": true,
+                  "VerticalAlignment": "flex-start",
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Label",
+                  "overflowShowLessTxt": "[[showLess]]",
+                  "overflowShowMoreTxt": "[[showMore]]"
+                },
+                "Widgets": []
+              }
+            ]
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-4",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-4",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": false,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "",
+              "flex-max-width": "",
+              "flex-min-height": "",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "default",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer",
+              "isLocked": true,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "AutoScroll": true,
+                  "CellBorderStyle": "IK.SD.BlackFont11",
+                  "CellValidationErrorStyle": "DefaultGridAdvancedCellValidationErrorStyle",
+                  "CellValidationErrorTooltipStyle": "DefaultGridAdvancedCellValidationErrorTooltipStyle",
+                  "ColumnFormat": {
+                    "formatInfo": [
+                      {
+                        "Align": "right",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "subsupplier_id",
+                        "FormatOptions": {
+                          "FormatString": "full",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "STRING",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Sub-supplier ID",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "right",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "left",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "subsupplier_name",
+                        "FormatOptions": {
+                          "FormatString": "full",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "STRING",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Sub-supplier name",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "left",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "right",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "tier_number",
+                        "FormatOptions": {
+                          "FormatString": "full",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "STRING",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Tier number",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "right",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "right",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "articles",
+                        "FormatOptions": {
+                          "FormatString": "unsanitized",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "HTML",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Articles",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "right",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "right",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "parts",
+                        "FormatOptions": {
+                          "FormatString": "unsanitized",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "HTML",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Parts",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "right",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "right",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "materials",
+                        "FormatOptions": {
+                          "FormatString": "unsanitized",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "HTML",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Materials",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "right",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "right",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "expires_greater_than_90",
+                        "FormatOptions": {
+                          "FormatString": "unsanitized",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "HTML",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Verification deadline >90 days",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "right",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "right",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "expires_within_30_90",
+                        "FormatOptions": {
+                          "FormatString": "unsanitized",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "HTML",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Verification deadline >30 days",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "right",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "right",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "expires_less_than_30",
+                        "FormatOptions": {
+                          "FormatString": "unsanitized",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "HTML",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Verification deadline <30 days",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "right",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "right",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "expired",
+                        "FormatOptions": {
+                          "FormatString": "unsanitized",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "HTML",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Verifications (Overdue)",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "right",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "left",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "requirement_list",
+                        "FormatOptions": {
+                          "FormatString": "unsanitized",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "HTML",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "Requirement list",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "left",
+                        "hidden": false,
+                        "inLayout": true
+                      },
+                      {
+                        "Align": "left",
+                        "AllowEdit": false,
+                        "Description": "",
+                        "FieldName": "reverification",
+                        "FormatOptions": {
+                          "FormatString": "checkbox",
+                          "formatInfo": {
+                            "StateFormats": []
+                          },
+                          "formatText": "View",
+                          "renderer": "BOOLEAN",
+                          "roundingEnabled": true,
+                          "showDependentField": false
+                        },
+                        "Title": "reverification",
+                        "ValidationExpression": "",
+                        "ValidationMessage": "",
+                        "Width": "auto",
+                        "headerTextAlignment": "left",
+                        "hidden": true,
+                        "inLayout": false
+                      }
+                    ]
+                  },
+                  "Configuration": "",
+                  "ConfigurationId": 0,
+                  "CookiePersistence": true,
+                  "CustomClass": "customGridRowWithBottomBorder customGridRowPadding customGridHeaderPadding customGridVerticalAlignTop",
+                  "DataOverflow": "wrapped",
+                  "DataServiceBindingDef": {
+                    "dataName": "Things_IK.ComplianceDashboard.Thing",
+                    "entityName": "IK.ComplianceDashboard.Thing",
+                    "entityType": "Things",
+                    "sourceId": "filterSubSuppliers",
+                    "target": "filterSubSuppliers"
+                  },
+                  "DefaultSelectedRows": "",
+                  "DisplayName": "gridadvanced-3",
+                  "DisplayOnlyMode": false,
+                  "EditButtonsLocation": "top-right",
+                  "EnableAddDeleteButtons": false,
+                  "EnableCallbackOnSelectedRowsChange": true,
+                  "EnableContextMenu": true,
+                  "EnableEditButtons": false,
+                  "EnableFilterEventOnConfigChange": true,
+                  "EnableFooter": false,
+                  "EnableGridReset": false,
+                  "EnableGridSearch": false,
+                  "EnableKeyboardNavigation": true,
+                  "EnableSorting": false,
+                  "FocusStyle": "IK.SD.BlackFont11",
+                  "GridResetButtonLocation": "top-right",
+                  "GridSearchLocation": "top-left",
+                  "HeaderOverflow": "wrapped",
+                  "Height": 200,
+                  "IDFieldName": "id",
+                  "Id": "gridadvanced-3",
+                  "IsEditable": false,
+                  "LastContainer": false,
+                  "Left": 99.02777099609375,
+                  "MaxHeaderHeight": 100,
+                  "MinRowHeight": 62,
+                  "ResponsiveLayout": true,
+                  "RowAlternateBackgroundStyle": "IK.SD.BlackFont11",
+                  "RowBackgroundStyle": "IK.SD.BlackFont11",
+                  "RowBorderStyle": "IK.SD.BlackFont11",
+                  "RowFormat_StateParameters": [],
+                  "RowHoverStyle": "IK.SD.BlackFont11",
+                  "RowSelectedStyle": "IK.SD.BlackFont11",
+                  "RowSelection": "none",
+                  "SelectedRows": "",
+                  "ShowDataLoading": true,
+                  "SortAscendingStyle": "DefaultSortAscendingStyle",
+                  "SortDescendingStyle": "DefaultSortDescendingStyle",
+                  "TableFooterStyle": "DefaultGridAdvancedFooterStyle",
+                  "TableHeaderStyle": "IK.SD.HeaderGrid12",
+                  "TableWrapperStyle": "IK.SD.BlackFont11Bold",
+                  "ToolbarStyle": "DefaultToolbarStyle",
+                  "TooltipStyle": "DefaultTooltipStyle",
+                  "Top": 116.45832824707031,
+                  "Type": "gridadvanced",
+                  "UseTheme": false,
+                  "Visible": true,
+                  "Width": 400,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Grid Advanced"
+                },
+                "Widgets": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "ClickOutsideToClose": false,
+          "CloseButton": true,
+          "DisplayName": "openRequirementList",
+          "Id": "navigationfunction-13",
+          "LastContainer": false,
+          "Left": null,
+          "MashupParameters": [
+            {
+              "BaseType": "INFOTABLE",
+              "Description": "",
+              "ParameterName": "selectMenuFromDashboard",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "dataShape": "IK.CVMMenu.DataShape",
+                  "isMandatory": "false"
+                },
+                "baseType": "INFOTABLE",
+                "description": "",
+                "name": "selectMenuFromDashboard",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "defaultView",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "isMandatory": "false"
+                },
+                "baseType": "STRING",
+                "description": "",
+                "name": "defaultView",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "MASHUPNAME",
+              "Description": "",
+              "ParameterName": "selectMashupFromDashboard",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "isMandatory": "false"
+                },
+                "baseType": "MASHUPNAME",
+                "description": "",
+                "name": "selectMashupFromDashboard",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "defaultArticle",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "isMandatory": "false"
+                },
+                "baseType": "STRING",
+                "description": "",
+                "name": "defaultArticle",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "defaultProjectNumber",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "isMandatory": "false"
+                },
+                "baseType": "STRING",
+                "description": "",
+                "name": "defaultProjectNumber",
+                "ordinal": 0
+              }
+            }
+          ],
+          "MissingMashupMessage": "",
+          "PopupHeight": 0,
+          "PopupScrollbar": "auto",
+          "PopupTitle": "",
+          "PopupWidth": 0,
+          "ReloadOnReplace": false,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "TargetMashup": "ComplianceVerificationManagement",
+          "TargetWindowType": "new",
+          "Text": "tw.navigationfunction-ide.properties.text.default-value",
+          "Top": null,
+          "Type": "navigationfunction",
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "navigationfunction",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "defaultArticle",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "defaultProjectNumber",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "defaultView",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "MASHUPNAME",
+              "DefaultValue": "IK.SupplierTaskListWithCustomWidget.Mashup",
+              "Description": "",
+              "ParameterName": "selectMashupFromDashboard",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "DefaultValue": {
+                "dataShape": {
+                  "fieldDefinitions": {
+                    "hasChildren": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "BOOLEAN",
+                      "description": "",
+                      "name": "hasChildren",
+                      "ordinal": 4
+                    },
+                    "id": {
+                      "aspects": {
+                        "isPrimaryKey": true
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "id",
+                      "ordinal": 1
+                    },
+                    "mashupName": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "MASHUPNAME",
+                      "description": "",
+                      "name": "mashupName",
+                      "ordinal": 5
+                    },
+                    "menuName": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "menuName",
+                      "ordinal": 2
+                    },
+                    "parentId": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "parentId",
+                      "ordinal": 3
+                    }
+                  },
+                  "name": "IK.CVMMenu.DataShape"
+                },
+                "rows": [
+                  {
+                    "id": "RequirementListKendo",
+                    "mashupName": "IK.SupplierTaskListWithCustomWidget.Mashup",
+                    "menuName": "<b>Requirement list</b>"
+                  }
+                ]
+              },
+              "Description": "",
+              "ParameterName": "selectMenuFromDashboard",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "generateCountLabel",
+          "Expression": "result = \"Showing \"+count+\" items\";",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-24",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "STRING",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "NUMBER",
+              "Description": "",
+              "ParameterName": "count",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DisplayName": "checkFileGenerated",
+          "Expression": "result = (URL)?true:false;",
+          "Height": 28,
+          "Id": "validator-26",
+          "LastContainer": false,
+          "Left": null,
+          "Output": true,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "validator",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Validator",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "URL",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "DisplayName": "fileNotGenerated",
+          "Height": 28,
+          "Id": "statusmessage-28",
+          "LastContainer": false,
+          "Left": null,
+          "Message": "File Not Generated!",
+          "MessageType": "error",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "statusmessage",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Status Message"
+        },
+        "Widgets": []
+      }
+    ]
+  },
+  "mashupType": "mashup"
+}]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <ModelTags>
+        <ModelTagVocabulary
+         description="ILM extension connector vocabulary"
+         documentationContent=""
+         homeMashup=""
+         isDynamic="false"
+         name="PTC.ALM.ILM.EXT.IK.WRVSConnector.Thing"
+         projectName="IKEA.CVM"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <VocabularyTerm
+             description=""
+             name="Requirement"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Test"></VocabularyTerm>
+        </ModelTagVocabulary>
+    </ModelTags>
+</Entities>

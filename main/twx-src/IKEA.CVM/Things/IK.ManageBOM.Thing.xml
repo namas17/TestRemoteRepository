@@ -1,0 +1,2417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="IK.ManageBOM.Thing"
+         projectName="IKEA.CVM"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="enableAssociationButtons">
+                        <ResultType
+                         aspect.dataShape="CVM.SupplyBOMAssociation.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.ViewBOM.Datashape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="editedTable"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="exportRequirements">
+                        <ResultType
+                         aspect.dataShape="FileSystemFileWithLinks"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.VerificationAggregated.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="data"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="selected_name"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="selected_number"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="filterStructure">
+                        <ResultType
+                         aspect.dataShape="IK.PTC.Resource.App.StructuredDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="searchText"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="IK.PTC.Resource.App.StructuredSupplyPartsDataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="structureData"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="filterSupplyObjects">
+                        <ResultType
+                         aspect.dataShape="CVM.SupplyObjectsList.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedSupplyActors"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedSupplyObjectStatus"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="CVM.SupplyObjectsList.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="supplyObjects"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getBOMStructure">
+                        <ResultType
+                         aspect.dataShape="IK.PTC.Resource.App.StructuredDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="article_id"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDataForAssociation">
+                        <ResultType
+                         aspect.dataShape="CVM.SupplyBOMAssociation.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="selectedRow"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="CVM.SupplyBOMAssociation.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRows"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDataForFilterDropdowns">
+                        <ResultType
+                         aspect.dataShape="CVM.SupplyObjectAssociationFilter.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="CVM.SupplyObjectsList.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="supplyObjects"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDataForSelectedValues">
+                        <ResultType
+                         aspect.dataShape="IK.ManageBOM.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="project_number"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="IK.KeyValue.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selected_values"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSelectedSupplyObjects">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyObject.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyObject.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="recommendedSupplyObjects"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyObject.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="similarSupplyObjects"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getStructure">
+                        <ResultType
+                         aspect.dataShape="IK.ViewBOM.Datashape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="BOOLEAN"
+                             description=""
+                             name="incomp_assoc"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="InputForViewBOM"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSupplyActorNamesForFilter">
+                        <ResultType
+                         aspect.dataShape="GenericStringList"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="CVM.SupplyObjectsList.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="supplyObjects"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSupplyObjects">
+                        <ResultType
+                         aspect.dataShape="CVM.SupplyObjectsList.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="objectType"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="projectNumber"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getTraces">
+                        <ResultType
+                         aspect.dataShape="IK.VerificationAggregated.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.PTC.Resource.App.StructuredDataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="bom_structure"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="input"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="IK.PTC.Resource.App.StructuredDataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selected_row"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getValuesForViews">
+                        <ResultType
+                         aspect.dataShape="IK.KeyValue.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="project_number"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="selected_view"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getViewable">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="objectID"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getViews">
+                        <ResultType
+                         aspect.dataShape="IK.KeyValue.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="searchSupplyObjects">
+                        <ResultType
+                         aspect.dataShape="CVM.SupplyObjectsList.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="searchText"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="CVM.SupplyObjectsList.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="supplyObjects"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="enableAssociationButtons">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " enableAssociateButtons -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "CVM.SupplyBOMAssociation.DataShape"
+                                        });
+                                        let selectedRows = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.ViewBOM.Datashape"
+                                        });
+                                        try {
+                                        	let disableAssociate = true;
+                                        	let disableSubAssembly = true;
+                                        	let objectType = "";
+                                        
+                                        	if (editedTable && editedTable.getRowCount() > 0) {
+                                        
+                                        		let params = {
+                                        			fieldName: "isSelected" /* STRING */ ,
+                                        			isCaseSensitive: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        			t: editedTable /* INFOTABLE */ ,
+                                        			value: true /* STRING */
+                                        		};
+                                        		selectedRows = Resources["InfoTableFunctions"].EQFilter(params);
+                                        
+                                        		if (selectedRows && selectedRows.getRowCount() > 0) {
+                                        			let params1 = {
+                                        				t: selectedRows /* INFOTABLE */ ,
+                                        				columns: "type" /* STRING */
+                                        			};
+                                        			let selectedTypes = Resources["InfoTableFunctions"].Distinct(params1);
+                                        
+                                        			if (selectedTypes && selectedTypes.getRowCount() == 1 && selectedTypes.rows[0].type != "Item Structure") {
+                                        				objectType = selectedTypes.rows[0].type;
+                                        				disableAssociate = false;
+                                        				if (selectedRows.getRowCount() > 1) {
+                                        					disableSubAssembly = false;
+                                        				}
+                                        
+                                        			}
+                                        
+                                        			if (selectedTypes && selectedTypes.getRowCount() > 1 && (!selectedTypes.Find({type:"Item Structure"}))) {
+                                        				disableSubAssembly = false;
+                                        			}
+                                        
+                                        		}
+                                        	}
+                                        	result.AddRow({
+                                        		disableAssociate: disableAssociate,
+                                        		disableSubAssembly: disableSubAssembly,
+                                        		objectType: objectType,
+                                        		selectedRows: selectedRows
+                                        	});
+                                        	logger.info(FN + "executed successfully");
+                                        
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="exportRequirements">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " exportRequirements -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "FileSystemFileWithLinks"
+                                        });
+                                        
+                                        try {
+                                        	var params = {
+                                        		infoTableName: "ITName" /* STRING */
+                                        	};
+                                        	// result: INFOTABLE
+                                        	var info = Resources["InfoTableFunctions"].CreateInfoTable(params);
+                                        	//Add a new field to the InfoTable:
+                                        	info.AddField({
+                                        		name: "Applies to",
+                                        		baseType: "STRING",
+                                        		ordinal: 1
+                                        	});
+                                        	info.AddField({
+                                        		name: "Requirement type",
+                                        		baseType: "STRING",
+                                        		ordinal: 2
+                                        	});
+                                        	info.AddField({
+                                        		name: "Requirement subtype",
+                                        		baseType: "STRING",
+                                        		ordinal: 3
+                                        	});
+                                            info.AddField({
+                                        		name: "Requirement ID",
+                                        		baseType: "STRING",
+                                        		ordinal: 4
+                                        	});
+                                        	info.AddField({
+                                        		name: "Requirement title",
+                                        		baseType: "STRING",
+                                        		ordinal: 5
+                                        	});
+                                        	info.AddField({
+                                        		name: "Requirement text",
+                                        		baseType: "HTML",
+                                        		ordinal: 6
+                                        	});
+                                        	info.AddField({
+                                        		name: "Verification datatype",
+                                        		baseType: "STRING",
+                                        		ordinal: 7
+                                        	});
+                                        	info.AddField({
+                                        		name: "Verification deadline",
+                                        		baseType: "STRING",
+                                        		ordinal: 8
+                                        	});
+                                        
+                                        	for (let i = 0; i < data.getRowCount(); i++) {
+                                        		let row = data.rows[i];
+                                        		let requirementText = row.requirement_text;
+                                        		requirementText = requirementText.replace(/<\/?[a-z][^>]*>|<!DOCTYPE html>/gi, ''); // to remove tags
+                                        		requirementText = requirementText.replace(/<!--[\s\S]*?-->/g, ''); // to remove comments
+                                        		let newEntry = new Object();
+                                        		newEntry["Applies to"] = row.applies_to_name;
+                                        		newEntry["Requirement type"] = row.requirement_type;
+                                        		newEntry["Requirement subtype"] = row.requirement_subtype;
+                                                newEntry["Requirement ID"] = row.id_rvs;
+                                        		newEntry["Requirement title"] = row.requirement_title;
+                                        		newEntry["Requirement text"] = requirementText;
+                                        		newEntry["Verification datatype"] = row.verification_data_format;
+                                        		newEntry["Verification deadline"] = row.verification_deadline;
+                                                
+                                        		info.AddRow(newEntry);
+                                        	}
+                                        
+                                        	let sdf = "MM-dd-yyyy_HH-mm-ss(ZZZ)";
+                                        	let dateValue = new Date();
+                                        	let formattedDate = dateFormat(dateValue, sdf);
+                                        	let username = Resources["CurrentSessionInfo"].GetCurrentUser();
+                                        	let fullFileName = selected_number + "_Requirements_" + formattedDate + ".xlsx";
+                                        	let pathAndFileName = "/CVM/RequirementExport/" + fullFileName;
+                                        
+                                        	let excelPathAndFileName = Things["IK.ExcelGeneration.Thing"].ExportInfotableToExcel({
+                                        		repository: "CustomFileRepoistory" /* THINGNAME */ ,
+                                        		pathAndFileName: pathAndFileName /* STRING */ ,
+                                        		sheetName: "Data" /* STRING */ ,
+                                        		data: info /* INFOTABLE */
+                                        	});
+                                        
+                                        	result = Things["CustomFileRepoistory"].GetFileListingWithLinks({
+                                        		path: "/CVM/RequirementExport/" /* STRING */ ,
+                                        		nameMask: fullFileName /* STRING */
+                                        	});
+                                        
+                                        	logger.info(FN + "Requirements exported successfully for [" + selected_number + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="filterStructure">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " filterStructure -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.PTC.Resource.App.StructuredDataShape"
+                                        });
+                                        
+                                        try {
+                                        	if (structureData && searchText) {
+                                        		for (let i = 0; i < structureData.getRowCount(); i++) {
+                                        			let row = structureData.rows[i];
+                                        			if (row.name.toUpperCase().includes(searchText.toUpperCase()) || row.number.toUpperCase().includes(searchText.toUpperCase())) {
+                                        				row.parentId = "";
+                                        				row.hasChildren = false;
+                                        				result.AddRow(row);
+                                        			}
+                                        		}
+                                        	} else {
+                                        		result = structureData;
+                                        	}
+                                        
+                                        	logger.info(FN + "Structure filtered for [" + searchText + "]. Result :" + result.getRowCount());
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="filterSupplyObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " filterSupplyObjects -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "CVM.SupplyObjectsList.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	let supplyObject = supplyObjects.rows[0];
+                                        	let recommendedSupplyObjects = supplyObject.recommendedSupplyObjects;
+                                        	let similarSupplyObjects = supplyObject.similarSupplyObjects;
+                                        	if ((selectedSupplyActors && selectedSupplyActors.getRowCount() > 0) || (selectedSupplyObjectStatus && selectedSupplyObjectStatus.getRowCount() > 0)) {
+                                        
+                                        
+                                        		let filters = [];
+                                        		if (selectedSupplyActors && selectedSupplyActors.getRowCount() > 0) {
+                                        			let supplyActors = [];
+                                        			selectedSupplyActors.rows.forEach((row) => supplyActors.push(row.item));
+                                        
+                                        			logger.debug("supplyActors   -- " + supplyActors.toString());
+                                        			filters.push({
+                                        				"type": "IN",
+                                        				"fieldName": "legal_name",
+                                        				"values": supplyActors
+                                        			});
+                                        			logger.debug("data -- > " + recommendedSupplyObjects.getRowCount() + " " + similarSupplyObjects.getRowCount() + " " + selectedSupplyActors.getRowCount());
+                                        
+                                        		}
+                                        		if (selectedSupplyObjectStatus && selectedSupplyObjectStatus.getRowCount() > 0) {
+                                        			let supplyObjectStatus = [];
+                                                    selectedSupplyObjectStatus.rows.forEach((row) => supplyObjectStatus.push(row.item));
+                                        			filters.push({
+                                        				"type": "IN",
+                                        				"fieldName": "status",
+                                        				"values": supplyObjectStatus
+                                        			});
+                                        		}
+                                        
+                                        		let query = {
+                                        			"filters": {
+                                        				"filters": filters,
+                                        				"type": "AND"
+                                        			}
+                                        		};
+                                        		params1 = {
+                                        			t: recommendedSupplyObjects /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        		params2 = {
+                                        			t: similarSupplyObjects /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        
+                                        		recommendedSupplyObjects = Resources["InfoTableFunctions"].Query(params1);
+                                        		similarSupplyObjects = Resources["InfoTableFunctions"].Query(params2);
+                                        		result.AddRow({
+                                        			recommendedSupplyObjects: recommendedSupplyObjects,
+                                        			similarSupplyObjects: similarSupplyObjects
+                                        		});
+                                        
+                                        		logger.debug("data 1 --> " + recommendedSupplyObjects.getRowCount() + " " + similarSupplyObjects.getRowCount());
+                                        	} else {
+                                        		result = supplyObjects;
+                                        	}
+                                        	logger.info(FN + "executed successfully");
+                                        
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getBOMStructure">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getBOMStructure -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.PTC.Resource.App.StructuredDataShape"
+                                        });
+                                        
+                                        try {
+                                        	let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        	let expandPart = "Part($select=ID,ObjectType,TypeIcon,Version,VersionID,DefaultUnit;$expand=Traces($select=Uri))";
+                                        	let selectComponents = "PartId,PartName,PartNumber,PVTreeId,PVParentTreeId";
+                                        	let partUse = ""; // ,PartUse($select=Quantity)
+                                        	let exp = expandPart + ",Components($select=" + selectComponents + ";$expand=" + expandPart + partUse + ";$levels=5)";
+                                        	// result: JSON
+                                        	let structure = Things[odataconnectorthing].getPartStructure({
+                                        		$expand: exp /* STRING {"dataShape":""} */ ,
+                                        		ID: article_id /* STRING [Required] {"dataShape":""} */ ,
+                                        		NavigationCriteria: {} /* STRING {"dataShape":""} */ ,
+                                        		$select: selectComponents /* STRING {"dataShape":""} */
+                                        	});
+                                        
+                                        	if (structure) {
+                                        		fillDataRecursively(structure);
+                                        	}
+                                        	logger.info(FN + "Structure loaded successfully");
+                                        
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        
+                                        function fillDataRecursively(jsonInput) {
+                                        	let jsonPart = jsonInput.Part;
+                                        	let jsonTraces = jsonPart.Traces;
+                                        	let innerComponents = jsonInput.Components;
+                                        	// PTC.Resource.App.StructuredDataShape entry object
+                                        	let newEntry = new Object();
+                                        	newEntry.type = jsonPart.ObjectType; // STRING
+                                        	newEntry.version = jsonPart.Version; // STRING
+                                        	newEntry.parentId = jsonInput.PVParentTreeId; // STRING
+                                        	newEntry.defaultUnit = jsonPart.DefaultUnit.Value; // STRING
+                                        	newEntry.number = jsonInput.PartNumber; // STRING
+                                        	newEntry.name = jsonInput.PartName; // STRING
+                                        	newEntry.objectId = jsonPart.VersionID; // STRING
+                                        	newEntry.hasChildren = innerComponents !== undefined && innerComponents.length > 0; // BOOLEAN	
+                                        	let icon;
+                                        	if (newEntry.type == "IKEA Part") {
+                                        		icon = "<img style=\"cursor: pointer; vertical-align:middle; height:24px; width:24px; padding-left:5px;padding-right:7px;\" src='/Thingworx/MediaEntities/IK.PartIcon.Media')\">";
+                                        	} else if (newEntry.type == "Material") {
+                                        		icon = "<img style=\"cursor: pointer; vertical-align:middle; height:24px; width:24px; padding-left:5px;padding-right:7px;\" src='/Thingworx/MediaEntities/IK.MaterialIcon.Media')\">";
+                                        	} else if (newEntry.type == "Appearance") {
+                                        		icon = "<img style=\"cursor: pointer; vertical-align:middle; height:24px; width:24px; padding-left:5px;padding-right:7px;\" src='/Thingworx/MediaEntities/IK.AppearanceIcon.Media')\">";
+                                        	}
+                                        	newEntry.objectHTML = newEntry.type == "Item Structure" ? ("<b>" + newEntry.number + " - " + newEntry.name + "</b>") : (icon + newEntry.number + " - " + newEntry.name); // STRING
+                                        	newEntry.treeId = jsonInput.PVTreeId; // STRING
+                                        	let requirementsToFetch = [];
+                                        	let traces = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "GenericStringList"
+                                        	});
+                                        	for (let k = 0; k < jsonTraces.length; k++) {
+                                        		let tracesvalue = jsonTraces[k];
+                                        		let uri = tracesvalue.Uri;
+                                        		let reqId = uri.split("=")[1];
+                                        		if (requirementsToFetch.indexOf(reqId) === -1) {
+                                        			requirementsToFetch.push(reqId);
+                                        			traces.AddRow({
+                                        				item: reqId
+                                        			});
+                                        		}
+                                        	}
+                                        	newEntry.traces = traces;
+                                        	result.AddRow(newEntry);
+                                        	for (let c = 0; innerComponents !== undefined && c < innerComponents.length; c++) {
+                                        		fillDataRecursively(innerComponents[c]);
+                                        	}
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDataForAssociation">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getDataForAssociation -> ";
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(CVM.SupplyBOMAssociation.DataShape)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "CVM.SupplyBOMAssociation.DataShape"
+                                        });
+                                        let selectedData = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.ViewBOM.Datashape"
+                                        });
+                                        
+                                        try {
+                                        	if (selectedRows && selectedRows.getRowCount() > 0) {
+                                        		let row = selectedRows.rows[0];
+                                        		result.AddRow({
+                                        			selectedRows: row.selectedRows,
+                                        			objectType: row.objectType
+                                        		});
+                                        	} else if (selectedRow) {
+                                        		let row = selectedRow.split("#_#");
+                                        		selectedData.AddRow({
+                                        			number: row[0],
+                                                    type: row[1],
+                                        			objectId: row[2],			
+                                        			hierarchy: row[3]
+                                        		});
+                                        		result.AddRow({
+                                        			selectedRows: selectedData,
+                                        			objectType: row[1]
+                                        		});
+                                        	}
+                                        	logger.info(FN + "executed successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDataForFilterDropdowns">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + "getDataForFilterDropdowns -> ";
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(CVM.SupplyObjectAssociationFilter.DataShape)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "CVM.SupplyObjectAssociationFilter.DataShape"
+                                        });
+                                        
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(GenericStringList)
+                                        let supplyActor = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "GenericStringList"
+                                        });
+                                        
+                                        let supplyObjectStatus = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "GenericStringList"
+                                        });
+                                        
+                                        let totalSupplyObjs = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	if (supplyObjects && supplyObjects.getRowCount() > 0) {
+                                        		let recommended = supplyObjects.rows[0].recommendedSupplyObjects;
+                                        		let similar = supplyObjects.rows[0].similarSupplyObjects;
+                                        
+                                        		let params = {
+                                        			t1: recommended /* INFOTABLE */ ,
+                                        			t2: similar /* INFOTABLE */
+                                        		};
+                                        		let supplyActors = [];
+                                        		let status = [];
+                                        		totalSupplyObjs = Resources["InfoTableFunctions"].Union(params);
+                                        		for (let i = 0; i < totalSupplyObjs.getRowCount() > 0; i++) {
+                                        			let supplyObj = totalSupplyObjs.rows[i];
+                                        			if (supplyActors.indexOf(supplyObj.legal_name) == -1) {
+                                        				supplyActors.push(supplyObj.legal_name);
+                                        				supplyActor.AddRow({
+                                        					item: supplyObj.legal_name
+                                        				});
+                                        			} 
+                                                    if (status.indexOf(supplyObj.status) == -1) {
+                                        				status.push(supplyObj.status);
+                                        				supplyObjectStatus.AddRow({
+                                        					item: supplyObj.status
+                                        				});
+                                        			}
+                                        		}
+                                        		result.AddRow({
+                                        			supplyActor: supplyActor,
+                                        			supplyObjectStatus: supplyObjectStatus
+                                        		});
+                                        	}
+                                        
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDataForSelectedValues">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getDataForSelectedValues -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.ManageBOM.DataShape"
+                                        });
+                                        
+                                        let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        let dbconnectorthing = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        let associationPendingCount = 0;
+                                        let articleRequirements = {};
+                                        let reqToFetchInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "GenericStringList"
+                                        });
+                                        let articleDetails = [];
+                                        let partAndReq = [];
+                                        let partAndSupplyObject = [];
+                                        try {
+                                        	if (selected_values && selected_values.getRowCount() > 0) {
+                                        		for (let i = 0; i < selected_values.getRowCount(); i++) {
+                                        			partAndReq = [];
+                                        			associationPendingCount = 0;
+                                        			partAndSupplyObject = [];
+                                        			let id = selected_values.rows[i].key;
+                                        
+                                        			const expandPart = "Part($select=ID,ObjectType;$expand=Traces($select=Uri),ConfigurableRevisionLinkUp($expand=Parent($select=Number)))";
+                                        			const selectComponents = "PartId,PartName,PartNumber";
+                                        			const exp = expandPart + ",Components($select=" + selectComponents + ";$expand=" + expandPart + ";$levels=5)";
+                                        			// result: JSON
+                                        			let structure = Things[odataconnectorthing].getPartStructure({
+                                        				$expand: exp /* STRING {"dataShape":""} */ ,
+                                        				ID: id /* STRING [Required] {"dataShape":""} */ ,
+                                        				NavigationCriteria: {} /* STRING {"dataShape":""} */ ,
+                                        				$select: selectComponents /* STRING {"dataShape":""} */
+                                        			});
+                                        			articleRequirements[structure.PartNumber] = [];
+                                        			let hierarchy = "";
+                                        			if (structure) {
+                                        				countDataRecursively(structure, hierarchy);
+                                        			}
+                                        			articleDetails.push({
+                                        				article_number: structure.PartNumber,
+                                        				article_name: structure.PartNumber + " - " + structure.PartName,
+                                        				association_pending: associationPendingCount,
+                                        				partAndReq: partAndReq,
+                                        				article_oid: id
+                                        			});
+                                        		}
+                                        		const reqResourceProviderThing = Things[Things["IK.CVM.Configuration"].getRequirementResourceProvider()];
+                                        		const testResourceProviderThing = Things[Things["IK.CVM.Configuration"].getTestResourceProvider()];
+                                        		let requirementsData;
+                                        		let filters = [];
+                                        		let verifiedTests;
+                                        		if (reqToFetchInfoTable.getRowCount() > 0) {
+                                        			reqToFetchInfoTable.rows.toArray().forEach(row => {
+                                        				filters.push({
+                                        					"fieldName": "LiveItemID",
+                                        					"type": "EQ",
+                                        					"value": row.item
+                                        				});
+                                        			});
+                                        
+                                        			let query = {
+                                        				"filters": {
+                                        					"type": "OR",
+                                        					"filters": filters
+                                        				}
+                                        			};
+                                        			requirementsData = reqResourceProviderThing.getObjects({
+                                        				query: query
+                                        			});
+                                        
+                                        			let distinctVerificationToFetch = [];
+                                        			let distinctVerificationToFetchInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        				infoTableName: "InfoTable",
+                                        				dataShapeName: "GenericStringList"
+                                        			});
+                                        			for (let j = 0; j < requirementsData.getRowCount(); j++) {
+                                        				let req = requirementsData.rows[j];
+                                        				let verifiedBy = req.VerifiedBy;
+                                        				if (verifiedBy && verifiedBy.getRowCount() > 0) {
+                                        					if (verifiedBy && req.VerificationDataformat && verifiedBy.getRowCount() == req.VerificationDataformat.getRowCount()) {
+                                        						for (let v = 0; v < verifiedBy.rows.length; v++) {
+                                        							let id_rvs_verified = verifiedBy.rows[v].ID;
+                                        							if (distinctVerificationToFetch.indexOf(id_rvs_verified) === -1) {
+                                        								distinctVerificationToFetch.push(id_rvs_verified);
+                                        								distinctVerificationToFetchInfoTable.AddRow({
+                                        									item: id_rvs_verified
+                                        								});
+                                        							}
+                                        						}
+                                        					}
+                                        				}
+                                        			}
+                                        
+                                        			if (distinctVerificationToFetchInfoTable.getRowCount() > 0) {
+                                        				verifiedTests = testResourceProviderThing.getObjectsByIds({
+                                        					ids: distinctVerificationToFetchInfoTable /* INFOTABLE {"dataShape":"GenericStringList"} */
+                                        				});
+                                        			}
+                                        		}
+                                        		for (let i = 0; i < articleDetails.length; i++) {
+                                        			let articleDetail = articleDetails[i];
+                                        			let reqDetails = articleDetail.partAndReq;
+                                        			let filterReportingObjJson = [];
+                                        			let tasksCount = 0;
+                                        			let requirementPending = 0;
+                                        			if (reqDetails && reqDetails.length > 0) {
+                                        				for (let r = 0; r < reqDetails.length; r++) {
+                                        					let reqDetail = reqDetails[r];
+                                        					let requirements = reqDetail.requirements;
+                                        					if (requirements) {
+                                        						for (let s = 0; s < requirements.length; s++) {
+                                        							let rvsId = requirements[s];
+                                        							let sp;
+                                        							let liveIdWithVersions = rvsId.split("-");
+                                        							if (liveIdWithVersions.length == 1) {
+                                        								//liveItem
+                                        								sp = Resources["InfoTableFunctions"].EQFilter({
+                                        									fieldName: "ID" /* STRING */ ,
+                                        									isCaseSensitive: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        									t: requirementsData /* INFOTABLE */ ,
+                                        									value: rvsId /* STRING */
+                                        								});
+                                        							} else {
+                                        								//versioned item
+                                        								let liveItemId = liveIdWithVersions[0];
+                                        								let versionId = liveIdWithVersions[1].split(".");
+                                        								let majorVersion = versionId[0];
+                                        								let minorVersion = versionId[1];
+                                        								let query = {
+                                        									"filters": {
+                                        										"filters": [{
+                                        											fieldName: "LiveItemID",
+                                        											value: liveItemId,
+                                        											type: "EQ"
+                                        										}, {
+                                        											fieldName: "MajorVersionID",
+                                        											value: majorVersion,
+                                        											type: "EQ"
+                                        										}, {
+                                        											fieldName: "MinorVersionID",
+                                        											value: minorVersion,
+                                        											type: "EQ"
+                                        										}, {
+                                        											fieldName: "DocumentID",
+                                        											type: "MissingValue"
+                                        										}],
+                                        										"type": "AND"
+                                        									}
+                                        								};
+                                        								params = {
+                                        									t: requirementsData /* INFOTABLE */ ,
+                                        									query: query /* QUERY */
+                                        								};
+                                        								// result: INFOTABLE
+                                        								sp = Resources["InfoTableFunctions"].Query(params);
+                                        							}
+                                        							let verifiedBy = sp.VerifiedBy;
+                                        							if (verifiedBy && verifiedBy.getRowCount() > 0) {
+                                        								if (verifiedBy && sp.VerificationDataformat && verifiedBy.getRowCount() == sp.VerificationDataformat.getRowCount()) {
+                                        									for (let v = 0; v < verifiedBy.rows.length; v++) {
+                                        										let tests = Resources["InfoTableFunctions"].EQFilter({
+                                        											fieldName: "ID" /* STRING */ ,
+                                        											isCaseSensitive: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        											t: verifiedTests /* INFOTABLE */ ,
+                                        											value: verifiedBy.rows[v].ID /* STRING */
+                                        										});
+                                        										let test = tests.rows[0];
+                                        										let id_rvs_verified = test.ID == test.LiveItemID ? test.ID : test.LiveItemID + "-" + test.MajorVersionID + "." + test.MinorVersionID;
+                                        										tasksCount++;
+                                        										filterReportingObjJson.push("SupplyObjectID:" + reqDetail.supplyObjectNumber + ";ComponentID:" + reqDetail.partNumber + ";RequirementID:" + rvsId + ";VerificationMethodID:" + id_rvs_verified + ";SupplierDetails:" + project_number);
+                                        									}
+                                        								}
+                                        							} else {
+                                        								tasksCount++;
+                                        								filterReportingObjJson.push("SupplyObjectID:" + reqDetail.supplyObjectNumber + ";ComponentID:" + reqDetail.partNumber + ";RequirementID:" + rvsId + ";VerificationMethodID:Not_Defined;SupplierDetails:" + project_number);
+                                        							}
+                                        						}
+                                        					}
+                                        				}
+                                        				let p = {
+                                        					"criteriaToMatch": filterReportingObjJson
+                                        				};
+                                        				let reportingObjJson = Things[odataconnectorthing].getPostReportingObjects({
+                                        					criteriaToMatch: p /* STRING [Required] {"dataShape":""} */ ,
+                                        					$select: "VerificationStatus"
+                                        				});
+                                        				let verifiedTasksCount = 0;
+                                        				for (let i = 0; i < reportingObjJson.value.length; i++) {
+                                        					if (reportingObjJson.value[i].VerificationStatus == "Verified") {
+                                        						verifiedTasksCount++;
+                                        					}
+                                        				}
+                                        				requirementPending = tasksCount - verifiedTasksCount;
+                                        
+                                        			} else {
+                                        				requirementPending = tasksCount;
+                                        			}
+                                        			let newEntry = new Object();
+                                        			newEntry.article_number = articleDetail.article_number;
+                                        			newEntry.article_name = articleDetail.article_name;
+                                        			newEntry.article_id = articleDetail.article_oid;
+                                        			newEntry.association_pending = "<a style=\"color:#0058A3;cursor:pointer;\" onclick=\"viewBOMNavigation('root_mashupcontainer-17_ptcsbutton-34','" + newEntry.article_number + "#_#" + newEntry.article_id + "#_#" + project_number + "#_#" + true + "')\">" + articleDetail.association_pending + "</a>";
+                                        			newEntry.requirement_pending = "<a style=\"color:#0058A3;cursor:pointer;\">" + requirementPending + "</a>";
+                                        			newEntry.action = "<img style=\"cursor: pointer; padding-right:10px; \" height=\"24px !important\" width=\"24px !important\" src='/Thingworx/MediaEntities/IK.ViewIcon.Media' onclick=\"viewBOMNavigation('root_mashupcontainer-17_ptcsbutton-34','" + newEntry.article_number + "#_#" + newEntry.article_id + "#_#" + project_number + "')\" /><img style=\"cursor: pointer;\" height=\"24px !important\" width=\"24px !important\" src='/Thingworx/MediaEntities/IK.3DCubeIcon.Media' onclick=\"reviewBOMNavigation()\" />";
+                                        			result.AddRow(newEntry);
+                                        		}
+                                        	}
+                                        	logger.info(FN + "executed for [" + project_number + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        
+                                        function countDataRecursively(jsonInput, hierarchy) {
+                                        	hierarchy = hierarchy && hierarchy.length > 0 ? hierarchy + "-" + jsonInput.PartNumber : jsonInput.PartNumber;
+                                        	const jsonPart = jsonInput.Part;
+                                        	const jsonTraces = jsonPart.Traces;
+                                        	const innerComponents = jsonInput.Components;
+                                        	let requirements = [];
+                                        
+                                        	let link = Things[dbconnectorthing].getSupplyBOMAssocaitionByHierarchy({
+                                        		hierarchy: hierarchy,
+                                        		supplier_number: project_number
+                                        	});
+                                        	if (!link || link.getRowCount() == 0) {
+                                        		if (jsonPart.ObjectType !== "Item Structure") {
+                                        			associationPendingCount++;
+                                        		}
+                                        	} else {
+                                        		let partNumber = jsonInput.PartNumber;
+                                        		let supplyObjectNumber = link.rows[0].SUPPLY_OBJECT_NUMBER;
+                                        		if (partAndSupplyObject.indexOf(partNumber + supplyObjectNumber) == -1) {
+                                        			partAndSupplyObject.push(partNumber + supplyObjectNumber);
+                                        			let obj = {
+                                        				partNumber: partNumber,
+                                        				supplyObjectNumber: supplyObjectNumber
+                                        			};
+                                        			let requirements = [];
+                                        			if (jsonTraces && jsonTraces.length > 0) {
+                                        				for (let k = 0; k < jsonTraces.length; k++) {
+                                        					let tracesvalue = jsonTraces[k];
+                                        					let uri = tracesvalue.Uri;
+                                        					let reqId = uri.split("=")[1];
+                                        					if (requirements.indexOf(reqId) === -1) {
+                                        						requirements.push(reqId);
+                                        						reqToFetchInfoTable.AddRow({
+                                        							item: reqId.split("-")[0]
+                                        						});
+                                        					}
+                                        				}
+                                        				obj.requirements = requirements;
+                                        			}
+                                        			partAndReq.push(obj);
+                                        		}
+                                        	}
+                                        	for (let c = 0; innerComponents !== undefined && c < innerComponents.length; c++) {
+                                        		countDataRecursively(innerComponents[c], hierarchy);
+                                        	}
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSelectedSupplyObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getSelectedSupplyObjects -> ";
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(IK.SupplyObject.DataShape)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        let totalSupplyObjects = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	if ((recommendedSupplyObjects && recommendedSupplyObjects.getRowCount() > 0) && (!similarSupplyObjects || similarSupplyObjects.getRowCount() == 0)) {
+                                        		totalSupplyObjects = recommendedSupplyObjects;
+                                        	} else if ((!recommendedSupplyObjects || recommendedSupplyObjects.getRowCount() == 0) && (similarSupplyObjects && similarSupplyObjects.getRowCount() > 0)) {
+                                        		totalSupplyObjects = similarSupplyObjects;
+                                        	} else if ((recommendedSupplyObjects && recommendedSupplyObjects.getRowCount() > 0) && (similarSupplyObjects && similarSupplyObjects.getRowCount() > 0)) {
+                                        		//Union of recommended and similar supply objects
+                                        		let params1 = {
+                                        			t1: recommendedSupplyObjects /* INFOTABLE */ ,
+                                        			t2: similarSupplyObjects /* INFOTABLE */
+                                        		};
+                                        		totalSupplyObjects = Resources["InfoTableFunctions"].Union(params1);
+                                        	}
+                                        
+                                        	//Filtering only selected supply objects
+                                        	let params2 = {
+                                        		fieldName: "is_selected" /* STRING */ ,
+                                        		isCaseSensitive: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        		t: totalSupplyObjects /* INFOTABLE */ ,
+                                        		value: true /* STRING */
+                                        	};
+                                        	result = Resources["InfoTableFunctions"].EQFilter(params2);
+                                        
+                                        	logger.info(FN + "executed successfully");
+                                        
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getStructure">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getStructure -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.ViewBOM.Datashape"
+                                        });
+                                        let dbconnectorthing = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        let dropbtnStyle = "<style> .dropbtn {cursor: pointer;height:22px;width:22px;} .dropdown {max-height:22px; position: relative;display: inline-block;} .dropdown-content {left:110%; border-radius:4px; display: none;position: absolute;background-color: #ffffff; min-width: 150px;overflow: auto;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}.dropdown-content a {color: black;font-size:12px; padding: 5px 5px;text-decoration: none;display: block;}.dropdown a:hover {background-color: #ddd;}.show {display: block;}</style>";
+                                        
+                                        try {
+                                        	let arr = InputForViewBOM.split("#_#");
+                                        	let article_number = arr[0];
+                                        	let article_oid = arr[1];
+                                        	let project_number = arr[2];
+                                        	if (article_oid) {
+                                        		var odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        		let expandPart = "Part($select=ObjectType,ID,MaterialClassification/ClfNodeHierarchyDisplayName;$expand=ConfigurableRevisionLinkUp($expand=Parent($select=Name,Number,ID,ObjectType)))";
+                                        		let selectComponents = "PartId,PartName,PartNumber,PVTreeId,PVParentTreeId";
+                                        		let partUse = ""; // ,PartUse($select=Quantity)
+                                        		let exp = expandPart + ",Components($select=" + selectComponents + ";$expand=" + expandPart + partUse + ";$levels=max)";
+                                        		// result: JSON
+                                        		let structure = Things[odataconnectorthing].getPartStructure({
+                                        			$expand: exp /* STRING {"dataShape":""} */ ,
+                                        			ID: article_oid /* STRING [Required] {"dataShape":""} */ ,
+                                        			NavigationCriteria: {} /* STRING {"dataShape":""} */ ,
+                                        			$select: selectComponents /* STRING {"dataShape":""} */
+                                        		});
+                                        		let hierarchy = "";
+                                        		if (structure) {
+                                        			fillDataRecursively(structure, article_number, hierarchy, project_number);
+                                        		}
+                                        	}
+                                        	logger.info(FN + "service executed for [" + article_number + "]");
+                                        
+                                        	if (incomp_assoc === true) {
+                                        		var incompIds = [];
+                                        		var incompHierarchy = [];
+                                        		var itemStructureNumber;
+                                        		//finding all rows without association
+                                        		result.rows.toArray().forEach(row => {
+                                        			let assSuppObjct = row.associatedSupplyObject;
+                                        			if (row.type != "Item Structure") {
+                                        				if (row.hasSupplyObject == false) {
+                                                            row.connectionState = true;
+                                                            incompIds.push(row.treeId);
+                                        					incompHierarchy.push(row.treeId);
+                                        				}
+                                        			} else {
+                                        				itemStructureNumber = row.treeId;
+                                        			}
+                                        		});
+                                        		// finding all their children  
+                                        		incompIds.forEach(node => {
+                                        			result.rows.toArray().forEach(row => {
+                                        				if (row.treeId.match(node)) {
+                                        					incompIds.push(row.treeId);
+                                        				}
+                                        			});
+                                        		});
+                                        		// finding all their parents, we split by '/' and join one by one to get all parents
+                                        		incompHierarchy.forEach(node => {
+                                        			let parent = "";
+                                        			incompParent = node.split('/');
+                                        			incompParent.forEach(node => {
+                                        				if (parent != "") node = '/' + node;
+                                        				parent = parent + node;
+                                        				incompIds.push(parent);
+                                        			});
+                                        		});
+                                        		//adding item structure node incase all nodes are associated
+                                        		incompIds.push(itemStructureNumber);
+                                        		// removing duplicates
+                                        		incompIds = incompIds.filter(
+                                        			function onlyUnique(value, index, array) {
+                                        				return array.indexOf(value) === index;
+                                        			}
+                                        		);
+                                        		var query = {
+                                        			"filters": {
+                                        				"type": "IN",
+                                        				"fieldName": "treeId",
+                                        				"values": incompIds
+                                        			}
+                                        		};
+                                        		let params = {
+                                        			t: result /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        		// result: INFOTABLE
+                                        		result = Resources["InfoTableFunctions"].Query(params);
+                                        		logger.info(FN + "service executed for [" + article_number + "] for associated supply objects");
+                                        	}
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        
+                                        function fillDataRecursively(jsonInput, article_number, hierarchy, project_number) {
+                                        	hierarchy = hierarchy && hierarchy.length > 0 ? hierarchy + "-" + jsonInput.PartNumber : jsonInput.PartNumber;
+                                        	let jsonPart = jsonInput.Part;
+                                        	let innerComponents = jsonInput.Components;
+                                        	let newEntry = new Object();
+                                        	newEntry.number = jsonInput.PartNumber; // STRING
+                                        	newEntry.name = jsonInput.PartName; // STRING
+                                        	newEntry.objectId = jsonPart.ID; // STRING
+                                        	newEntry.hasChildren = innerComponents !== undefined && innerComponents.length > 0; // BOOLEAN
+                                        	newEntry.treeId = jsonInput.PVTreeId ? jsonInput.PVTreeId.replace("/", article_number) : jsonInput.PVTreeId;
+                                        //    newEntry.treeId = jsonInput.PVTreeId;
+                                        	newEntry.parentId = jsonInput.PVParentTreeId ? jsonInput.PVParentTreeId.replace("/", article_number) : jsonInput.PVParentTreeId; // STRING
+                                        //    newEntry.parentId = jsonInput.PVParentTreeId;
+                                        	newEntry.isSelected = false;
+                                        	newEntry.type = jsonPart.ObjectType; // STRING
+                                        	newEntry.hierarchy = hierarchy;
+                                            let material_subtype = "";
+                                        	if (jsonPart.MaterialClassification) {
+                                        		let materialHierarchy = jsonPart.MaterialClassification.ClfNodeHierarchyDisplayName.split(" > ");
+                                        		material_subtype = materialHierarchy[materialHierarchy.length - 1];
+                                        	}
+                                            newEntry.materialSubType = material_subtype;
+                                            let childCount = ((hierarchy.split("-")).length); // To calculate the width of the ikea objects column in html rendering --- 18px is for the initial empty image in the tree grid for each child level
+                                        	let icon;
+                                            let tooltipStyleItemStructure = "<style>.tooltip {padding-left:7px; text-overflow:ellipsis; overflow:hidden; width:calc(100% - 18px - 7px); height:22px; display:inline-block;}.tooltip .tooltiptext { visibility: hidden; background-color: #111111; color: #f5f5f5; text-align: center; border-radius: 4px; padding: 5px 10px; position: absolute; z-index: 1; }.tooltip:hover .tooltiptext { visibility: visible; font: normal normal normal 12px/18px Noto IKEA Latin;}</style>";
+                                            let tooltipStyleObjects = "<style>.tooltip1 {text-overflow:ellipsis; overflow:hidden; height:22px;display:inline-block;}.tooltip1 .tooltiptext1 { visibility: hidden; background-color: #111111; color: #f5f5f5; text-align: center; border-radius: 4px; padding: 5px 10px; position: absolute; z-index: 1; }.tooltip1:hover .tooltiptext1 { visibility: visible; font: normal normal normal 12px/18px Noto IKEA Latin;}</style>";
+                                        	if (newEntry.type == "IKEA Part") {
+                                        		icon = "<img style=\"display:inline-block; cursor: pointer; vertical-align:middle; height:24px; width:36px; padding-left:5px;padding-right:7px;\" src='/Thingworx/MediaEntities/IK.PartIcon.Media')\">";
+                                        	} else if (newEntry.type == "Material") {
+                                        		icon = "<img style=\"display:inline-block; cursor: pointer; vertical-align:middle; height:24px; width:36px; padding-left:5px;padding-right:7px;\" src='/Thingworx/MediaEntities/IK.MaterialIcon.Media')\">";
+                                        	} else if (newEntry.type == "Appearance") {
+                                        		icon = "<img style=\"display:inline-block; cursor: pointer; vertical-align:middle; height:24px; width:36px; padding-left:5px;padding-right:7px;\" src='/Thingworx/MediaEntities/IK.AppearanceIcon.Media')\">";
+                                        	}
+                                        	if (article_number == jsonInput.PartNumber) {
+                                        //        newEntry.objectHTML = "<b>"+newEntry.number + " - " +newEntry.name+"</b>";
+                                                newEntry.objectHTML = tooltipStyleItemStructure + "<div class=\"tooltip\"><b>" + newEntry.number + "  -  " + newEntry.name +"</b><div class=\"tooltiptext\">"+newEntry.number + " - "+newEntry.name+"</div></div>"; // STRING  
+                                        
+                                        	} else {
+                                        //        newEntry.objectHTML = icon + newEntry.number + " - " +newEntry.name;
+                                        		newEntry.objectHTML = tooltipStyleObjects + "<div class=\"tooltip1\" style=\"width:calc(100% - "+ ((childCount*18))+"px);\">"+icon+ newEntry.number + "  -  " + newEntry.name+"<div class=\"tooltiptext1\">"+newEntry.number + " - "+newEntry.name+"</div></div>"; // STRING
+                                                
+                                        
+                                        	}
+                                            let associateParam  = newEntry.number + "#_#"+ newEntry.type+"#_#"+ newEntry.objectId +"#_#"+newEntry.hierarchy;
+                                            let closeIcon = "<img style=\"cursor: pointer; margin-right:10px;  \" height=\"24px !important\" width=\"24px !important\" src='/Thingworx/MediaEntities/IKEA.Crosscloseicon' onclick=\"closeViewBOMMenu()\" />";
+                                        	newEntry.menu = dropbtnStyle + "<div class=\"dropdown\"><img src='/Thingworx/MediaEntities/IK.ThreeDotsMenuIcon.Media' onclick=\"openViewBOMMenu('" + newEntry.treeId + "')\" class=\"dropbtn\" /><div id=\'" + newEntry.treeId + "' class=\"dropdown-content\">"+closeIcon+"<a onclick=\"associateSupplyObjectNavigation('root_mashupcontainer-17_ptcsbutton-19','" + associateParam+ "')\"> Associate supply object</a><a> Add draft supply object</a></div></div>";
+                                        	newEntry.sir = "<img style=\"cursor: pointer; padding-right:10px; \" height=\"24px !important\" width=\"24px !important\" src='/Thingworx/MediaEntities/IK.NoteIcon.Media' />";
+                                        	
+                                            let subRowStyle = "<style>.tooltip2 {text-overflow:ellipsis; overflow:hidden;}.tooltip2 .tooltiptext2 { visibility: hidden; background-color: #111111; color: #f5f5f5; text-align: center; border-radius: 4px; padding: 5px 10px; position: absolute; z-index: 1;}.tooltip2:hover .tooltiptext2 { visibility: visible; font: normal normal normal 12px/18px Noto IKEA Latin;}</style>";
+                                        	let menu = "";
+                                        	let linkCount = jsonPart.ConfigurableRevisionLinkUp.length;
+                                        	let linksByHierarchy = Things[dbconnectorthing].getSupplyBOMAssocaitionByHierarchy({
+                                        		hierarchy: hierarchy,
+                                        		supplier_number: project_number
+                                        	});
+                                            newEntry.hasSupplyObject = (linksByHierarchy.getRowCount()>0)?true:false;
+                                            let supplyObjects = subRowStyle;
+                                            for (let i = 0; i < linkCount; i++) {
+                                        		let obj = jsonPart.ConfigurableRevisionLinkUp[i];
+                                        		if (obj) {
+                                        			let link = Things[dbconnectorthing].getSupplyBOMAssociationByHierarchyAndSupplyObject({
+                                        				hierarchy: hierarchy,
+                                        				supply_object_number: obj.Parent.Number,
+                                        				supplier_number: project_number
+                                        			});
+                                                    let subRowHeight = "";
+                                        			if (link && link.getRowCount() > 0) {
+                                        				let uid = generateGUID();
+                                        				if (linksByHierarchy.getRowCount() > 1) {
+                                        					if (i == 0) {
+                                        						subRowHeight = "min-height:22px; padding-bottom:20px";
+                                        					} else if (i == linkCount - 1) {
+                                        						subRowHeight = "min-height:22px; padding-top:20px";
+                                        					} else {
+                                        						subRowHeight = "min-height:22px; padding :20px 0px 20px 0px;";
+                                        					}
+                                        				} else {
+                                        					subRowHeight = "min-height:22px;";
+                                        				}
+                                        				supplyObjects = supplyObjects + "<div class=\"tooltip2\" style=\""+subRowHeight+"\">" + obj.Parent.Name + "<div class=\"tooltiptext2\">"+obj.Parent.Name+"</div></div>";
+                                        				menu = menu + "<div class=\"dropdown\" style=\"" + subRowHeight + "\"><img src='/Thingworx/MediaEntities/IK.ThreeDotsMenuIcon.Media' onclick=\"openViewBOMMenu('" + newEntry.treeId + uid + "')\" class=\"dropbtn\" /><div id=\'" + newEntry.treeId + uid + "' class=\"dropdown-content\">"+closeIcon+"<a> Manage supply object</a><a> Completed verifications</a><a> Pending requirements</a><a> Connection log</a><a style=\"color:red;\"> Disconnect association </a></div></div>" + "</br>";
+                                        			}
+                                        		}
+                                        	}
+                                        	newEntry.associatedSupplyObject = supplyObjects;
+                                        	newEntry.menu = (menu && menu.length > 0) ? (dropbtnStyle + menu) : newEntry.menu;
+                                        	result.AddRow(newEntry);
+                                        	for (let c = 0; innerComponents !== undefined && c < innerComponents.length; c++) {
+                                        		fillDataRecursively(innerComponents[c], article_number, hierarchy, project_number);
+                                        	}
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSupplyActorNamesForFilter">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + "getSupplyActorNamesForFilter -> ";
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(GenericStringList)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "GenericStringList"
+                                        });
+                                        
+                                        let totalSupplyObjs = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	if (supplyObjects && supplyObjects.getRowCount() > 0) {
+                                        		let recommended = supplyObjects.rows[0].recommendedSupplyObjects;
+                                        		let similar = supplyObjects.rows[0].similarSupplyObjects;
+                                        
+                                        		let params = {
+                                        			t1: recommended /* INFOTABLE */ ,
+                                        			t2: similar /* INFOTABLE */
+                                        		};
+                                        		let supplyActors = [];
+                                        		totalSupplyObjs = Resources["InfoTableFunctions"].Union(params);
+                                        		for (let i = 0; i < totalSupplyObjs.getRowCount() > 0; i++) {
+                                        			let supplyObj = totalSupplyObjs.rows[i];
+                                        			if (supplyActors.indexOf(supplyObj.legal_name) == -1) {
+                                        				supplyActors.push(supplyObj.legal_name);
+                                        				result.AddRow({
+                                        					item: supplyObj.legal_name
+                                        				});
+                                        			}
+                                        		}
+                                        	}
+                                        
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSupplyObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getSupplyObjects -> ";
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(CVM.SupplyObjectsList.DataShape)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "CVM.SupplyObjectsList.DataShape"
+                                        });
+                                        let allSupplyObjects = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        let recommendedSupplyObjects = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        let similarSupplyObjects = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	let filter = "";
+                                        	if (objectType == "IKEA Part") {
+                                        		filter = "ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDObjectType' and d/DisplayValue ne 'Material') and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDObjectType' and d/DisplayValue ne 'Appearance')";
+                                        	} else if (objectType == "Material") {
+                                        		filter = "ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDObjectType' and d/DisplayValue ne 'IKEA Part') and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDObjectType' and d/DisplayValue ne 'Appearance')";
+                                        	} else if (objectType == "Appearance") {
+                                        		filter = "ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDObjectType' and d/DisplayValue ne 'IKEA Part') and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDObjectType' and d/DisplayValue ne 'Material')";
+                                        	}
+                                        
+                                        	filter = filter + " and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDSupplierDetails' and d/DisplayValue eq '" + projectNumber + "') and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDObjectClass' and d/DisplayValue eq 'Trade good')";
+                                        	let odataConnector = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        	let supplyObjectsJson = Things[odataConnector].getClassificationObjects({
+                                        		$skip: undefined /* INTEGER {"dataShape":""} */ ,
+                                        		ClfNodeId: "GDSupplyObject" /* STRING [Required] {"dataShape":""} */ ,
+                                        		$top: undefined /* INTEGER {"dataShape":""} */ ,
+                                        		$filter: filter /* STRING {"dataShape":""} */ ,
+                                        		$count: undefined /* BOOLEAN {"dataShape":""} */ ,
+                                        		$select: undefined /* STRING {"dataShape":""} */
+                                        	});
+                                        	let supplyObjects = supplyObjectsJson.value;
+                                        	for (let i = 0; i < supplyObjects.length; i++) {
+                                        		let supplyObject = supplyObjects[i];
+                                        		let objectType = "";
+                                        		let status = "";
+                                        		let supplyActor = "";
+                                        		let classificationAttributes = supplyObject.ClassificationAttributes;
+                                        		for (let c = 0; c < classificationAttributes.length; c++) {
+                                        			if (classificationAttributes[c].InternalName == "com.ikea.GDObjectType") {
+                                        				objectType = classificationAttributes[c].Value;
+                                        			}
+                                        			if (classificationAttributes[c].InternalName == "com.ikea.GDLegalName") {
+                                        				supplyActor = classificationAttributes[c].Value;
+                                        			}
+                                        			if (classificationAttributes[c].InternalName == "com.ikea.GDStatus") {
+                                        				status = classificationAttributes[c].Value;
+                                        			}
+                                        		}
+                                        		let connectedArticles = 0;
+                                        		let lastModifiedTime;
+                                        		if (objectType) {
+                                        			let dbConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        			let connectedArticle = Things[dbConnector].getConnectedArticleCountBySupplyObject({
+                                        				supplyObjectNumber: supplyObject.Number
+                                        			});
+                                        			if (connectedArticle && connectedArticle.getRowCount() > 0) {
+                                        				connectedArticles = connectedArticle.getRowCount();
+                                        				lastModifiedTime = connectedArticle.rows[0].CREATED_TIMESTAMP;
+                                        			}
+                                        		}
+                                        		allSupplyObjects.AddRow({
+                                        			name: supplyObject.Name,
+                                        			number: supplyObject.Number,
+                                        			display_name: supplyObject.Number + " - " + supplyObject.Name,
+                                        			legal_name: supplyActor,
+                                        			status: status,
+                                        			connected_articles: connectedArticles,
+                                        			connected_articles_html: "<a style=\"color:#0058A3;\">" + connectedArticles + "</a>",
+                                        			last_modified: lastModifiedTime
+                                        		});
+                                        	}
+                                        
+                                        	let params = {
+                                        		t: allSupplyObjects /* INFOTABLE */ ,
+                                        		query: {
+                                        			"sorts": [{
+                                        				"fieldName": "connected_articles",
+                                        				"isAscending": false
+                                        			}, {
+                                        				"fieldName": "last_modified",
+                                        				"isAscending": false
+                                        			}]
+                                        		} /* QUERY */
+                                        	};
+                                        
+                                        	// result: INFOTABLE
+                                        	allSupplyObjects = Resources["InfoTableFunctions"].Query(params);
+                                        
+                                        	for (let j = 0; j < allSupplyObjects.getRowCount(); j++) {
+                                        		let row = allSupplyObjects.rows[j];
+                                        		if (j < 5) {
+                                        			recommendedSupplyObjects.AddRow(row);
+                                        		} else {
+                                        			similarSupplyObjects.AddRow(row);
+                                        		}
+                                        	}
+                                        	result.AddRow({
+                                        		recommendedSupplyObjects: recommendedSupplyObjects,
+                                        		similarSupplyObjects: similarSupplyObjects
+                                        	});
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getTraces">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getTraces -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.VerificationAggregated.DataShape",
+                                        });
+                                        
+                                        try {
+                                        	let filters = [];
+                                        	let allTraces = [];
+                                        	let reqResourceProviderThing = Things[Things["IK.CVM.Configuration"].getRequirementResourceProvider()];
+                                        	let requirementsData;
+                                        	let selectedRow = selected_row.rows[0];
+                                        	if (selectedRow.type == "Item Structure") {
+                                        		for (let i = 0; i < bom_structure.getRowCount(); i++) {
+                                        			let row = bom_structure.rows[i];
+                                        			let traces = row.traces;
+                                        			for (let j = 0; j < traces.getRowCount(); j++) {
+                                        				let reqID = traces.rows[j].item + "#_#" + row.number + " - " + row.name;
+                                        				if (allTraces.indexOf(reqID) == -1) {
+                                        					allTraces.push(reqID);
+                                        				}
+                                        				let req = reqID.split("#_#")[0];
+                                        				let id = req.split("-")[0];
+                                        				filters.push({
+                                        					"fieldName": "LiveItemID",
+                                        					"type": "EQ",
+                                        					"value": id
+                                        				});
+                                        			}
+                                        		}
+                                        	} else {
+                                        		let traces = selectedRow.traces;
+                                        		if (traces.getRowCount() > 0) {
+                                        			traces.rows.toArray().forEach(row => {
+                                        				let reqID = row.item + "#_#" + selectedRow.number + " " + selectedRow.name;
+                                        				allTraces.push(reqID);
+                                        				let req = reqID.split("#_#")[0];
+                                        				let id = req.split("-")[0];
+                                        				filters.push({
+                                        					"fieldName": "LiveItemID",
+                                        					"type": "EQ",
+                                        					"value": id
+                                        				});
+                                        			});
+                                        		}
+                                        
+                                        	}
+                                        	let query = {
+                                        		"filters": {
+                                        			"type": "OR",
+                                        			"filters": filters
+                                        		}
+                                        	};
+                                        	if (allTraces.length > 0) {
+                                        		requirementsData = reqResourceProviderThing.getObjects({
+                                        			query: query
+                                        		});
+                                        	}
+                                        	if (requirementsData && requirementsData.getRowCount() > 0) {
+                                        		for (let i = 0; i < allTraces.length; i++) {
+                                        			let req = allTraces[i].split("#_#");
+                                        			let rvsId = req[0];
+                                        			let requirement;
+                                        			let liveIdWithVersions = rvsId.split("-");
+                                                    let liveItem = liveIdWithVersions[0];
+                                        				
+                                        			if (liveIdWithVersions.length == 1) {
+                                        				//liveItem
+                                        				requirement = Resources["InfoTableFunctions"].EQFilter({
+                                        					fieldName: "ID" /* STRING */ ,
+                                        					isCaseSensitive: undefined /* BOOLEAN {"defaultValue":false} */ ,
+                                        					t: requirementsData /* INFOTABLE */ ,
+                                        					value: rvsId /* STRING */
+                                        				});
+                                        			} else {
+                                        				//versioned item
+                                        				let liveItemId = liveIdWithVersions[0];
+                                        				let versionId = liveIdWithVersions[1].split(".");
+                                        				let majorVersion = versionId[0];
+                                        				let minorVersionPart = versionId[1];
+                                        				let minorVersion = minorVersionPart.split("#")[0];
+                                        				let query = {
+                                        					"filters": {
+                                        						"filters": [{
+                                        							fieldName: "LiveItemID",
+                                        							value: liveItemId,
+                                        							type: "EQ"
+                                        						}, {
+                                        							fieldName: "MajorVersionID",
+                                        							value: majorVersion,
+                                        							type: "EQ"
+                                        						}, {
+                                        							fieldName: "MinorVersionID",
+                                        							value: minorVersion,
+                                        							type: "EQ"
+                                        						}, {
+                                        							fieldName: "DocumentID",
+                                        							type: "MissingValue"
+                                        						}],
+                                        						"type": "AND"
+                                        					}
+                                        				};
+                                        				params = {
+                                        					t: requirementsData /* INFOTABLE */ ,
+                                        					query: query /* QUERY */
+                                        				};
+                                        				// result: INFOTABLE
+                                        				requirement = Resources["InfoTableFunctions"].Query(params);
+                                        			}
+                                        
+                                        			let verifiedBy = requirement.VerifiedBy;
+                                        			if (verifiedBy && verifiedBy.getRowCount() > 0) {
+                                        				if (verifiedBy && requirement.VerificationDataformat && verifiedBy.getRowCount() == requirement.VerificationDataformat.getRowCount()) {
+                                        					for (let v = 0; v < verifiedBy.rows.length; v++) {
+                                        						let uid = generateGUID();
+                                        						let newEntry = {};
+                                        						newEntry.uid = uid;
+                                        						newEntry.unique_id = uid;
+                                        						newEntry.applies_to_name = allTraces[i].split("#_#")[1];
+                                        						newEntry.requirement_type = requirement.RequirementType;
+                                        						newEntry.requirement_subtype = requirement.RequirementSubtype && requirement.RequirementSubtype.rows.length > 0 ? requirement.RequirementSubtype.rows[0].get("Requirement Subtype") : "";
+                                        						newEntry.requirement_title = requirement.RequirementTitle;
+                                        						newEntry.requirement_text = requirement.Text;
+                                        						newEntry.requirement_description = "<a style=\"text-decoration: underline;cursor:pointer;\" onClick=\"getRequirementText('" + rvsId + "','root_mashupcontainer-17_navigationfunction-33-popup_ptcsbutton-42')\">" + requirement.RequirementTitle + "</a>";
+                                        						newEntry.verification_data_format = requirement.VerificationDataformat.rows[v].get("Verification Data format");
+                                        						newEntry.id_rvs = rvsId;
+                                                                result.AddRow(newEntry);
+                                        					}
+                                        				}
+                                        
+                                        			} else {
+                                        				let uid = generateGUID();
+                                        				let newEntry = {};
+                                        				newEntry.uid = uid;
+                                        				newEntry.unique_id = uid;
+                                        				newEntry.applies_to_name = allTraces[i].split("#_#")[1];
+                                        				newEntry.requirement_type = requirement.RequirementType;
+                                        				newEntry.requirement_subtype = requirement.RequirementSubtype && requirement.RequirementSubtype.rows.length > 0 ? requirement.RequirementSubtype.rows[0].get("Requirement Subtype") : "";
+                                        				newEntry.requirement_title = requirement.RequirementTitle;
+                                        				newEntry.requirement_text = requirement.Text;
+                                        				newEntry.requirement_description = "<a style=\"text-decoration: underline;cursor:pointer;\" onClick=\"getRequirementText('" + requirement.ID + "','root_mashupcontainer-17_navigationfunction-33-popup_ptcsbutton-42')\">" + requirement.RequirementTitle + "</a>";
+                                        				newEntry.verification_data_format = "No Verification Method Defined";
+                                                        newEntry.id_rvs = rvsId;
+                                        				result.AddRow(newEntry);
+                                        			}
+                                        		}
+                                        	}
+                                        	logger.info(FN + "Requirements loaded successfully");
+                                        //    if(input== "SortData")
+                                        //    {
+                                        //    var querySort =
+                                        //{
+                                        //    "sorts": [
+                                        //        {
+                                        //            "fieldName": "applies_to_name",
+                                        //            "isAscending": true
+                                        //        },
+                                        //        {
+                                        //            "fieldName": "requirement_title",
+                                        //            "isAscending": true
+                                        //        },
+                                        //        {
+                                        //            "fieldName": "requirement_type",
+                                        //            "isAscending": true
+                                        //        },
+                                        //        {
+                                        //            "fieldName": "id_rvs",
+                                        //            "isAscending": true
+                                        //        }
+                                        //    ]
+                                        //};
+                                        //    params = {
+                                        //					t: result /* INFOTABLE */ ,
+                                        //					query: querySort /* QUERY */
+                                        //				};
+                                        //logger.info(FN + "Requirements sorted successfully");
+                                        //    }
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getValuesForViews">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getValuesForViews -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.KeyValue.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	if (selected_view == "Article") {
+                                        		let projectNumber = project_number.replace("_", "/");
+                                        		let databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        		let number = Things[databaseConnector].getIRUsingSupplierId({
+                                        			project_number: projectNumber
+                                        		});
+                                        		let partNumber = "";
+                                        
+                                        		if (number && number.getRowCount() > 0) {
+                                        			for (let i = 0; i < number.getRowCount(); i++) {
+                                        				partNumber += "Number eq '" + number.rows[i].PRODUCTNUMBER + "'";
+                                        				if (i < number.getRowCount() - 1) {
+                                        					partNumber += " or ";
+                                        				}
+                                        			}
+                                        		}
+                                        		let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        		let json = Things[odataconnectorthing].getParts({
+                                        			$filter: partNumber,
+                                        			$select: "Name,Number,ID"
+                                        		});
+                                        
+                                        		if (json !== undefined && json.value !== undefined) {
+                                        			var items = json.value;
+                                        			for (var i = 0; i < items.length; i++) {
+                                        				var item = items[i];
+                                        				result.AddRow({
+                                        					key: item.ID,
+                                        					value: item.Number + "  " + item.Name
+                                        				});
+                                        
+                                        			}
+                                        			logger.info(FN + "Articles fetched successfully for [" + project_number + "]");
+                                        		}
+                                        	}
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getViewable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getViewable -> ";
+                                        var result = "";
+                                        
+                                        try {
+                                        	// result: THINGNAME
+                                        	let swagger = Things["IK.CVM.Configuration"].getWNCSwaggerConnector();
+                                        	// result: JSON
+                                        	var json = Things[swagger].Visualization_Get_Viewable({
+                                        		forceCreoViewPlugin: undefined /* BOOLEAN */ ,
+                                        		navigationCriteria: undefined /* STRING */ ,
+                                        		oid: objectID /* STRING */
+                                        	});
+                                        	if (json !== undefined && json.attributes !== undefined) {
+                                        		var viewableUrl = json.attributes.structure;
+                                        		// result: STRING
+                                        		result = Things[swagger].GetProxyUrl({
+                                        			clientFollowsRedirect: true /* BOOLEAN */ ,
+                                        			isAbsoluteTargetUrl: true /* BOOLEAN */ ,
+                                        			targetUrl: viewableUrl /* STRING */
+                                        		});
+                                        
+                                        	}
+                                        	logger.info(FN + "Image viewed successfully for [" + objectID + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getViews">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getViews -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.KeyValue.DataShape"
+                                        });
+                                        try {
+                                        	result.AddRow({
+                                        		key: "Article",
+                                        		value: "Select article(s)"
+                                        	});
+                                        	result.AddRow({
+                                        		key: "Part",
+                                        		value: "Select part(s)"
+                                        	});
+                                        	result.AddRow({
+                                        		key: "Material",
+                                        		value: "Select material(s)"
+                                        	});
+                                            logger.info( FN + "Views loaded successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="searchSupplyObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " searchSupplyObjects -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "CVM.SupplyObjectsList.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	if (searchText) {
+                                        		let supplyObject = supplyObjects.rows[0];
+                                        		let recommendedSupplyObjects = supplyObject.recommendedSupplyObjects;
+                                        		let similarSupplyObjects = supplyObject.similarSupplyObjects;
+                                        		let query = {
+                                        			"filters": {
+                                        				"filters": [{
+                                        					"type": "LIKE",
+                                        					"fieldName": "display_name",
+                                        					"value": "%" + searchText + "%"
+                                        				}, {
+                                        					"type": "LIKE",
+                                        					"fieldName": "legal_name",
+                                        					"value": "%" + searchText + "%"
+                                        				}],
+                                        				"type": "OR"
+                                        			}
+                                        		};
+                                        		params1 = {
+                                        			t: recommendedSupplyObjects /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        		params2 = {
+                                        			t: similarSupplyObjects /* INFOTABLE */ ,
+                                        			query: query /* QUERY */
+                                        		};
+                                        		recommendedSupplyObjects = Resources["InfoTableFunctions"].Query(params1);
+                                        		similarSupplyObjects = Resources["InfoTableFunctions"].Query(params2);
+                                        		result.AddRow({
+                                        			recommendedSupplyObjects: recommendedSupplyObjects,
+                                        			similarSupplyObjects: similarSupplyObjects
+                                        		});
+                                        	} else {
+                                        		result = supplyObjects;
+                                        	}
+                                        
+                                        	logger.info(FN + "executed successfully");
+                                        
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

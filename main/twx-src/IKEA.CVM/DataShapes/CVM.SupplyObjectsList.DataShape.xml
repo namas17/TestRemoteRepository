@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <DataShapes>
+        <DataShape
+         baseDataShape=""
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="CVM.SupplyObjectsList.DataShape"
+         projectName="IKEA.CVM"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.dataShape="IK.SupplyObject.DataShape"
+                 aspect.isPrimaryKey="false"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="recommendedSupplyObjects"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="IK.SupplyObject.DataShape"
+                 aspect.isPrimaryKey="false"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="similarSupplyObjects"
+                 ordinal="2"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

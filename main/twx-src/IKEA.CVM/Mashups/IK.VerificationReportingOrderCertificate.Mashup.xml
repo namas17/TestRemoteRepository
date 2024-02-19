@@ -1,0 +1,3965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="IK.VerificationReportingOrderCertificate.Mashup"
+         projectName="IKEA.CVM"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.dataShape="IK.VerificationAggregated.DataShape"
+                 aspect.isMandatory="false"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="task_details"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="OUT"
+                 aspect.isMandatory="false"
+                 baseType="BOOLEAN"
+                 description=""
+                 name="taskRequested"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[{
+  "CustomMashupCss": "",
+  "Data": {
+    "Session": {
+      "DataName": "Session",
+      "EntityName": "",
+      "EntityType": "Session",
+      "Id": "session",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "SessionInterface",
+          "Name": "GetGlobalSessionValues",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetGlobalSessionValues"
+        }
+      ]
+    },
+    "Things_IK.SupplierTaskList.Thing": {
+      "DataName": "Things_IK.SupplierTaskList.Thing",
+      "EntityName": "IK.SupplierTaskList.Thing",
+      "EntityType": "Things",
+      "Id": "7a31207d-ff8d-488e-bc03-a76c5a3ab2a4",
+      "RefreshInterval": 0,
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "32edd75e-c334-4a41-8567-99f62c33ce83",
+          "Name": "getTasks",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "getTasks"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "e684f08c-018e-48c9-94fe-330b87ba1879",
+          "Name": "getSelectedRowsFromGrid",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "getSelectedRowsFromGrid"
+        }
+      ]
+    },
+    "UserExtensions": {
+      "DataName": "UserExtensions",
+      "EntityName": "",
+      "EntityType": "UserExtensions",
+      "Id": "UserExtensions",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "UserExtensionInterface",
+          "Name": "GetCurrentUserExtensionProperties",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetCurrentUserExtensionProperties"
+        }
+      ]
+    }
+  },
+  "DataBindings": [
+    {
+      "Id": "8711256977841713",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "LabelText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-24",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcslabel-15",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5486289525645736",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "DATETIME",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "date",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-23",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "expression-24",
+      "TargetSection": ""
+    },
+    {
+      "Id": "1804248415466353",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "task_details",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "property",
+          "TargetProperty": "tasks",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "getTasks",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "6410510786070351",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "Data",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getTasks",
+      "SourceName": "getTasks",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "UI",
+      "TargetId": "gridadvanced-20",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5754657191762908",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "InfotableInput",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getTasks",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "UI",
+      "TargetId": "infotablerowcount-27",
+      "TargetSection": ""
+    },
+    {
+      "Id": "3315784679429888",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "RowsNumber",
+          "SourcePropertyBaseType": "INTEGER",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "input",
+          "TargetPropertyBaseType": "NUMBER",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "infotablerowcount-27",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "expression-28",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6590315114969538",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "LabelText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-28",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcslabel-17",
+      "TargetSection": ""
+    },
+    {
+      "Id": "1352926726082419",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "EditedTable",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "property",
+          "TargetProperty": "InfotableInput",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "gridadvanced-20",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "infotablerowcount-29",
+      "TargetSection": ""
+    },
+    {
+      "Id": "4889231236875438",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "EditedTable",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "data",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "gridadvanced-20",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "getSelectedRowsFromGrid",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "4604360154046523",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "InfotableInput",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getSelectedRowsFromGrid",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "UI",
+      "TargetId": "infotablerowcount-30",
+      "TargetSection": ""
+    },
+    {
+      "Id": "3951217623692540",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "RowsNumber",
+          "SourcePropertyBaseType": "INTEGER",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "selectedRowsCount",
+          "TargetPropertyBaseType": "NUMBER",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "infotablerowcount-30",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "expression-31",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6403248716841378",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "RowsNumber",
+          "SourcePropertyBaseType": "INTEGER",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "editedTableCount",
+          "TargetPropertyBaseType": "NUMBER",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "infotablerowcount-29",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "expression-31",
+      "TargetSection": ""
+    },
+    {
+      "Id": "544088937256487",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "RowsNumber",
+          "SourcePropertyBaseType": "INTEGER",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "initialTaskCount",
+          "TargetPropertyBaseType": "NUMBER",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "infotablerowcount-27",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "expression-31",
+      "TargetSection": ""
+    },
+    {
+      "Id": "3452468116337466",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "NUMBER",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "LabelText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-31",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcslabel-18",
+      "TargetSection": ""
+    },
+    {
+      "Id": "3409185113668589",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "property",
+          "TargetProperty": "taskRequested",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "validator-33",
+      "SourceSection": "",
+      "TargetArea": "Mashup",
+      "TargetId": "mashup-root",
+      "TargetSection": ""
+    }
+  ],
+  "DesignTimePermissions": {},
+  "Events": [
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-23",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "Loaded",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "7216841367055590"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-24",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Changed",
+      "EventTriggerId": "expression-23",
+      "EventTriggerSection": "",
+      "Id": "8608357341277867"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.SupplierTaskList.Thing",
+      "EventHandlerService": "getTasks",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "Loaded",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "1930538754086982"
+    },
+    {
+      "EventHandlerArea": "Mashup",
+      "EventHandlerId": "mashup-root",
+      "EventHandlerService": "CloseIfPopup",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-21",
+      "EventTriggerSection": "",
+      "Id": "5965288284522596"
+    },
+    {
+      "EventHandlerArea": "Mashup",
+      "EventHandlerId": "mashup-root",
+      "EventHandlerService": "CloseIfPopup",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-25",
+      "EventTriggerSection": "",
+      "Id": "5581761387906836"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "infotablerowcount-27",
+      "EventHandlerService": "CountRows",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "getTasks",
+      "EventTriggerSection": "Things_IK.SupplierTaskList.Thing",
+      "Id": "8168119768994523"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-28",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "RowsAreCounted",
+      "EventTriggerId": "infotablerowcount-27",
+      "EventTriggerSection": "",
+      "Id": "7350080116648002"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "infotablerowcount-29",
+      "EventHandlerService": "CountRows",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "RowsAreCounted",
+      "EventTriggerId": "infotablerowcount-27",
+      "EventTriggerSection": "",
+      "Id": "1982330776350373"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "infotablerowcount-29",
+      "EventHandlerService": "CountRows",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "EditCellCompleted",
+      "EventTriggerId": "gridadvanced-20",
+      "EventTriggerSection": "",
+      "Id": "6219825690458951"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.SupplierTaskList.Thing",
+      "EventHandlerService": "getSelectedRowsFromGrid",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "EditCellStarted",
+      "EventTriggerId": "gridadvanced-20",
+      "EventTriggerSection": "",
+      "Id": "410945889495013"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "infotablerowcount-30",
+      "EventHandlerService": "CountRows",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "getSelectedRowsFromGrid",
+      "EventTriggerSection": "Things_IK.SupplierTaskList.Thing",
+      "Id": "8484884477715010"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-31",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "RowsAreCounted",
+      "EventTriggerId": "infotablerowcount-30",
+      "EventTriggerSection": "",
+      "Id": "8590525126289277"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-31",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "RowsAreCounted",
+      "EventTriggerId": "infotablerowcount-27",
+      "EventTriggerSection": "",
+      "Id": "2586709052330998"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "infotablerowcount-30",
+      "EventHandlerService": "CountRows",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "RowsAreCounted",
+      "EventTriggerId": "infotablerowcount-27",
+      "EventTriggerSection": "",
+      "Id": "6395842899298452"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "validator-33",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-22",
+      "EventTriggerSection": "",
+      "Id": "1373389129609004"
+    },
+    {
+      "EventHandlerArea": "Mashup",
+      "EventHandlerId": "mashup-root",
+      "EventHandlerService": "CloseIfPopup",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "False",
+      "EventTriggerId": "validator-33",
+      "EventTriggerSection": "",
+      "Id": "4489829875673710"
+    }
+  ],
+  "RunTimePermissions": {},
+  "UI": {
+    "Properties": {
+      "AddToDashboardButton": "SimplePlus",
+      "AddToDashboardButtonStyle": "DefaultAddToDashboardButtonStyle",
+      "Area": "Mashup",
+      "BGImage": "",
+      "BGImageRepeat": "no-repeat",
+      "BGImageSize": "auto",
+      "Columns": 0,
+      "ConfigureGadgetButton": "SimpleGear",
+      "ConfigureGadgetButtonStyle": "DefaultConfigureGadgetButtonStyle",
+      "DisplayName": "Mashup",
+      "EnableParameterEditing": false,
+      "Height": 618,
+      "Id": "mashup-root",
+      "IgnoreWarningsInViewMashup": false,
+      "IsPrintLayout": false,
+      "Left": 0,
+      "MashupToEditGadget": "DefaultMashupToEditGadget",
+      "MinHeight": 0,
+      "MinWidth": 0,
+      "ResponsiveLayout": true,
+      "Rows": 0,
+      "ShowDataLoading": true,
+      "Style": "DefaultMashupStyle",
+      "StyleTheme": "IK.CVM.Theme",
+      "Title": "",
+      "TitleBar": false,
+      "TitleBarStyle": "DefaultTitleBarStyle",
+      "TitleBarText": "Gadget Title Here",
+      "Top": 0,
+      "Type": "mashup",
+      "UseMasterTheme": false,
+      "UseTheme": false,
+      "UseThemeForHybrids": false,
+      "Visible": true,
+      "Width": 1024,
+      "Z-index": 10,
+      "__TypeDisplayName": "Mashup",
+      "_currentParameterDefs": [
+        {
+          "Aspects": {
+            "bindingDirection": "OUT",
+            "isMandatory": false
+          },
+          "BaseType": "BOOLEAN",
+          "Description": "",
+          "ParameterName": "taskRequested"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "dataShape": "IK.VerificationAggregated.DataShape",
+            "isMandatory": false
+          },
+          "BaseType": "INFOTABLE",
+          "Description": "",
+          "ParameterName": "task_details"
+        }
+      ],
+      "id_index": 33,
+      "supportsAutoResize": true
+    },
+    "Widgets": [
+      {
+        "Properties": {
+          "Area": "UI",
+          "DisplayName": "container-2",
+          "EnableExpandCollapse": false,
+          "ExpandCollapseTabLocation": "inside",
+          "Expanded": true,
+          "Id": "flexcontainer-2",
+          "LastContainer": true,
+          "Overlay": false,
+          "ResponsiveLayout": true,
+          "ShowDataLoading": true,
+          "ShowExpandCollapseTab": false,
+          "SourceURL": "",
+          "Style": "DefaultContainerStyle",
+          "StyleProperties": {},
+          "Type": "flexcontainer",
+          "UseTheme": true,
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "Responsive Container",
+          "align-content": "flex-start",
+          "align-items": "flex-start",
+          "flex-basis": "auto",
+          "flex-direction": "column",
+          "flex-grow": 1,
+          "flex-max-height": "",
+          "flex-max-width": "",
+          "flex-min-height": "",
+          "flex-min-width": "",
+          "flex-shrink": 1,
+          "flex-size": "default",
+          "flex-wrap": "nowrap",
+          "iconClass": "widgets-flexcontainer",
+          "justify-content": "flex-start",
+          "positioning": "responsive",
+          "userCannotRemove": true
+        },
+        "Widgets": [
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-4",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-4",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": false,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "25px",
+              "flex-max-width": "",
+              "flex-min-height": "25px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": []
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-3",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-3",
+              "LastContainer": true,
+              "Overlay": false,
+              "ResponsiveLayout": false,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "",
+              "flex-max-width": "",
+              "flex-min-height": "",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "default",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer",
+              "isLocked": true,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-8",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-8",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "25px",
+                  "flex-min-height": "",
+                  "flex-min-width": "25px",
+                  "flex-shrink": 1,
+                  "flex-size": "fixed",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer-fixed",
+                  "isLocked": false,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": []
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-6",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-6",
+                  "LastContainer": true,
+                  "Overlay": false,
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "column",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "",
+                  "flex-min-height": "",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "default",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer",
+                  "isLocked": true,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": [
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-10",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-10",
+                      "LastContainer": false,
+                      "Overlay": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-start",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "40px",
+                      "flex-max-width": "",
+                      "flex-min-height": "40px",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "fixed",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer-fixed",
+                      "isLocked": false,
+                      "justify-content": "space-between",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-11",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-11",
+                          "LabelText": "Request certificate",
+                          "LabelType": "large-header",
+                          "LastContainer": false,
+                          "Left": 132.01171875,
+                          "Margin": "0",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 20.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "ButtonType": "transparent",
+                          "ContextID": "",
+                          "Disabled": false,
+                          "DisplayName": "ptcs-button-25",
+                          "Icon": "/Thingworx/MediaEntities/IKEA.Crosscloseicon",
+                          "Id": "ptcsbutton-25",
+                          "Label": "",
+                          "LabelAlignment": "center",
+                          "LastContainer": false,
+                          "Left": 247.01171875,
+                          "Margin": "0",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "TabSequence": 0,
+                          "Top": 20.76171875,
+                          "Type": "ptcsbutton",
+                          "UseTheme": true,
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Button"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-9",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-9",
+                      "LastContainer": false,
+                      "Overlay": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-start",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "36px",
+                      "flex-max-width": "",
+                      "flex-min-height": "36px",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "fixed",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer-fixed",
+                      "isLocked": false,
+                      "justify-content": "flex-start",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-13",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-13",
+                          "LabelText": "Certificate request",
+                          "LabelType": "title",
+                          "LastContainer": false,
+                          "Left": 67.01171875,
+                          "Margin": "5 50 5 0",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 15.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-14",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-14",
+                          "LabelText": "Date:",
+                          "LabelType": "header",
+                          "LastContainer": false,
+                          "Left": 237.01171875,
+                          "Margin": "5",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 20.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-15",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-15",
+                          "LabelText": "Label",
+                          "LabelType": "title",
+                          "LastContainer": false,
+                          "Left": 342.01171875,
+                          "Margin": "5",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 20.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-16",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-16",
+                      "LastContainer": false,
+                      "Overlay": false,
+                      "ResponsiveLayout": true,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-start",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "29px",
+                      "flex-max-width": "",
+                      "flex-min-height": "29px",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "fixed",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer-fixed",
+                      "isLocked": false,
+                      "justify-content": "flex-start",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-17",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-17",
+                          "LabelText": "Label",
+                          "LabelType": "header",
+                          "LastContainer": false,
+                          "Left": 107.01171875,
+                          "Margin": "5 5 5 0",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 10.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "CustomClass": "customLabel10",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-18",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-18",
+                          "LabelText": "Label",
+                          "LabelType": "label",
+                          "LastContainer": false,
+                          "Left": 132.01171875,
+                          "Margin": "5",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 10.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisplayName": "infotablerowcount-27",
+                          "Id": "infotablerowcount-27",
+                          "LastContainer": false,
+                          "Left": 159.00390625,
+                          "Margin": "5",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 10.76171875,
+                          "Type": "infotable_row_count",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Infotable Row Count"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisplayName": "infotablerowcount-29",
+                          "Id": "infotablerowcount-29",
+                          "LastContainer": false,
+                          "Left": 349.00390625,
+                          "Margin": "5",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 15.76171875,
+                          "Type": "infotable_row_count",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Infotable Row Count"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisplayName": "infotablerowcount-30",
+                          "Id": "infotablerowcount-30",
+                          "LastContainer": false,
+                          "Left": 409.00390625,
+                          "Margin": "5",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 15.76171875,
+                          "Type": "infotable_row_count",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Infotable Row Count"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-12",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-12",
+                      "LastContainer": true,
+                      "Overlay": false,
+                      "ResponsiveLayout": true,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-start",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "",
+                      "flex-max-width": "",
+                      "flex-min-height": "",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "default",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer",
+                      "isLocked": true,
+                      "justify-content": "flex-start",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "AutoScroll": true,
+                          "CellBorderStyle": "IK.SD.BlackFont11",
+                          "CellValidationErrorStyle": "DefaultGridAdvancedCellValidationErrorStyle",
+                          "CellValidationErrorTooltipStyle": "DefaultGridAdvancedCellValidationErrorTooltipStyle",
+                          "ColumnFormat": {
+                            "formatInfo": [
+                              {
+                                "Align": "left",
+                                "AllowEdit": true,
+                                "Description": "",
+                                "FieldName": "isSelected",
+                                "FormatOptions": {
+                                  "FormatString": "checkbox",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "BOOLEAN",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "&nbsp;",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "40px",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "requestor",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "Requestor",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "applies_to_name",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "Supply object",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "Requirement text",
+                                "FieldName": "requirement_text",
+                                "FormatOptions": {
+                                  "FormatString": "unsanitized",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "Requirement text",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certification_method",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "Certification method",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certifier",
+                                "FormatOptions": {
+                                  "FormatString": "unsanitized",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "Certifier",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "uid",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "uid",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "id_verification_result",
+                                "FieldName": "id_verification_result",
+                                "FormatOptions": {
+                                  "FormatString": "0",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "INTEGER",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "id_verification_result",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "id_verification",
+                                "FieldName": "id_verification",
+                                "FormatOptions": {
+                                  "FormatString": "0",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "INTEGER",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "id_verification",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "id_article",
+                                "FieldName": "id_article",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "id_article",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "id_part",
+                                "FieldName": "id_part",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "id_part",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "id_rvs",
+                                "FieldName": "id_rvs",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "id_rvs",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "id_rvs_verified",
+                                "FieldName": "id_rvs_verified",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "id_rvs_verified",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "applies_to_material",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "applies_to_material",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "producer",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "producer",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "requirement_title",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "requirement_title",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "Requirement type",
+                                "FieldName": "requirement_type",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "requirement_type",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "Requirement subtype",
+                                "FieldName": "requirement_subtype",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "requirement_subtype",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "measuring_unit",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "measuring_unit",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "verification_data_format",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "verification_data_format",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "requirement_source",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "requirement_source",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "requirement_valid_from",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "requirement_valid_from",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "requirement_valid_to",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "requirement_valid_to",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "Latest implementation type",
+                                "FieldName": "latest_implementation_date",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "latest_implementation_date",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "verification_method",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "verification_method",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "reporting_frequency",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "reporting_frequency",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "ValidationMashupName",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "ValidationMashupName",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "popup_width",
+                                "FormatOptions": {
+                                  "FormatString": "0",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "INTEGER",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "popup_width",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "popup_height",
+                                "FormatOptions": {
+                                  "FormatString": "0",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "INTEGER",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "popup_height",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "parent_supplier",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "parent_supplier",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "child_supplier",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "child_supplier",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "delegated_to",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "delegated_to",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "declarant",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "declarant",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "verification_deadline",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "verification_deadline",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "verification_statement",
+                                "FormatOptions": {
+                                  "FormatString": "raw",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "verification_statement",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "verification_statement_value",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "verification_statement_value",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "task_status",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "task_status",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "has_feedback",
+                                "FormatOptions": {
+                                  "FormatString": "checkbox",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "BOOLEAN",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "has_feedback",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "is_verified",
+                                "FieldName": "is_verified",
+                                "FormatOptions": {
+                                  "FormatString": "checkbox",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "BOOLEAN",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "is_verified",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "comment",
+                                "FieldName": "comment",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "comment",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "test_labs",
+                                "FormatOptions": {
+                                  "FormatString": "raw",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "test_labs",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "test_data_to_be_reported",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "test_data_to_be_reported",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "batch_number",
+                                "FormatOptions": {
+                                  "FormatString": "unsanitized",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "Batch number",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "material_description",
+                                "FormatOptions": {
+                                  "FormatString": "unsanitized",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "Material description",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "material_identification_code",
+                                "FormatOptions": {
+                                  "FormatString": "unsanitized",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "Material identification code",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "sample_description",
+                                "FormatOptions": {
+                                  "FormatString": "unsanitized",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "Sample description",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": false,
+                                "inLayout": true
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "created for test report verification(dummy) ",
+                                "FieldName": "additional_information",
+                                "FormatOptions": {
+                                  "FormatString": "raw",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "additional_information",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "created for test report verification(dummy) ",
+                                "FieldName": "result",
+                                "FormatOptions": {
+                                  "FormatString": "raw",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "result",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "created for test report verification(dummy) ",
+                                "FieldName": "action",
+                                "FormatOptions": {
+                                  "FormatString": "raw",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "action",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "created for test report verification(dummy) ",
+                                "FieldName": "date",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "date",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "created for test report verification(dummy) ",
+                                "FieldName": "value",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "value",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "delegation_mashup_name",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "delegation_mashup_name",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "test_method",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "test_method",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "unique_id",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "unique_id",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_id",
+                                "FormatOptions": {
+                                  "FormatString": "full",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_id",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "trade_good_type",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "trade_good_type",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "trade_good_id",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "trade_good_id",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "trade_good_name",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "trade_good_name",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "SendRequestMashupName",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "MASHUPNAME",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "sr",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "compliant_in_production_string",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "compliant_in_production_string",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "compliant_in_production",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "DATETIME",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "compliant_in_production",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "applies_to_name_html",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "applies_to_name_html",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "supply_object_id",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "supply_object_id",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "requirement_description",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "requirement_description",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "connected_article",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "connected_article",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "verification_type",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "verification_type",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "connected_part",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "connected_part",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "connected_article_count",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "HTML",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "connected_article_count",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "reporting_object_oid",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "reporting_object_id",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "test_report_file_name",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "sub_row_count",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "sub_row_count",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "grouping_section_id",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "grouping_section_id",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "parent_id",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "parent_id",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "test_report_validity_period",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "test_report_validity_period",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "test_report_id",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "test_report_id",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "test_report_issue_date",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "DATETIME",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "test_report_issue_date",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "test_report_file_path",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "test_report_file_path",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "test_labs_data",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "INFOTABLE",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "test_labs_data",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "units_data",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "INFOTABLE",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "units_data",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "sample_production_date",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "DATETIME",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "sample_production_date",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "applies_to_part",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "applies_to_part",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certifier_data",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "INFOTABLE",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_name",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_name",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_issuer_data",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "INFOTABLE",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_issuer_data",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_type_data",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "INFOTABLE",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_type_data",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_type",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_type",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_issuer",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_issuer",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_comments",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_valid_from",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "DATETIME",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_valid_from",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_file_path",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_file_path",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_file_name",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_file_name",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "certificate_valid_to",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "formatInfo": {
+                                    "StateFormats": []
+                                  },
+                                  "formatText": "View",
+                                  "renderer": "DATETIME",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "certificate_valid_to",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              },
+                              {
+                                "Align": "left",
+                                "AllowEdit": false,
+                                "Description": "",
+                                "FieldName": "weight_or_volume",
+                                "FormatOptions": {
+                                  "FormatString": "",
+                                  "renderer": "STRING",
+                                  "roundingEnabled": true,
+                                  "showDependentField": false
+                                },
+                                "Title": "weight_or_volume",
+                                "ValidationExpression": "",
+                                "ValidationMessage": "",
+                                "Width": "auto",
+                                "headerTextAlignment": "left",
+                                "hidden": true,
+                                "inLayout": false
+                              }
+                            ]
+                          },
+                          "Configuration": "",
+                          "ConfigurationId": 0,
+                          "CookiePersistence": true,
+                          "CustomClass": "customGridVerticalAlignTop customGridRowPadding customGridRowWithBottomBorder  customTasklistCheckbox tasklistCellSelection",
+                          "DataOverflow": "wrapped",
+                          "DataServiceBindingDef": {
+                            "dataName": "Things_IK.SupplierTaskList.Thing",
+                            "entityName": "IK.SupplierTaskList.Thing",
+                            "entityType": "Things",
+                            "sourceId": "getTasks",
+                            "target": "getTasks"
+                          },
+                          "DefaultSelectedRows": "",
+                          "DisplayName": "gridadvanced-20",
+                          "DisplayOnlyMode": false,
+                          "EditButtonsLocation": "top-right",
+                          "EnableAddDeleteButtons": false,
+                          "EnableCallbackOnSelectedRowsChange": true,
+                          "EnableContextMenu": true,
+                          "EnableEditButtons": false,
+                          "EnableFilterEventOnConfigChange": true,
+                          "EnableFooter": false,
+                          "EnableGridReset": false,
+                          "EnableGridSearch": false,
+                          "EnableKeyboardNavigation": true,
+                          "EnableSorting": false,
+                          "FocusStyle": "IK.SD.BlackFont11",
+                          "GridResetButtonLocation": "top-right",
+                          "GridSearchLocation": "top-left",
+                          "HeaderOverflow": "wrapped",
+                          "Height": 200,
+                          "IDFieldName": "id",
+                          "Id": "gridadvanced-20",
+                          "IsEditable": true,
+                          "LastContainer": false,
+                          "Left": 144.00390625,
+                          "MaxHeaderHeight": 100,
+                          "MinRowHeight": 62,
+                          "ResponsiveLayout": true,
+                          "RowAlternateBackgroundStyle": "IK.SD.BlackFont11",
+                          "RowBackgroundStyle": "IK.SD.BlackFont11",
+                          "RowBorderStyle": "IK.SD.BlackFont11",
+                          "RowFormat_StateParameters": [],
+                          "RowHoverStyle": "IK.SD.BlackFont11",
+                          "RowSelectedStyle": "IK.SD.BlackFont11",
+                          "RowSelection": "none",
+                          "SelectedRows": "",
+                          "ShowDataLoading": true,
+                          "SortAscendingStyle": "DefaultSortAscendingStyle",
+                          "SortDescendingStyle": "DefaultSortDescendingStyle",
+                          "TableFooterStyle": "DefaultGridAdvancedFooterStyle",
+                          "TableHeaderStyle": "IK.SD.HeaderGrid12",
+                          "TableWrapperStyle": "IK.SD.BlackFont11Bold",
+                          "ToolbarStyle": "DefaultToolbarStyle",
+                          "TooltipStyle": "DefaultTooltipStyle",
+                          "Top": 40.76171875,
+                          "Type": "gridadvanced",
+                          "UseTheme": false,
+                          "Visible": true,
+                          "Width": 400,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Grid Advanced"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-19",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-19",
+                      "LastContainer": false,
+                      "Overlay": false,
+                      "ResponsiveLayout": true,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-end",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "45px",
+                      "flex-max-width": "",
+                      "flex-min-height": "45px",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "fixed",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer-fixed",
+                      "isLocked": false,
+                      "justify-content": "flex-end",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "ButtonType": "secondary",
+                          "ContextID": "",
+                          "Disabled": false,
+                          "DisplayName": "ptcs-button-21",
+                          "Height": 34,
+                          "Id": "ptcsbutton-21",
+                          "Label": "Cancel",
+                          "LabelAlignment": "center",
+                          "LastContainer": false,
+                          "Left": 209.00390625,
+                          "Margin": "0 10 0 0",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "TabSequence": 0,
+                          "Top": 20.76171875,
+                          "Type": "ptcsbutton",
+                          "UseTheme": true,
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Button"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "ButtonType": "primary",
+                          "ContextID": "",
+                          "Disabled": false,
+                          "DisplayName": "ptcs-button-22",
+                          "Id": "ptcsbutton-22",
+                          "Label": "Send request",
+                          "LabelAlignment": "center",
+                          "LastContainer": false,
+                          "Left": 174.00390625,
+                          "Margin": "0",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "TabSequence": 0,
+                          "Top": 15.76171875,
+                          "Type": "ptcsbutton",
+                          "UseTheme": true,
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Button"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-7",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-7",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "25px",
+                  "flex-min-height": "",
+                  "flex-min-width": "25px",
+                  "flex-shrink": 1,
+                  "flex-size": "fixed",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer-fixed",
+                  "isLocked": false,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": []
+              }
+            ]
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-5",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-5",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": true,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "25px",
+              "flex-max-width": "",
+              "flex-min-height": "25px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": []
+          }
+        ]
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "generateDate",
+          "Expression": "result = new Date();",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-23",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "DATETIME",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": []
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "generateDateLabel",
+          "Expression": "result = date.split(\" \")[0]+\"\";",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-24",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "STRING",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "date",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "countAvailableTasks",
+          "Expression": "result = input + \" Requirements available\";",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-28",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "STRING",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "NUMBER",
+              "Description": "",
+              "ParameterName": "input",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "countSelectedTasks",
+          "Expression": "input = (initialTaskCount - editedTableCount) + selectedRowsCount;\nresult = \"(\" + input + \" selected)\";",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-31",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "NUMBER",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "NUMBER",
+              "Description": "",
+              "ParameterName": "initialTaskCount",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "NUMBER",
+              "DefaultValue": "0",
+              "Description": "",
+              "ParameterName": "editedTableCount",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "NUMBER",
+              "DefaultValue": "0",
+              "Description": "",
+              "ParameterName": "selectedRowsCount",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DisplayName": "isTaskRequested",
+          "Expression": "result=input;",
+          "Height": 28,
+          "Id": "validator-33",
+          "LastContainer": false,
+          "Left": null,
+          "Output": true,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "validator",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Validator",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "DefaultValue": "false",
+              "Description": "",
+              "ParameterName": "input",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      }
+    ]
+  },
+  "mashupType": "mashup"
+}]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="IK.CVM.Configuration"
+         projectName="IKEA.CVM"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="IK.DatabaseConnector.Thing"
+                     aspect.isPersistent="true"
+                     aspect.thingTemplate="Database"
+                     baseType="THINGNAME"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="cvmDatabase"
+                     ordinal="4"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="PTC.ALM.ILM.Resource.IK.WRVSConnector.ThingIntegrityRequirementResourceProvider"
+                     aspect.isPersistent="true"
+                     aspect.thingShape="PTC.ALM.ILM.EXT.Adapter.IntegrityItemServiceImpl"
+                     aspect.thingTemplate="PTC.ALM.ILM.EXT.Resource.IntegrityBasedResourceProviderTemplate"
+                     baseType="THINGNAME"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="requirementResourceProvider"
+                     ordinal="5"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="PTC.ALM.ILM.Resource.IK.WRVSConnectorForRequirementSpecialist.ThingIntegrityRequirementResourceProvider"
+                     aspect.isPersistent="true"
+                     aspect.thingShape="PTC.ALM.ILM.EXT.Adapter.IntegrityItemServiceImpl"
+                     aspect.thingTemplate="PTC.ALM.ILM.EXT.Resource.IntegrityBasedResourceProviderTemplate"
+                     baseType="THINGNAME"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="requirementResourceProviderRequirementPreviewer"
+                     ordinal="14"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="https://cvmdev.plus.ikeadt.com:7001/"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="rvsHostName"
+                     ordinal="15"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="PTC.ALM.ILM.Resource.IK.WRVSConnectorForRequirementSpecialist.ThingIntegrityRequirement Specification DocumentResourceProvider"
+                     aspect.thingShape="PTC.ALM.ILM.EXT.Adapter.IntegrityItemServiceImpl"
+                     aspect.thingTemplate="PTC.ALM.ILM.EXT.Resource.IntegrityBasedResourceProviderTemplate"
+                     baseType="THINGNAME"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="specificationDocumentResourceProviderRequirementPreviewer"
+                     ordinal="14"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="OR:wt.folder.SubFolder:33673968559"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="subsupplierDocumentFolderID"
+                     ordinal="9"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="OR:wt.folder.SubFolder:33673968568"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="subsupplierReportingObjFolderID"
+                     ordinal="10"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="OR:wt.folder.Cabinet:33673967485"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="supplyPartCabinetID"
+                     ordinal="8"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="OR:wt.inf.library.WTLibrary:33673967439"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="supplyPartLibraryID"
+                     ordinal="7"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="PTC.ALM.ILM.Resource.IK.WRVSConnector.ThingIntegrityTestResourceProvider"
+                     aspect.isPersistent="true"
+                     aspect.thingShape="PTC.ALM.ILM.EXT.Adapter.IntegrityItemServiceImpl"
+                     aspect.thingTemplate="PTC.ALM.ILM.EXT.Resource.IntegrityBasedResourceProviderTemplate"
+                     baseType="THINGNAME"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="testResourceProvider"
+                     ordinal="6"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="IK.WindchillOdataConnector.Thing"
+                     aspect.isPersistent="true"
+                     aspect.thingTemplate="PTC.WCODataConnectorThingTemplate"
+                     baseType="THINGNAME"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="windchillOdataConnector"
+                     ordinal="3"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="IK.WindchillOdataConnectorForSubSupplier.Thing"
+                     aspect.isPersistent="true"
+                     aspect.thingTemplate="PTC.WCODataConnectorThingTemplate"
+                     baseType="THINGNAME"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="windchillOdataConnectorSubSupplierUsers"
+                     ordinal="12"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="IK.WindchillSwaggerConnector.Thing"
+                     aspect.isPersistent="true"
+                     aspect.thingTemplate="WindchillSwaggerConnector"
+                     baseType="THINGNAME"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="windchillSwaggerConnector"
+                     ordinal="2"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCVMDatabase">
+                        <ResultType
+                         baseType="THINGNAME"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDefaultMenu">
+                        <ResultType
+                         aspect.dataShape="IK.CVMMenu.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getMenuData">
+                        <ResultType
+                         aspect.dataShape="IK.CVMMenu.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="groupName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getOdataConnector">
+                        <ResultType
+                         baseType="THINGNAME"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getOdataConnectorForSubSupplierUsers">
+                        <ResultType
+                         baseType="THINGNAME"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProjects">
+                        <ResultType
+                         aspect.dataShape="CVM.Project.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="groupName"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="'IKEA Industry Poland Sp.zoo o/Fabr.WEST w Zbaszynku', 'KETER ITALIA SPA', 'SREDNA GORA AD', 'JIANGMEN  LI HUA INDUSTRY CO LTD'"
+                             baseType="STRING"
+                             description=""
+                             name="projectName"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getRequirementResourceProvider">
+                        <ResultType
+                         baseType="THINGNAME"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getRequirementResourceProviderRequirementPreviewer">
+                        <ResultType
+                         baseType="THINGNAME"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSpecificationDocumentResourceProvider">
+                        <ResultType
+                         baseType="THINGNAME"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSpecificationDocumentResourceProviderRequirementPreviewer">
+                        <ResultType
+                         baseType="THINGNAME"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSupplyPartCabinetID">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSupplyPartsLibraryID">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getTestResourceProvider">
+                        <ResultType
+                         baseType="THINGNAME"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getUserInfo">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description="returns host in the form https://WINDCHILL_URL/APPNAME"
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getWindchillHost">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getWNCSwaggerConnector">
+                        <ResultType
+                         baseType="THINGNAME"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCVMDatabase">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.cvmDatabase;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDefaultMenu">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(IK.CVMMenu.DataShape)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.CVMMenu.DataShape"
+                                        });
+                                        
+                                        let sessionValues = Resources["CurrentSessionInfo"].GetGlobalSessionValues();
+                                        let row = sessionValues.rows[0];
+                                        if (row.InputForReqListNavigation) {
+                                        	result.AddRow({
+                                        		id: "RequirementList_RequirementList",
+                                        		menuName: "Requirement list",
+                                        		parentId: "RequirementList",
+                                        		hasChildren: false,
+                                        		mashupName: "IK.RequirementListSupplier.Mashup"
+                                        	});
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getMenuData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getMenuData -> ";
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(IK.CVMMenu.DataShape)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "IK.CVMMenu.DataShape"
+                                        });
+                                        
+                                        try{
+                                            if(groupName == "Supplier Users"){
+                                                result.AddRow({id:"ManageBOM", menuName:"<b>Manage BOM</b>", parentId:"", hasChildren:true});
+                                                result.AddRow({id:"ManageBOM_SupplyBOM", menuName:"Supply BOM", parentId:"ManageBOM", hasChildren:false, mashupName:"IK.SupplyBOMAssociation.Mashup"});
+                                                result.AddRow({id:"ManageBOM_SupplyBOM_Database",menuName:"[Supply BOM]", parentId:"ManageBOM", hasChildren:false, mashupName:"CVM.SupplyBOMAssociation.Mashup"});
+                                                result.AddRow({id:"ManageBOM_ManageBOM", menuName:"Manage BOM", parentId:"ManageBOM", hasChildren:false, mashupName:"IK.ManageBOM.Mashup"});
+                                        
+                                                result.AddRow({id:"ManageBOM_SupplyObjectsLibrary", menuName:"Supply objects library", parentId:"ManageBOM", hasChildren:false, mashupName:"IK.SupplyObjectsLibrary.Mashup"});
+                                        
+                                                result.AddRow({id:"ManageSupplyChain", menuName:"<b>Manage supply chain</b>", parentId:"", hasChildren:true});
+                                                result.AddRow({id:"ManageSupplyChain_SupplyChain", menuName:"Supply chain", parentId:"ManageSupplyChain", hasChildren:false, mashupName:"IK.SupplyChain.Mashup"});
+                                                    
+                                                result.AddRow({id:"RequirementList", menuName:"<b>Requirement list</b>", parentId:"", hasChildren:true});
+                                                result.AddRow({id:"RequirementList_RequirementList", menuName:"Requirement list", parentId:"RequirementList", hasChildren:false, mashupName:"IK.RequirementListSupplier.Mashup"});
+                                                result.AddRow({id:"RequirementList_RequirementList_Database", menuName:"[Requirement list]", parentId:"RequirementList", hasChildren:false, mashupName:"CVM.RequirementListSupplier.Mashup"});
+                                        		result.AddRow({id:"RequirementList_RequirementList_Perfo", menuName:"Req list perfo", parentId:"RequirementList", hasChildren:false, mashupName:"IK.CVM.TEST.RequirementListSupplier.Mashup"});
+                                        
+                                                
+                                                result.AddRow({id:"Dashboard", menuName:"<b>Dashboard</b>", parentId:"", hasChildren:true});
+                                                result.AddRow({id:"Dashboard_ComplianceDashboard", menuName:"Compliance Dashboard", parentId:"Dashboard", hasChildren:false, mashupName:"IK.ComplianceDashboard.Mashup"});
+                                                
+                                                result.AddRow({id:"Reports", menuName:"<b>Reports</b>", parentId:"", hasChildren:true});
+                                                result.AddRow({id:"Reports_LegalReporting", menuName:"Compliance reporting", parentId:"Reports", hasChildren: false, mashupName:"IK.LegalReporting.Mashup"});
+                                            }
+                                            else if(groupName == "Sub Supplier Users"){
+                                                userGroup = "Sub Supplier Users";
+                                                result.AddRow({id:"RequirementList", menuName:"<b>Requirement list</b>", parentId:"", hasChildren:true});
+                                                result.AddRow({id:"RequirementListKendo", menuName:"Requirement list", parentId:"RequirementList", hasChildren:false, mashupName:"IK.SubSupplierTaskListWithCustomWidget.Mashup"});
+                                            }
+                                            else if(groupName == "Requirement Specialist"){
+                                                result.AddRow({id:"RequirementListPreviewer", menuName:"Requirement previewer", parentId:"", hasChildren:false, mashupName:"IK.RequirementPreviewer.Mashup"});
+                                            }
+                                        	logger.info(FN +"Menu loaded successfully");
+                                        }catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getOdataConnector">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.windchillOdataConnector;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getOdataConnectorForSubSupplierUsers">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.windchillOdataConnectorSubSupplierUsers;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getProjects -> ";
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(CVM.Project.DataShape)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "CVM.Project.DataShape"
+                                        });
+                                        try {
+                                            let dbConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        
+                                        	if (groupName == "Supplier Users") {
+                                        		let suppliers = Things[dbConnector].getSupplierDetails({
+                                                    project_name : projectName
+                                                });
+                                        		for (let sup = 0; sup < suppliers.getRowCount(); sup++) {
+                                        			let supplier = suppliers.rows[sup];
+                                        			let text = supplier.NAME;
+                                        			let proj_name = text.replace(/[/\:*?<>"|]/g, '_');
+                                        			result.AddRow({
+                                        				project_name: proj_name,
+                                        				project_number: proj_name + "(" + supplier.UNIT_CODE_SUP + ")",
+                                        				bu_type: supplier.UNIT_TYPE_SUP,
+                                        				bu_code_owner: supplier.UNIT_CODE_SUP
+                                        			});
+                                        		}
+                                        		
+                                        		//		let odataConnector = me.windchillOdataConnector;
+                                        		//		let json = Things[odataConnector].getProjects({
+                                        		//			"$select": "ID,Name,projectNumber"
+                                        		//		});
+                                        		//
+                                        		//		if (json !== undefined && json.value !== undefined) {
+                                        		//			let values = json.value;
+                                        		//			for (let i = 0; i < values.length; i++) {
+                                        		//			let value = values[i];
+                                        		//				let newEntry = new Object();					
+                                        		//				newEntry.project_name = value.Name;
+                                        		//				newEntry.project_number = value.projectNumber;
+                                        		//				newEntry.project_identity = value.projectNumber;
+                                        		//				result.AddRow(newEntry);
+                                        		//			}
+                                        		//		}
+                                        	} else if (groupName == "Sub Supplier Users") {
+                                        		let subSuppliers = Things[dbConnector].getSuppliers();
+                                        		for (let s = 0; s < subSuppliers.getRowCount(); s++) {
+                                        			let subSupplier = subSuppliers.rows[s];
+                                        			let newEntry = new Object();
+                                        			newEntry.project_name = subSupplier.LEGALNAME;
+                                        			newEntry.project_identity = subSupplier.SUB_SUPPLIER_ID.toString();
+                                        			newEntry.project_number = subSupplier.LEGALNAME + "(" + subSupplier.SUB_SUPPLIER_ID + ")";
+                                        			result.AddRow(newEntry);
+                                        		}
+                                        	}
+                                        
+                                        	logger.info(FN + "Project loaded successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getRequirementResourceProvider">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.requirementResourceProvider;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getRequirementResourceProviderRequirementPreviewer">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.requirementResourceProviderRequirementPreviewer;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSpecificationDocumentResourceProvider">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.specificationDocumentResourceProvider;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSpecificationDocumentResourceProviderRequirementPreviewer">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.specificationDocumentResourceProviderRequirementPreviewer;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSupplyPartCabinetID">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.supplyPartCabinetID;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSupplyPartsLibraryID">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.supplyPartLibraryID;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getTestResourceProvider">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.testResourceProvider;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getUserInfo">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getUserInfo -> ";
+                                        
+                                        try {
+                                        	let username = Resources["CurrentSessionInfo"].GetCurrentUser();
+                                        	let groupInfo = Resources["CurrentSessionInfo"].GetCurrentUserGroups();
+                                        
+                                        	for (let row = 0; row < groupInfo.getRowCount(); row++) {
+                                        		if (groupInfo[row].name == "Supplier Users") {
+                                        			result = "Supplier Users";
+                                        			break;
+                                        		} else if (groupInfo[row].name == "Sub Supplier Users") {
+                                        			result = "Sub Supplier Users";
+                                        			break;
+                                        		} else if (groupInfo[row].name == "Requirement Specialist") {
+                                        			result = "Requirement Specialist";
+                                        			break;
+                                        		}
+                                        	}
+                                        	logger.info("User [" + username + "] logged in from [" + result + "] group");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getWindchillHost">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getWindchillHost -> ";
+                                        
+                                        try{
+                                            // result: INFOTABLE dataShape: "EntityList"
+                                            let configuration = Things[me.windchillSwaggerConnector].GetConfigurationTable({
+                                            	tableName: "HTTPConnectorConnectionSettings" /* STRING */
+                                            });
+                                        
+                                            let baseUrl = configuration.rows[0]["BaseURL"];
+                                            result = baseUrl.substring(0, baseUrl.lastIndexOf ("/"));
+                                        }catch(err){
+                                            logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getWNCSwaggerConnector">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = me.windchillSwaggerConnector;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="cvmDatabase"></AlertDefinitions>
+                <AlertDefinitions
+                 name="requirementResourceProvider"></AlertDefinitions>
+                <AlertDefinitions
+                 name="requirementResourceProviderRequirementPreviewer"></AlertDefinitions>
+                <AlertDefinitions
+                 name="rvsHostName"></AlertDefinitions>
+                <AlertDefinitions
+                 name="specificationDocumentResourceProviderRequirementPreviewer"></AlertDefinitions>
+                <AlertDefinitions
+                 name="subsupplierDocumentFolderID"></AlertDefinitions>
+                <AlertDefinitions
+                 name="subsupplierReportingObjFolderID"></AlertDefinitions>
+                <AlertDefinitions
+                 name="supplyPartCabinetID"></AlertDefinitions>
+                <AlertDefinitions
+                 name="supplyPartLibraryID"></AlertDefinitions>
+                <AlertDefinitions
+                 name="testResourceProvider"></AlertDefinitions>
+                <AlertDefinitions
+                 name="windchillOdataConnector"></AlertDefinitions>
+                <AlertDefinitions
+                 name="windchillOdataConnectorSubSupplierUsers"></AlertDefinitions>
+                <AlertDefinitions
+                 name="windchillSwaggerConnector"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <requirementResourceProviderRequirementPreviewer>
+                    <Value>
+                    <![CDATA[
+                    PTC.ALM.ILM.Resource.IK.WRVSConnectorForRequirementSpecialist.ThingIntegrityRequirementResourceProvider
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </requirementResourceProviderRequirementPreviewer>
+                <cvmDatabase>
+                    <Value>
+                    <![CDATA[
+                    IK.DatabaseConnector.Thing
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </cvmDatabase>
+                <testResourceProvider>
+                    <Value>
+                    <![CDATA[
+                    PTC.ALM.ILM.Resource.IK.WRVSConnector.ThingIntegrityTestResourceProvider
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </testResourceProvider>
+                <windchillOdataConnector>
+                    <Value>
+                    <![CDATA[
+                    IK.WindchillOdataConnector.Thing
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </windchillOdataConnector>
+                <subsupplierDocumentFolderID>
+                    <Value>
+                    <![CDATA[
+                    OR:wt.folder.SubFolder:33673968559
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </subsupplierDocumentFolderID>
+                <requirementResourceProvider>
+                    <Value>
+                    <![CDATA[
+                    PTC.ALM.ILM.Resource.IK.WRVSConnector.ThingIntegrityRequirementResourceProvider
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </requirementResourceProvider>
+                <windchillOdataConnectorSubSupplierUsers>
+                    <Value>
+                    <![CDATA[
+                    IK.WindchillOdataConnectorForSubSupplier.Thing
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </windchillOdataConnectorSubSupplierUsers>
+                <subsupplierReportingObjFolderID>
+                    <Value>
+                    <![CDATA[
+                    OR:wt.folder.SubFolder:33673968568
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </subsupplierReportingObjFolderID>
+                <supplyPartLibraryID>
+                    <Value>
+                    <![CDATA[
+                    OR:wt.inf.library.WTLibrary:33673967439
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </supplyPartLibraryID>
+                <supplyPartCabinetID>
+                    <Value>
+                    <![CDATA[
+                    OR:wt.folder.Cabinet:33673967485
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </supplyPartCabinetID>
+                <windchillSwaggerConnector>
+                    <Value>
+                    <![CDATA[
+                    IK.WindchillSwaggerConnector.Thing
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </windchillSwaggerConnector>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

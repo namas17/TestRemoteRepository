@@ -1,0 +1,2145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="IK.SupplyChain.Thing"
+         projectName="IKEA.CVM"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="addOrDeleteSupplyObjectInGrid">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyChainTier.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="BOOLEAN"
+                             description=""
+                             name="deleteRow"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyChainTier.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="existingData"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="inputForRemoveSupplyObject"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyChainTier.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRow"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="selectedText"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_id"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="addServiceToSupplyObject">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="chain_id"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supplier_number"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_child_id"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_child_name"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_id"
+                             ordinal="4"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="addSupplyObjectInChain">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="chain_id"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supplier_number"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_child_id"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_id"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="top_node"
+                             ordinal="8"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="addSupplyObjectsToChain">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyChainTier.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="data"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supplier_number"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_id"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="copySelectedRow">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyChain.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyChain.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRow"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="createSupplyChain">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supplier_number"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_id"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_name"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="deleteServiceFromSupplyObject">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="chain_id"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supplier_number"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_child_id"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_id"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="deleteSupplyObjectFromChain">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="chain_id"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supplier_number"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_id"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="filterSupplyChain">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyChain.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="search_text"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyChain.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="supply_chain"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getChainsForSupplier">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyChain.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supplier_number"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getConnectedServices">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyObject.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="chain_id"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supplier_number"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="supply_object_id"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDetailsForDiagram">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyObject.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyChain.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="input"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getFolderInfoForSupplyObjects">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="project_name"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSelectedRow">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyChain.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyChain.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRow"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSuggestedSupplyObjects">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="project_number"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="text"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSuggestedTransportSupplyObjects">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="project_number"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="text"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSupplyObjectDetails">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyObject.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="number"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="pasteCopiedRow">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyChain.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="copiedRow"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="IK.SupplyChain.DataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRow"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="resetData">
+                        <ResultType
+                         aspect.dataShape="IK.SupplyChainTier.DataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="addOrDeleteSupplyObjectInGrid">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " addOrDeleteSupplyObjectInGrid -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyChainTier.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	if (deleteRow) {
+                                        		if (inputForRemoveSupplyObject) {
+                                        			let deletedRow;
+                                        			for (let i = 0; i < existingData.getRowCount(); i++) {
+                                        				let row = existingData.rows[i];
+                                        				if (row.id != inputForRemoveSupplyObject) {
+                                        					if (deletedRow && row.tier > deletedRow.tier) {
+                                        						row.tier = row.tier - 1;
+                                        						result.AddRow(row);
+                                        					} else {
+                                        						result.AddRow(row);
+                                        					}
+                                        				} else {
+                                        					deletedRow = row;
+                                        				}
+                                        			}
+                                        		}
+                                        		logger.info(FN + "[" + inputForRemoveSupplyObject + "] Deleted successfully from grid");
+                                        	} else {
+                                        		let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        		if (supply_object_id && selectedText) {
+                                        			let partJson = Things[odataconnectorthing].getParts({
+                                        				$filter: "Number eq '" + supply_object_id + "'"
+                                        			});
+                                        			let part = partJson.value[0];
+                                        			let name = part.Name;
+                                        			let legalName;
+                                        			var attr = part.CVMClassification.ClassificationAttributes;
+                                        			if (attr) {
+                                        				for (var a = 0; a < attr.length; a++) {
+                                        					if (attr[a].InternalName == "com.ikea.GDLegalName") {
+                                        						legalName = attr[a].Value;
+                                        					}
+                                        				}
+                                        			}
+                                        			if (existingData && existingData.getRowCount() > 0 && (selectedRow && selectedRow.getRowCount() > 0)) {
+                                        				let selected = selectedRow.rows[0];
+                                        				if (selected.tier == existingData.getRowCount()) {
+                                        					result = existingData;
+                                        					result.AddRow({
+                                        						unique_id: generateGUID(),
+                                        						id: supply_object_id,
+                                        						supply_object_name: name,
+                                        						tier: selected.tier + 1,
+                                        						legal_name: legalName,
+                                        						action: "<img style=\"cursor: pointer;\" src='/Thingworx/MediaEntities/IKEA.Skapp.Bin' onclick=\"deleteSupplyObjectFromGrid('" + supply_object_id + "')\">"
+                                        					});
+                                        				} else {
+                                        					for (let i = 0; i < existingData.getRowCount(); i++) {
+                                        						let existing = existingData.rows[i];
+                                        						if (existing.tier <= selected.tier) {
+                                        							result.AddRow(existing);
+                                        						} else if (existing.tier == selected.tier + 1) {
+                                        							result.AddRow({
+                                        								unique_id: generateGUID(),
+                                        								id: supply_object_id,
+                                        								supply_object_name: name,
+                                        								tier: selected.tier + 1,
+                                        								legal_name: legalName,
+                                        								action: "<img style=\"cursor: pointer;\" src='/Thingworx/MediaEntities/IKEA.Skapp.Bin' onclick=\"deleteSupplyObjectFromGrid('" + supply_object_id + "')\">"
+                                        							});
+                                        							existing.tier = existing.tier + 1;
+                                        							result.AddRow(existing);
+                                        						} else if (existing.tier > selected.tier) {
+                                        							existing.tier = existing.tier + 1;
+                                        							result.AddRow(existing);
+                                        						}
+                                        					}
+                                        				}
+                                        			} else if (existingData && existingData.getRowCount() > 0) {
+                                        				let tier = existingData.getRowCount() + 1;
+                                        				existingData.AddRow({
+                                        					unique_id: generateGUID(),
+                                        					id: supply_object_id,
+                                        					supply_object_name: name,
+                                        					tier: tier,
+                                        					legal_name: legalName,
+                                        					action: "<img style=\"cursor: pointer;\" src='/Thingworx/MediaEntities/IKEA.Skapp.Bin' onclick=\"deleteSupplyObjectFromGrid('" + supply_object_id + "')\">"
+                                        				});
+                                        				result = existingData;
+                                        			} else {
+                                        				result.AddRow({
+                                        					unique_id: generateGUID(),
+                                        					id: supply_object_id,
+                                        					supply_object_name: name,
+                                        					tier: 1,
+                                        					legal_name: legalName,
+                                        					action: "<img style=\"cursor: pointer;\" src='/Thingworx/MediaEntities/IKEA.Skapp.Bin' onclick=\"deleteSupplyObjectFromGrid('" + supply_object_id + "')\">"
+                                        				});
+                                        			}
+                                        			logger.info(FN + "Added supply object [" + supply_object_id + "] to the chain successfully");
+                                        		} else {
+                                        			result = existingData;
+                                        		}
+                                        	}
+                                        	logger.info(FN + "Executed successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="addServiceToSupplyObject">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " addServiceToSupplyObject -> ";
+                                        
+                                        try {
+                                        	let databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let date = new Date();
+                                        	let addSupplyObjectToChain = Things[databaseConnector].createSupplyChainStructure({
+                                        		supplier_number: supplier_number,
+                                        		supply_chain_id: chain_id,
+                                        		supply_object_id: supply_object_id,
+                                        		supply_object_child_id: supply_object_child_id,
+                                        		relationship_type: "Transport",
+                                        		created_timestamp: date,
+                                        		modified_timestamp: date
+                                        	});
+                                        	if (addSupplyObjectToChain > 0) {
+                                        		result = true;
+                                        	} else {
+                                        		result = false;
+                                        	}
+                                        	logger.info(FN + "[" + supply_object_child_id + "-" + supply_object_child_name + "] as service added to supply object for [" + supply_object_id + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="addSupplyObjectInChain">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " addSupplyObjectInChain -> ";
+                                        
+                                        try {
+                                        	let databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let row = Things[databaseConnector].fetchChildDetailForSupplyObject({
+                                        		supplier_number: supplier_number,
+                                        		supply_chain_id: chain_id,
+                                        		supply_object_id: supply_object_id,
+                                        		relationship_type: "BOM"
+                                        	});
+                                        	let date = new Date();
+                                        	if (row.getRowCount() == 0) {
+                                        		let addSupplyObjectToChain = Things[databaseConnector].createSupplyChainStructure({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: supply_object_id,
+                                        			supply_object_child_id: supply_object_child_id,
+                                        			relationship_type: "BOM",
+                                        			top_node: top_node,
+                                        			created_timestamp: date,
+                                        			modified_timestamp: date
+                                        		});
+                                        		if (addSupplyObjectToChain > 0) {
+                                        			result = true;
+                                        		} else {
+                                        			result = false;
+                                        		}
+                                        	} else {
+                                        		let updateSupplyObjectToChain = Things[databaseConnector].modifyChildDetailToSupplyObject({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: supply_object_id,
+                                        			supply_object_child_id: supply_object_child_id,
+                                        			modified_timestamp: date,
+                                        			relationship_type: "BOM"
+                                        		});
+                                        		if (updateSupplyObjectToChain > 0) {
+                                        			result = true;
+                                        		} else {
+                                        			result = false;
+                                        		}
+                                        	}
+                                        	logger.info(FN + "Supply object [" + supply_object_child_id + "] added has child to supply object [" + supply_object_id + "] in the chain [" + chain_id + "] for supplier [" + supplier_number + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="addSupplyObjectsToChain">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " addSupplyObjectsToChain -> ";
+                                        
+                                        try {
+                                        	let databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let date = new Date();
+                                        
+                                        	if ((!data || data.getRowCount() == 0) && supply_object_id) {
+                                        		let chain_id_row = Things[databaseConnector].getSequenceNextVal({
+                                        			seqName: "CVM_SUPPLY_CHAIN_STRUCTURE_SEQ"
+                                        		});
+                                        		chain_id = "" + chain_id_row.rows[0].NEXTVAL;
+                                        		let addSupplyObjectToChain = Things[databaseConnector].createSupplyChainStructure({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: supply_object_id,
+                                        			relationship_type: "BOM",
+                                        			top_node: "YES",
+                                        			created_timestamp: date,
+                                        			modified_timestamp: date
+                                        		});
+                                        		if (addSupplyObjectToChain > 0) {
+                                        			result = true;
+                                        		} else {
+                                        			result = false;
+                                        		}
+                                        		logger.info(FN + "[" + supply_object_id + "] Supply object created as parent for new chain for supplier [" + supplier_number + "]");
+                                        	} else {
+                                        		let chain_id;
+                                        		for (let i = 0; i < data.getRowCount(); i++) {
+                                        			let row = data.rows[i];
+                                        			if (row.tier == 1) {
+                                        				let chain_id_row = Things[databaseConnector].getSequenceNextVal({
+                                        					seqName: "CVM_SUPPLY_CHAIN_STRUCTURE_SEQ"
+                                        				});
+                                        				chain_id = "" + chain_id_row.rows[0].NEXTVAL;
+                                        				let addSupplyObjectToChain = Things[databaseConnector].createSupplyChainStructure({
+                                        					supplier_number: supplier_number,
+                                        					supply_chain_id: chain_id,
+                                        					supply_object_id: row.id,
+                                        					relationship_type: "BOM",
+                                        					top_node: "YES",
+                                        					created_timestamp: date,
+                                        					modified_timestamp: date
+                                        				});
+                                        				if (addSupplyObjectToChain > 0) {
+                                        					result = true;
+                                        				} else {
+                                        					result = false;
+                                        				}
+                                        			} else {
+                                        				let parentRow = data.rows[i - 1];
+                                        				if (row.tier == 2) {
+                                        					let updateSupplyObjectToChain = Things[databaseConnector].modifyChildDetailToSupplyObject({
+                                        						supplier_number: supplier_number,
+                                        						supply_chain_id: chain_id,
+                                        						supply_object_id: parentRow.id,
+                                        						supply_object_child_id: row.id,
+                                        						modified_timestamp: date,
+                                        						relationship_type: "BOM"
+                                        					});
+                                        					if (updateSupplyObjectToChain > 0) {
+                                        						result = true;
+                                        					} else {
+                                        						result = false;
+                                        					}
+                                        				} else {
+                                        					let addSupplyObjectToChain = Things[databaseConnector].createSupplyChainStructure({
+                                        						supplier_number: supplier_number,
+                                        						supply_chain_id: chain_id,
+                                        						supply_object_id: parentRow.id,
+                                        						supply_object_child_id: row.id,
+                                        						relationship_type: "BOM",
+                                        						top_node: "NO",
+                                        						created_timestamp: date,
+                                        						modified_timestamp: date
+                                        					});
+                                        					if (addSupplyObjectToChain > 0) {
+                                        						result = true;
+                                        					} else {
+                                        						result = false;
+                                        					}
+                                        				}
+                                        			}
+                                        		}
+                                        		logger.info(FN + "[" + data.getRowCount() + "] supply objects created as a new chain for supplier [" + supplier_number + "]");
+                                        	}
+                                        	logger.info(FN + "Executed successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="copySelectedRow">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " copySelectedRow -> ";
+                                        
+                                        try {
+                                        	result = selectedRow;
+                                        	logger.info(FN + "[" + selectedRow.rows[0].supply_object_id + "] supply object selected  from chain [" + selectedRow.rows[0].chain_id + "] row copied successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="createSupplyChain">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " createSupplyChain -> ";
+                                        
+                                        try {
+                                        	let databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let chain_id = Things[databaseConnector].getSequenceNextVal({
+                                        		seqName: "CVM_SUPPLY_CHAIN_STRUCTURE_SEQ"
+                                        	});
+                                        	let date = new Date();
+                                        	let addSupplyObjectToChain = Things[databaseConnector].createSupplyChainStructure({
+                                        		supplier_number: supplier_number,
+                                        		supply_chain_id: "" + chain_id.rows[0].NEXTVAL,
+                                        		supply_chain_name: supply_object_name,
+                                        		supply_object_id: supply_object_id,
+                                        		supply_object_name: supply_object_name,
+                                        		relationship_type: "BOM",
+                                        		top_node: "YES",
+                                        		created_timestamp: date,
+                                        		modified_timestamp: date
+                                        	});
+                                        	if (addSupplyObjectToChain > 0) {
+                                        		result = true;
+                                        	} else {
+                                        		result = false;
+                                        	}
+                                        	logger.info(FN + "Executed successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="deleteServiceFromSupplyObject">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " deleteServiceFromSupplyObject -> ";
+                                        
+                                        try {
+                                        	let databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let deleteService = Things[databaseConnector].removeServiceFromSupplyObject({
+                                        		supplier_number: supplier_number,
+                                        		supply_chain_id: chain_id,
+                                        		supply_object_id: supply_object_id,
+                                        		supply_object_child_id: supply_object_child_id,
+                                        		relationship_type: "Transport"
+                                        	});
+                                        	logger.info(FN + "[" + supply_object_child_id + "] service deleted for supply object [" + supply_object_id + "] in chain [" + chain_id + "]");
+                                        
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="deleteSupplyObjectFromChain">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " deleteSupplyObjectFromChain -> ";
+                                        
+                                        let databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        try {
+                                        	//deleting child recursively
+                                        	let childRows = Things[databaseConnector].fetchChildForSupplyObject({
+                                        		supplier_number: supplier_number,
+                                        		supply_chain_id: chain_id,
+                                        		supply_object_id: supply_object_id,
+                                        		relationship_type: "BOM"
+                                        	});
+                                        	for (let i = 0; i < childRows.getRowCount(); i++) {
+                                        		let childRow = childRows.rows[i];
+                                        		let deleteRow = Things[databaseConnector].removeSupplyObjectFromChain({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: supply_object_id,
+                                        			supply_object_child_id: childRow.SUPPLY_OBJECT_CHILD_ID,
+                                        			relationship_type: "BOM"
+                                        		});
+                                        		let deleteServices = Things[databaseConnector].removeServicesFromSupplyObject({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: childRow.SUPPLY_OBJECT_CHILD_ID,
+                                        			relationship_type: "Transport"
+                                        		});
+                                        		getChild(childRow);
+                                        	}
+                                        	//find parent
+                                        	let parentRows = Things[databaseConnector].fetchParentForSupplyObject({
+                                        		supplier_number: supplier_number,
+                                        		supply_chain_id: chain_id,
+                                        		supply_object_child_id: supply_object_id,
+                                        		relationship_type: "BOM"
+                                        	});
+                                        	if (parentRows && parentRows.getRowCount() > 0) {
+                                        		let parentRow = parentRows.rows[0];
+                                        		if (parentRow.TOP_NODE == "YES") {
+                                        			//find no. of child for the parent node
+                                        			let childRowForParent = Things[databaseConnector].fetchChildForSupplyObject({
+                                        				supplier_number: supplier_number,
+                                        				supply_chain_id: chain_id,
+                                        				supply_object_id: parentRow.SUPPLY_OBJECT_ID,
+                                        				relationship_type: "BOM"
+                                        			});
+                                        			if (childRowForParent.getRowCount() == 1) {
+                                        				//update child as null
+                                        				let updateSupplyObjectToChain = Things[databaseConnector].modifyChildDetailToSupplyObject({
+                                        					supplier_number: supplier_number,
+                                        					supply_chain_id: chain_id,
+                                        					supply_object_id: childRowForParent.SUPPLY_OBJECT_ID,
+                                        					supply_object_child_id: null,
+                                        					modified_timestamp: new Date(),
+                                        					relationship_type: "BOM"
+                                        				});
+                                        				let deleteServices = Things[databaseConnector].removeServicesFromSupplyObject({
+                                        					supplier_number: supplier_number,
+                                        					supply_chain_id: chain_id,
+                                        					supply_object_id: childRowForParent.SUPPLY_OBJECT_CHILD_ID,
+                                        					relationship_type: "Transport"
+                                        				});
+                                        			} else if (childRowForParent.getRowCount() > 1) {
+                                        				//delete that row
+                                        				let deleteRow = Things[databaseConnector].removeSupplyObjectFromChain({
+                                        					supplier_number: supplier_number,
+                                        					supply_chain_id: chain_id,
+                                        					supply_object_id: parentRow.SUPPLY_OBJECT_ID,
+                                        					supply_object_child_id: parentRow.SUPPLY_OBJECT_CHILD_ID,
+                                        					relationship_type: "BOM"
+                                        				});
+                                        				let deleteServices = Things[databaseConnector].removeServicesFromSupplyObject({
+                                        					supplier_number: supplier_number,
+                                        					supply_chain_id: chain_id,
+                                        					supply_object_id: parentRow.SUPPLY_OBJECT_CHILD_ID,
+                                        					relationship_type: "Transport"
+                                        				});
+                                        			}
+                                        		} else {
+                                        			let deleteRow = Things[databaseConnector].removeSupplyObjectFromChain({
+                                        				supplier_number: supplier_number,
+                                        				supply_chain_id: chain_id,
+                                        				supply_object_id: parentRow.SUPPLY_OBJECT_ID,
+                                        				supply_object_child_id: parentRow.SUPPLY_OBJECT_CHILD_ID,
+                                        				relationship_type: "BOM"
+                                        			});
+                                        
+                                        			let deleteServices = Things[databaseConnector].removeServicesFromSupplyObject({
+                                        				supplier_number: supplier_number,
+                                        				supply_chain_id: chain_id,
+                                        				supply_object_id: parentRow.SUPPLY_OBJECT_CHILD_ID,
+                                        				relationship_type: "Transport"
+                                        			});
+                                        		}
+                                        	} else {
+                                        		let deleteRow = Things[databaseConnector].removeTopNodeSupplyObjectFromChain({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: supply_object_id,
+                                        			relationship_type: "BOM"
+                                        		});
+                                        		let deleteServices = Things[databaseConnector].removeServicesFromSupplyObject({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: supply_object_id,
+                                        			relationship_type: "Transport"
+                                        		});
+                                        	}
+                                        	logger.info(FN + "[" + supply_object_id + "] supply object and its children are deleted successfully from the chain [" + chain_id + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        
+                                        function getChild(child) {
+                                        	let childRows = Things[databaseConnector].fetchChildForSupplyObject({
+                                        		supplier_number: supplier_number,
+                                        		supply_chain_id: chain_id,
+                                        		supply_object_id: child.SUPPLY_OBJECT_CHILD_ID,
+                                        		relationship_type: "BOM"
+                                        	});
+                                        	for (let i = 0; i < childRows.getRowCount(); i++) {
+                                        		let childRow = childRows.rows[i];
+                                        		let deleteRow = Things[databaseConnector].removeSupplyObjectFromChain({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: childRow.SUPPLY_OBJECT_ID,
+                                        			supply_object_child_id: childRow.SUPPLY_OBJECT_CHILD_ID,
+                                        			relationship_type: "BOM"
+                                        		});
+                                        		let deleteServices = Things[databaseConnector].removeServicesFromSupplyObject({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: childRow.SUPPLY_OBJECT_CHILD_ID,
+                                        			relationship_type: "Transport"
+                                        		});
+                                        
+                                        		getChild(childRow);
+                                        	}
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="filterSupplyChain">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " filterSupplyChain -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyChain.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	if (!search_text || search_text.length == 0) {
+                                        		result = supply_chain;
+                                        		logger.info(FN + "Chain filtered without search text");
+                                        	} else {
+                                        		for (let i = 0; i < supply_chain.getRowCount(); i++) {
+                                        			let row = supply_chain.rows[i];
+                                        			if (row.supply_object_name.toUpperCase().includes(search_text.toUpperCase())) {
+                                        				row.parent_id = "";
+                                        				row.has_children = false;
+                                        				result.AddRow(row);
+                                        			}
+                                        		}
+                                        		logger.info(FN + "Chain filtered with search text [" + search_text + "]");
+                                        	}
+                                        	logger.info(FN + " Supply chain filtered successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getChainsForSupplier">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getChainsForSupplier -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyChain.DataShape"
+                                        });
+                                        
+                                        let services = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "GenericStringList"
+                                        });
+                                        let html = "<img style=\"height: 7px;width: 7px; padding-right:5px;\" src='/Thingworx/MediaEntities/IK.BlueIcon.Media'>";
+                                        let supplyObjectNumberFilter = "";
+                                        let supplyObjectDetail = {};
+                                        try {
+                                        	if (supplier_number) {
+                                        		var databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        		let supplyObjects = Things[databaseConnector].fetchSupplyObjectsForChain({
+                                        			supplier_number: supplier_number,
+                                        			relationship_type: "BOM"
+                                        		});
+                                        
+                                        		for (let i = 0; i < supplyObjects.getRowCount(); i++) {
+                                        			let supplyObject = supplyObjects.rows[i];
+                                        			if (supplyObject.TOP_NODE == "YES") {
+                                        				let parentRow = new Object();
+                                        				parentRow.supply_chain_id = supplyObject.SUPPLIER_NUMBER;
+                                        				parentRow.id = supplyObject.SUPPLY_CHAIN_ID + "_" + supplyObject.SUPPLY_OBJECT_ID;
+                                        				parentRow.chain_id = supplyObject.SUPPLY_CHAIN_ID;
+                                        				parentRow.supply_object_id = supplyObject.SUPPLY_OBJECT_ID;
+                                        				supplyObjectNumberFilter = supplyObjectNumberFilter + "Number eq '" + supplyObject.SUPPLY_OBJECT_ID + "' or ";
+                                        				parentRow.top_node = supplyObject.TOP_NODE;
+                                        				parentRow.id_diagram = supplyObject.SUPPLY_OBJECT_ID;
+                                        				parentRow.description = " ";
+                                        				parentRow.connection_date = supplyObject.CREATED_TIMESTAMP;
+                                        				let parent = result.Find({
+                                        					id: parentRow.id
+                                        				});
+                                        				if (!parent) {
+                                        					result.AddRow(parentRow);
+                                        				}
+                                        				if (supplyObject.SUPPLY_OBJECT_CHILD_ID) {
+                                        					let childRow = new Object();
+                                        					childRow.supply_chain_id = supplyObject.SUPPLIER_NUMBER;
+                                        					childRow.id = supplyObject.SUPPLY_CHAIN_ID + "_" + supplyObject.SUPPLY_OBJECT_CHILD_ID;
+                                        					supplyObjectNumberFilter = supplyObjectNumberFilter + "Number eq '" + supplyObject.SUPPLY_OBJECT_CHILD_ID + "' or ";
+                                        					childRow.parent_id = supplyObject.SUPPLY_CHAIN_ID + "_" + supplyObject.SUPPLY_OBJECT_ID;
+                                        					childRow.chain_id = supplyObject.SUPPLY_CHAIN_ID;
+                                        					childRow.supply_object_id = supplyObject.SUPPLY_OBJECT_CHILD_ID;
+                                        					childRow.top_node = "NO";
+                                        					childRow.id_diagram = supplyObject.SUPPLY_OBJECT_CHILD_ID;
+                                        					childRow.parent_id_diagram = supplyObject.SUPPLY_OBJECT_ID;
+                                        					childRow.description = " ";
+                                        					childRow.connection_date = supplyObject.MODIFIED_TIMESTAMP;
+                                        					let child = result.Find({
+                                        						id: childRow.id
+                                        					});
+                                        					if (!child) {
+                                        						result.AddRow(childRow);
+                                        					}
+                                        				}
+                                        			} else {
+                                        				let newEntry = new Object();
+                                        				newEntry.id = supplyObject.SUPPLY_CHAIN_ID + "_" + supplyObject.SUPPLY_OBJECT_CHILD_ID;
+                                        				supplyObjectNumberFilter = supplyObjectNumberFilter + "Number eq '" + supplyObject.SUPPLY_OBJECT_CHILD_ID + "' or ";
+                                        				newEntry.supply_chain_id = supplyObject.SUPPLIER_NUMBER;
+                                        				newEntry.parent_id = supplyObject.SUPPLY_CHAIN_ID + "_" + supplyObject.SUPPLY_OBJECT_ID;
+                                        				newEntry.chain_id = supplyObject.SUPPLY_CHAIN_ID;
+                                        				newEntry.supply_object_id = supplyObject.SUPPLY_OBJECT_CHILD_ID;
+                                        				newEntry.top_node = supplyObject.TOP_NODE;
+                                        				newEntry.id_diagram = supplyObject.SUPPLY_OBJECT_CHILD_ID;
+                                        				newEntry.parent_id_diagram = supplyObject.SUPPLY_OBJECT_ID;
+                                        				newEntry.description = " ";
+                                        				newEntry.connection_date = supplyObject.CREATED_TIMESTAMP;
+                                        				result.AddRow(newEntry);
+                                        			}
+                                        		}
+                                        		supplyObjectNumberFilter = supplyObjectNumberFilter.slice(0, -4);
+                                        		if (result && result.getRowCount() > 0) {
+                                        			let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        			let partJson = Things[odataconnectorthing].getParts({
+                                        				$filter: supplyObjectNumberFilter,
+                                        				$select: "Name,Number"
+                                        			});
+                                        
+                                        			let values = partJson.value;
+                                        			for (let i = 0; i < values.length; i++) {
+                                        				let value = values[i];
+                                        				supplyObjectDetail[value.Number] = value.Name;
+                                        			}
+                                        
+                                        			for (let i = 0; i < result.getRowCount(); i++) {
+                                        				let row = result.rows[i];
+                                        				let name = supplyObjectDetail[row.supply_object_id];
+                                        				let servicesInfo = Things[databaseConnector].fetchServicesForSupplyObject({
+                                        					supplier_number: supplier_number,
+                                        					supply_chain_id: row.chain_id,
+                                        					supply_object_id: row.supply_object_id,
+                                        					relationship_type: "Transport"
+                                        				});
+                                        				row.supply_object_name = name;
+                                        				row.display_name_map = (servicesInfo && servicesInfo.getRowCount() > 0) ? (name + " (+" + servicesInfo.getRowCount() + " services)") : name;
+                                        				row.display_name = (servicesInfo && servicesInfo.getRowCount() > 0) ? (html + name) : name;
+                                        			}
+                                        		}
+                                        		logger.info(FN + "Chains fetched successfuly for [" + supplier_number + "]");
+                                        
+                                        	}
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getConnectedServices">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getConnectedServices -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	var databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        	let servicesInfo = Things[databaseConnector].fetchServicesForSupplyObject({
+                                        		supplier_number: supplier_number,
+                                        		supply_chain_id: chain_id,
+                                        		supply_object_id: supply_object_id,
+                                        		relationship_type: "Transport"
+                                        	});
+                                        	for (let i = 0; i < servicesInfo.getRowCount(); i++) {
+                                        		let service = servicesInfo.rows[i];
+                                        		let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        		let partJson = Things[odataconnectorthing].getParts({
+                                        			$filter: "Number eq '" + service.SUPPLY_OBJECT_CHILD_ID + "'"
+                                        		});
+                                        		let part = partJson.value[0];
+                                        		var newEntry = new Object();
+                                        		newEntry.action = "<img style=\"cursor: pointer;\" src='/Thingworx/MediaEntities/IKEA.Skapp.Bin' onclick=\"deleteServiceFromSupplyObject('" + service.SUPPLY_OBJECT_CHILD_ID + "')\">";
+                                        		var attr = part.CVMClassification.ClassificationAttributes;
+                                        		if (attr) {
+                                        			for (var a = 0; a < attr.length; a++) {
+                                        				if (attr[a].InternalName == "com.ikea.GDObjectClass") {
+                                        					newEntry.object_type = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDTypeOfOperation") {
+                                        					newEntry.type_of_operation = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDLegalName") {
+                                        					newEntry.legal_name = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDLegalCode") {
+                                        					newEntry.legal_code = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				}
+                                        			}
+                                        		}
+                                        		result.AddRow(newEntry);
+                                        	}
+                                        	logger.info(FN + "connected services fetched successfully for [" + supply_object_id + "] in chain [" + chain_id + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDetailsForDiagram">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getDetailsForDiagram -> ";
+                                        
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        	let partJson = Things[odataconnectorthing].getParts({
+                                        		$filter: "Number eq '" + input.rows[0].supply_object_id + "'"
+                                        	});
+                                        	let part = partJson.value[0];
+                                        	var newEntry = new Object();
+                                        	newEntry.supply_object_id = part.Number;
+                                        	newEntry.version = part.Version;
+                                        	newEntry.supply_object_oid = part.ID;
+                                        
+                                        	var attr = part.CVMClassification.ClassificationAttributes;
+                                        	if (attr) {
+                                        		for (var a = 0; a < attr.length; a++) {
+                                        			if (attr[a].InternalName == "com.ikea.GDName") {
+                                        				newEntry.name = attr[a].Value;
+                                        			} else if (attr[a].InternalName == "com.ikea.GDActorType") {
+                                        				newEntry.actor_type = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        			} else if (attr[a].InternalName == "com.ikea.GDTypeOfOperation") {
+                                        				newEntry.type_of_operation = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        			} else if (attr[a].InternalName == "com.ikea.GDLegalName") {
+                                        				newEntry.legal_name = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        			}
+                                        		}
+                                        	}
+                                        	result.AddRow(newEntry);
+                                        	logger.info(FN + "Details for supply object [" + input.rows[0].supply_object_id + "] fetched in Diagram view successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getFolderInfoForSupplyObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getFolderInfoForSupplyObjects -> ";
+                                        
+                                        try {
+                                        	let libraryID = Things["IK.CVM.Configuration"].getSupplyPartsLibraryID();
+                                        	let cabinetID = Things["IK.CVM.Configuration"].getSupplyPartCabinetID();
+                                        	let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        	let swaggerConnector = Things["IK.CVM.Configuration"].getWNCSwaggerConnector();
+                                        
+                                        	var folderjson = Things[swaggerConnector].Get_Folders({
+                                        		id: libraryID
+                                        	});
+                                        	var folderId;
+                                        	if (folderjson !== undefined && folderjson.items !== undefined) {
+                                        		var items = folderjson.items;
+                                        		for (var i = 0; i < items.length; i++) {
+                                        			var item = items[i];
+                                        			if (item.attributes.name == project_name) {
+                                        				folderId = item.id;
+                                        			}
+                                        		}
+                                        	}
+                                        
+                                        	var subfolderjson = Things[swaggerConnector].Get_SubFolders({
+                                        		id: folderId
+                                        	});
+                                        	var subfolderId;
+                                        	if (subfolderjson !== undefined && subfolderjson.items !== undefined) {
+                                        		var subfolderitems = subfolderjson.items;
+                                        		for (var j = 0; j < subfolderitems.length; j++) {
+                                        			var subfolderitem = subfolderitems[j];
+                                        			if (subfolderitem.attributes.name == "Supply Objects") {
+                                        				subfolderId = subfolderitem.id;
+                                        			}
+                                        		}
+                                        	}
+                                        
+                                        	result = {
+                                        		"libraryID": libraryID,
+                                        		"cabinetID": cabinetID,
+                                        		"folderId": folderId,
+                                        		"subfolderId": subfolderId
+                                        	};
+                                        	logger.info(FN + "Folder info fetched foe supply objects [" + project_name + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSelectedRow">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + "getSelectedRow -> ";
+                                        try {
+                                        	result = selectedRow;
+                                        	logger.info(FN + "Rows selected successfully");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSuggestedSupplyObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getSuggestedSupplyObjects -> ";
+                                        
+                                        try {
+                                        
+                                        	let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        	let objects = Things[odataconnectorthing].getClassificationObjects({
+                                        		$skip: undefined /* INTEGER {"dataShape":""} */ ,
+                                        		ClfNodeId: "GDSupplyObject" /* STRING [Required] {"dataShape":""} */ ,
+                                        		$count: undefined /* BOOLEAN {"dataShape":""} */ ,
+                                        		$filter: "((ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDName' and contains(d/DisplayValue,'" + text + "')) or ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDLegalName' and contains(d/DisplayValue,'" + text + "'))) and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDSupplierDetails' and d/DisplayValue eq '" + project_number + "') and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDObjectClass' and d/DisplayValue eq 'Trade good') and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDStatus' and d/DisplayValue eq 'Active') )"
+                                        	});
+                                        
+                                        	let data = [];
+                                        	for (let x = 0; x < objects.value.length; x++) {
+                                        		let supplyObject = objects.value[x];
+                                        		let attr = supplyObject.ClassificationAttributes;
+                                        		let supplyActor;
+                                        		if (attr) {
+                                        			for (let a = 0; a < attr.length; a++) {
+                                        				if (attr[a].InternalName == "com.ikea.GDLegalName") {
+                                        					supplyActor = attr[a].Value;
+                                        				}
+                                        			}
+                                        		}
+                                        		data.push({
+                                        			"val": supplyObject.Name + ", " + supplyActor,
+                                        			"key": supplyObject.Number
+                                        		});
+                                        	}
+                                        	result = {
+                                        		"data": data
+                                        	};
+                                        	logger.info(FN + "Supply objects fetched for [" + text + "] for supplier [" + project_number + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSuggestedTransportSupplyObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getSuggestedTransportSupplyObjects -> ";
+                                        
+                                        try {
+                                        	let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        	let objects = Things[odataconnectorthing].getClassificationObjects({
+                                        		$skip: undefined /* INTEGER {"dataShape":""} */ ,
+                                        		ClfNodeId: "GDSupplyObject" /* STRING [Required] {"dataShape":""} */ ,
+                                        		$count: undefined /* BOOLEAN {"dataShape":""} */ ,
+                                        		$filter: "(ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDLegalName' and contains(d/DisplayValue,'" + text + "')) and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDSupplierDetails' and d/DisplayValue eq '" + project_number + "') and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDObjectClass' and d/DisplayValue eq 'Transport') and ClassificationAttributes/any(d:d/InternalName eq 'com.ikea.GDStatus' and d/DisplayValue eq 'Active')  )"
+                                        	});
+                                        
+                                        	let data = [];
+                                        	for (let x = 0; x < objects.value.length; x++) {
+                                        		let supplyObject = objects.value[x];
+                                        		let classificationAttributes = supplyObject.ClassificationAttributes;
+                                        		let legalName = "";
+                                        		for (let c = 0; c < classificationAttributes.length; c++) {
+                                        			if (classificationAttributes[c].InternalName == "com.ikea.GDLegalName") {
+                                        				legalName = classificationAttributes[c].Value;
+                                        				break;
+                                        			}
+                                        		}
+                                        		data.push({
+                                        			"val": legalName,
+                                        			"key": supplyObject.Number
+                                        		});
+                                        
+                                        	}
+                                        	result = {
+                                        		"data": data
+                                        	};
+                                        	logger.info(FN + "Transport supply objects fetched for [" + text + "] for supplier [" + project_number + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSupplyObjectDetails">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " getSupplyObjectDetails -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyObject.DataShape"
+                                        });
+                                        
+                                        try {
+                                        	if (number) {
+                                        		let odataconnectorthing = Things["IK.CVM.Configuration"].getOdataConnector();
+                                        		let partJson = Things[odataconnectorthing].getParts({
+                                        			$filter: "Number eq '" + number + "'"
+                                        		});
+                                        		let part = partJson.value[0];
+                                        		var newEntry = new Object();
+                                        		newEntry.supply_object_id = part.Number;
+                                        		newEntry.version = part.Version;
+                                        		newEntry.supply_object_oid = part.ID;
+                                        
+                                        		var attr = part.CVMClassification.ClassificationAttributes;
+                                        		if (attr) {
+                                        			for (var a = 0; a < attr.length; a++) {
+                                        				if (attr[a].InternalName == "com.ikea.GDName") {
+                                        					newEntry.name = attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDType") {
+                                        					newEntry.type = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDTradeGoodID") {
+                                        					newEntry.trade_good_id = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDObjectClass") {
+                                        					newEntry.object_type = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDActorType") {
+                                        					newEntry.actor_type = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDTypeOfOperation") {
+                                        					newEntry.type_of_operation = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDLegalName") {
+                                        					newEntry.legal_name = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDCountry") {
+                                        					newEntry.country = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				} else if (attr[a].InternalName == "com.ikea.GDLegalCode") {
+                                        					newEntry.legal_code = attr[a].Value == "undefined" ? "" : attr[a].Value;
+                                        				}
+                                        			}
+                                        		}
+                                        		result.AddRow(newEntry);
+                                        	}
+                                        	logger.info(FN + "Supply object details fetched for [" + number + "].");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="pasteCopiedRow">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " pasteCopiedRow -> ";
+                                        let databaseConnector = Things["IK.CVM.Configuration"].getCVMDatabase();
+                                        
+                                        try {
+                                        	if (selectedRow && selectedRow.getRowCount() > 0 && copiedRow && copiedRow.getRowCount() > 0) {
+                                        		let row = selectedRow.rows[0];
+                                        		let childRow = copiedRow.rows[0];
+                                        		if (row.top_node == "YES") {
+                                        			let parentRow = Things[databaseConnector].fetchChildDetailForSupplyObject({
+                                        				supplier_number: row.supply_chain_id,
+                                        				supply_chain_id: row.chain_id,
+                                        				supply_object_id: row.supply_object_id,
+                                        				relationship_type: "BOM"
+                                        			});
+                                        			let date = new Date();
+                                        			if (parentRow.getRowCount() == 0) {
+                                        				let addSupplyObjectToChain = Things[databaseConnector].createSupplyChainStructure({
+                                        					supplier_number: row.supply_chain_id,
+                                        					supply_chain_id: row.chain_id,
+                                        					supply_object_id: row.supply_object_id,
+                                        					supply_object_child_id: childRow.supply_object_id,
+                                        					relationship_type: "BOM",
+                                        					top_node: row.top_node,
+                                        					created_timestamp: date,
+                                        					modified_timestamp: date
+                                        				});
+                                        			} else {
+                                        				let updateSupplyObjectToChain = Things[databaseConnector].modifyChildDetailToSupplyObject({
+                                        					supplier_number: row.supply_chain_id,
+                                        					supply_chain_id: row.chain_id,
+                                        					supply_object_id: row.supply_object_id,
+                                        					supply_object_child_id: childRow.supply_object_id,
+                                        					modified_timestamp: date,
+                                        					relationship_type: "BOM"
+                                        				});
+                                        			}
+                                        			addAllChildToChain(childRow.supply_chain_id, childRow.chain_id, childRow.supply_object_id, row);
+                                        		} else {
+                                        			let date = new Date();
+                                        			let addSupplyObjectToChain = Things[databaseConnector].createSupplyChainStructure({
+                                        				supplier_number: row.supply_chain_id,
+                                        				supply_chain_id: row.chain_id,
+                                        				supply_object_id: row.supply_object_id,
+                                        				supply_object_child_id: childRow.supply_object_id,
+                                        				relationship_type: "BOM",
+                                        				top_node: "NO",
+                                        				created_timestamp: date,
+                                        				modified_timestamp: date
+                                        			});
+                                        			addAllChildToChain(childRow.supply_chain_id, childRow.chain_id, childRow.supply_object_id, row);
+                                        		}
+                                        	}
+                                        	logger.info(FN + "copied supply object [" + copiedRow.rows[0].supply_object_id + "] and its children from chain [" + copiedRow.rows[0].chain_id + "] is pasted under supply object [" + selectedRow.rows[0].supply_object_id + "] in chain [" + selectedRow.rows[0].chain_id + "]");
+                                        } catch (err) {
+                                        	logger.error(FN + "Line" + err.lineNumber + ": " + err);
+                                        }
+                                        
+                                        
+                                        function addAllChildToChain(supplier_number, chain_id, supply_object_id, selectedRow) {
+                                        	if (supply_object_id) {
+                                        		let childRows = Things[databaseConnector].fetchChildForSupplyObject({
+                                        			supplier_number: supplier_number,
+                                        			supply_chain_id: chain_id,
+                                        			supply_object_id: supply_object_id,
+                                        			relationship_type: "BOM"
+                                        		});
+                                        		for (let i = 0; i < childRows.getRowCount(); i++) {
+                                        			let childRow = childRows.rows[i];
+                                        			let date = new Date();
+                                        			if (childRow.SUPPLY_OBJECT_CHILD_ID) {
+                                        				let addSupplyObjectToChain = Things[databaseConnector].createSupplyChainStructure({
+                                        					supplier_number: selectedRow.supply_chain_id,
+                                        					supply_chain_id: selectedRow.chain_id,
+                                        					supply_object_id: childRow.SUPPLY_OBJECT_ID,
+                                        					supply_object_child_id: childRow.SUPPLY_OBJECT_CHILD_ID,
+                                        					relationship_type: "BOM",
+                                        					top_node: "NO",
+                                        					created_timestamp: date,
+                                        					modified_timestamp: date
+                                        				});
+                                        			}
+                                        			addAllChildToChain(childRow.SUPPLIER_NUMBER, childRow.SUPPLY_CHAIN_ID, childRow.SUPPLY_OBJECT_CHILD_ID, selectedRow);
+                                        		}
+                                        	}
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="resetData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        const FN = me.name + " resetData -> ";
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "IK.SupplyChainTier.DataShape"
+                                        });
+                                        
+                                        logger.info(FN + "Executed successfully");
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

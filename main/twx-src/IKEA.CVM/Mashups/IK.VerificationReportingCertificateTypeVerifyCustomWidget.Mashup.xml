@@ -1,0 +1,3422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="IK.VerificationReportingCertificateTypeVerifyCustomWidget.Mashup"
+         projectName="IKEA.CVM"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="bu_code_owner"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="bu_type"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="OUT"
+                 aspect.isMandatory="false"
+                 baseType="BOOLEAN"
+                 description=""
+                 name="draftDeleted"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="project_name"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="project_number"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.dataShape="IK.VerificationAggregated.DataShape"
+                 aspect.isMandatory="false"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="task_details"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="OUT"
+                 aspect.isMandatory="false"
+                 baseType="BOOLEAN"
+                 description=""
+                 name="taskVerified"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[{
+  "CustomMashupCss": ".k-grid .k-grid-header{\n\tborder-bottom : 1px solid #f5f5f5 !important;  \n}\n.k-grid-header{\n    padding-right:0px  !important;\n}\n\n.k-grid .k-group-cell, .k-grouping-row td, td.k-group-cell ,.k-grid-header,.k-header, .k-state-selected:hover,.k-selected:hover {\n    background-color : #ffffff;\n}\n.k-selected\n{\n    box-shadow : none;\n}\n\n.k-grid-header th.k-header, .k-grid tr td\n{\n    border-style : none;\n    border-bottom : 1px solid #f5f5f5 !important;  \n}\n\n.k-grid  .k-grid-header  .k-header  .k-link {\n    height: auto;\n}\n  \n.k-grid  .k-grid-header  .k-header {\n    white-space: normal;\n    /*text-align: center;*/\n    vertical-align: text-top;\n}\n\n.k-grid th\n{\n    color : #484848;\n    font-size : 12px;\n}\n.k-input:focus-within, .k-widget.k-input:focus-within\n{\n    box-shadow : none;\n    border: 1px solid #929292 !important;\n   /* max-height : 40px !important;*/\n    min-height :40px !important;    \n}\n\n.k-input\n{   \n    /*max-height : 40px !important;*/\n    min-height :40px !important;\n}\n.k-datepicker > .k-input-button \n{\n   /* max-height : 40px !important;*/\n    min-height :40px !important;\n}\n\n.k-picker.k-focus, .k-picker:focus\n{\n    border: 1px solid #929292 !important;\n}\n.k-picker.k-hover, .k-picker:hover\n{\n    background-color : #ffffff;\n}\n\n.k-button-solid-base.k-hover, .k-button-solid-base:hover\n{\n    background-color : #ffffff;\n}\n.k-picker, .k-widget.k-picker\n{\n    height : 40px;\n    align-items : center;\n}\n.k-grid .k-detail-cell{ \n    padding-top :0px !important;\n    padding-bottom :0px !important;\n}\n.k-grid-header th.k-header{\n    padding-left : 0px;\n}\ntd .k-checkbox:checked:focus, th .k-checkbox:checked:focus\n{\n     border: 1px solid #7B61FF\n}\n.k-checkbox\n{\n    height:24px;\n    width : 24px;\n}\n.k-checkbox:checked::before\n{\n    top : 12px !important;\n}\n.k-grid td{\n    padding : 20px 20px 20px 0px;\n}\n\n.k-popup>.k-list{\n     width :150px;\n     border :1px solid #929292;\n}\n.k-popup\n{\n    box-shadow : none !important;\n    border-style:none;    \n}\n.k-animation-container{\n     width : 150px;\n}\n\n.customTextOverflow{\n    overflow : hidden;\n    text-overflow:ellipsis;\n}\n\n.red-color-text>span{\n    color:#E00751 !important;\n}\n.k-icon {\n    font :20px/1 WebComponentsIcons;\n}\n.k-grid th{\n    text-overflow : ellipsis !important;\n}\n\n::-webkit-scrollbar\n{\n\twidth:8px;\n\tbackground-color: white;  \n    margin-left  :10px !important;\n} \n\n::-webkit-scrollbar-thumb {\n  width:8px;\n  background: white;\n  border-radius:8px;\n} \n\n:hover::-webkit-scrollbar-thumb{\n  \tbackground: #E0E0E0; \n \twidth: 8px;\n    margin-left  :10px !important ;\n} \n\n:hover::-webkit-scrollbar {\n    width: 8px;\n    background: #F5F5F5; \n    margin-left :10px !important ;\n}\n\n",
+  "Data": {
+    "Session": {
+      "DataName": "Session",
+      "EntityName": "",
+      "EntityType": "Session",
+      "Id": "session",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "SessionInterface",
+          "Name": "GetGlobalSessionValues",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetGlobalSessionValues"
+        }
+      ]
+    },
+    "Things_CustomFileRepoistory": {
+      "DataName": "Things_CustomFileRepoistory",
+      "EntityName": "CustomFileRepoistory",
+      "EntityType": "Things",
+      "Id": "557b70b3-05ba-4cef-92f4-220facf1ef4f",
+      "RefreshInterval": 0,
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "4aa59ffe-3c73-4cd6-a806-869f7e36195b",
+          "Name": "CreateFolder",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "CreateFolder"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "2501d3fa-2cef-4a7e-a337-020ffcb1f510",
+          "Name": "DeleteFolder",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "DeleteFolder"
+        }
+      ]
+    },
+    "Things_IK.SupplierTaskList.Thing": {
+      "DataName": "Things_IK.SupplierTaskList.Thing",
+      "EntityName": "IK.SupplierTaskList.Thing",
+      "EntityType": "Things",
+      "Id": "7a31207d-ff8d-488e-bc03-a76c5a3ab2a4",
+      "RefreshInterval": 0,
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "572f512b-2739-4a60-8f63-255ca0481299",
+          "Name": "getColumnForCertVerify",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "getColumnForCertVerify"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "15a2b01b-2578-4441-8094-d011317ba484",
+          "Name": "getSchemaJsonCertVerifiy",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "getSchemaJsonCertVerifiy"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "523f6ed4-0560-433d-ad99-1a6d970a6a41",
+          "Name": "getTasksForCertificateVerification",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "getTasksForCertificateVerification"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "ba422a7b-6a76-4b41-947a-a4b04abcd76a",
+          "Name": "getClickedRowCertVerify",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "getClickedRowCertVerify"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "a4228158-80e7-4faf-b818-1c381035bfb9",
+          "Name": "getCertificateFileDetailsCustomWidget",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "getCertificateFileDetailsCustomWidget"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "7fdf6af2-d896-4e46-9d7c-841d01af3b6c",
+          "Name": "updateCertificateReportingObjectCustomWidget",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "updateCertificateReportingObjectCustomWidget"
+        }
+      ]
+    },
+    "UserExtensions": {
+      "DataName": "UserExtensions",
+      "EntityName": "",
+      "EntityType": "UserExtensions",
+      "Id": "UserExtensions",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "UserExtensionInterface",
+          "Name": "GetCurrentUserExtensionProperties",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetCurrentUserExtensionProperties"
+        }
+      ]
+    }
+  },
+  "DataBindings": [
+    {
+      "Id": "3315784679429888",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "RowsNumber",
+          "SourcePropertyBaseType": "INTEGER",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "input",
+          "TargetPropertyBaseType": "NUMBER",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "infotablerowcount-27",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "expression-28",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6590315114969538",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "LabelText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-28",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcslabel-17",
+      "TargetSection": ""
+    },
+    {
+      "Id": "3951217623692540",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "RowsNumber",
+          "SourcePropertyBaseType": "INTEGER",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "selectedRowsCount",
+          "TargetPropertyBaseType": "NUMBER",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "infotablerowcount-30",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "expression-31",
+      "TargetSection": ""
+    },
+    {
+      "Id": "3452468116337466",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "NUMBER",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "LabelText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-31",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcslabel-18",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6397230554924879",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "taskVerified",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "validator-34",
+      "SourceSection": "",
+      "TargetArea": "Mashup",
+      "TargetId": "mashup-root",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6725424137241316",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "DataInfo",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getTasksForCertificateVerification",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "UI",
+      "TargetId": "kendouicertificateverify-36",
+      "TargetSection": ""
+    },
+    {
+      "Id": "1249504823914576",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "result",
+          "SourcePropertyBaseType": "JSON",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "SchemaJson",
+          "TargetPropertyBaseType": "JSON",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getSchemaJsonCertVerifiy",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "UI",
+      "TargetId": "kendouicertificateverify-36",
+      "TargetSection": ""
+    },
+    {
+      "Id": "8986307438561796",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "result",
+          "SourcePropertyBaseType": "JSON",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "ColumnJson",
+          "TargetPropertyBaseType": "JSON",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getColumnForCertVerify",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "UI",
+      "TargetId": "kendouicertificateverify-36",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6143656774876953",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "task_details",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "property",
+          "TargetProperty": "task_details",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "getTasksForCertificateVerification",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "3461789376709571",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "ClickedRow",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "data",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "kendouicertificateverify-36",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "getClickedRowCertVerify",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "5161713767491980",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "id_rvs",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "InputForRequirementText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Field"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getClickedRowCertVerify",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "Session",
+      "TargetId": "Session",
+      "TargetSection": "Session"
+    },
+    {
+      "Id": "470226153526487",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "InfotableInput",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getTasksForCertificateVerification",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "UI",
+      "TargetId": "infotablerowcount-27",
+      "TargetSection": ""
+    },
+    {
+      "Id": "2138718849793109",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "SelectedRows",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "InfotableInput",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "kendouicertificateverify-36",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "infotablerowcount-30",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5208488879251133",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "uploaded_file_data",
+          "SourcePropertyBaseType": "JSON",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "UploadedFileData",
+          "TargetPropertyBaseType": "JSON",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "navigationfunction-37",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "kendouicertificateverify-36",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6891544150824766",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "UploadReportRowID",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "unique_id",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "kendouicertificateverify-36",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "navigationfunction-37",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5472047304092553",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "UpdatedData",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "updatedData",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "kendouicertificateverify-36",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "getCertificateFileDetailsCustomWidget",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "8039946599477655",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "UploadReportRowID",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "unique_id",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "kendouicertificateverify-36",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "getCertificateFileDetailsCustomWidget",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "1123938090249793",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "updatedData",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getCertificateFileDetailsCustomWidget",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "UI",
+      "TargetId": "navigationfunction-37",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5702858654430370",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "path",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-42",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "CreateFolder",
+      "TargetSection": "Things_CustomFileRepoistory"
+    },
+    {
+      "Id": "7457989147138637",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForDashboardVerificationStatus",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "SPUserTaskPartStrucGridSupplier",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Field"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "Session",
+      "TargetId": "Session",
+      "TargetSection": "Session"
+    },
+    {
+      "Id": "6403556310090639",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "name",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "username",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UserExtensions",
+      "SourceDetails": "AllData",
+      "SourceId": "UserExtensions",
+      "SourceSection": "UserExtensions",
+      "TargetArea": "UI",
+      "TargetId": "expression-42",
+      "TargetSection": ""
+    },
+    {
+      "Id": "7601205017597502",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "path",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-42",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "DeleteFolder",
+      "TargetSection": "Things_CustomFileRepoistory"
+    },
+    {
+      "Id": "3753002970182544",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "fileAdded",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "fileAdded",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "navigationfunction-37",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "validator-43",
+      "TargetSection": ""
+    },
+    {
+      "Id": "4699854493874005",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "SelectedRows",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "property",
+          "TargetProperty": "selectedIDs",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "kendouicertificateverify-36",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "updateCertificateReportingObjectCustomWidget",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "3677204619753766",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "UpdatedData",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "tasks",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "kendouicertificateverify-36",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "updateCertificateReportingObjectCustomWidget",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "864146537496236",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "result",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "input",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "updateCertificateReportingObjectCustomWidget",
+      "SourceSection": "Things_IK.SupplierTaskList.Thing",
+      "TargetArea": "UI",
+      "TargetId": "validator-34",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5775511475796982",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "project_name",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "project_name",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "updateCertificateReportingObjectCustomWidget",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "6483980562054496",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "project_number",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "project_number",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "updateCertificateReportingObjectCustomWidget",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "6483980562054496",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "bu_type",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "bu_type",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "updateCertificateReportingObjectCustomWidget",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "6483980562054496",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "bu_code_owner",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "bu_code_owner",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "updateCertificateReportingObjectCustomWidget",
+      "TargetSection": "Things_IK.SupplierTaskList.Thing"
+    },
+    {
+      "Id": "3083892506838359",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Input1",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-46",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-45",
+      "TargetSection": ""
+    },
+    {
+      "Id": "7439110826161683",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Input2",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-47",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-45",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6232121413794249",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Visible",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "eventsrouter-45",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcsicon-48",
+      "TargetSection": ""
+    }
+  ],
+  "DesignTimePermissions": {},
+  "Events": [
+    {
+      "EventHandlerArea": "Mashup",
+      "EventHandlerId": "mashup-root",
+      "EventHandlerService": "CloseIfPopup",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-21",
+      "EventTriggerSection": "",
+      "Id": "5965288284522596"
+    },
+    {
+      "EventHandlerArea": "Mashup",
+      "EventHandlerId": "mashup-root",
+      "EventHandlerService": "CloseIfPopup",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-25",
+      "EventTriggerSection": "",
+      "Id": "5581761387906836"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-28",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "RowsAreCounted",
+      "EventTriggerId": "infotablerowcount-27",
+      "EventTriggerSection": "",
+      "Id": "7350080116648002"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-31",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "RowsAreCounted",
+      "EventTriggerId": "infotablerowcount-30",
+      "EventTriggerSection": "",
+      "Id": "8590525126289277"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.SupplierTaskList.Thing",
+      "EventHandlerService": "getSchemaJsonCertVerifiy",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "Loaded",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "8268114955023131"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.SupplierTaskList.Thing",
+      "EventHandlerService": "getColumnForCertVerify",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "getSchemaJsonCertVerifiy",
+      "EventTriggerSection": "Things_IK.SupplierTaskList.Thing",
+      "Id": "257223064389863"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.SupplierTaskList.Thing",
+      "EventHandlerService": "getTasksForCertificateVerification",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "getColumnForCertVerify",
+      "EventTriggerSection": "Things_IK.SupplierTaskList.Thing",
+      "Id": "1627161152473746"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "kendouicertificateverify-36",
+      "EventHandlerService": "SelectAllRows",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "getTasksForCertificateVerification",
+      "EventTriggerSection": "Things_IK.SupplierTaskList.Thing",
+      "Id": "920918324933149"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "navigationfunction-37",
+      "EventHandlerService": "Navigate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "UploadReportForRowClicked",
+      "EventTriggerId": "kendouicertificateverify-36",
+      "EventTriggerSection": "",
+      "Id": "1574753490674261"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "navigationfunction-38",
+      "EventHandlerService": "Navigate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "CellClicked",
+      "EventTriggerId": "kendouicertificateverify-36",
+      "EventTriggerSection": "",
+      "Id": "4997625379051669"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.SupplierTaskList.Thing",
+      "EventHandlerService": "getClickedRowCertVerify",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "CellClicked",
+      "EventTriggerId": "kendouicertificateverify-36",
+      "EventTriggerSection": "",
+      "Id": "4694263696535596"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "infotablerowcount-27",
+      "EventHandlerService": "CountRows",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "getTasksForCertificateVerification",
+      "EventTriggerSection": "Things_IK.SupplierTaskList.Thing",
+      "Id": "4980551151924731"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "infotablerowcount-30",
+      "EventHandlerService": "CountRows",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "SelectionChanged",
+      "EventTriggerId": "kendouicertificateverify-36",
+      "EventTriggerSection": "",
+      "Id": "57809316567689"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.SupplierTaskList.Thing",
+      "EventHandlerService": "getCertificateFileDetailsCustomWidget",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "UploadReportForRowClicked",
+      "EventTriggerId": "kendouicertificateverify-36",
+      "EventTriggerSection": "",
+      "Id": "1278270329010144"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_CustomFileRepoistory",
+      "EventHandlerService": "CreateFolder",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "Loaded",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "1392405712498990"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-42",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "Loaded",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "2102247611786621"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_CustomFileRepoistory",
+      "EventHandlerService": "CreateFolder",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Changed",
+      "EventTriggerId": "expression-42",
+      "EventTriggerSection": "",
+      "Id": "7963733345554939"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_CustomFileRepoistory",
+      "EventHandlerService": "DeleteFolder",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-25",
+      "EventTriggerSection": "",
+      "Id": "1865569106153925"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_CustomFileRepoistory",
+      "EventHandlerService": "DeleteFolder",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-21",
+      "EventTriggerSection": "",
+      "Id": "8666318344548658"
+    },
+    {
+      "EventHandlerArea": "Mashup",
+      "EventHandlerId": "mashup-root",
+      "EventHandlerService": "CloseIfPopup",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "DeleteFolder",
+      "EventTriggerSection": "Things_CustomFileRepoistory",
+      "Id": "1078791433267585"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "kendouicertificateverify-36",
+      "EventHandlerService": "UpdateFileDetails",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "True",
+      "EventTriggerId": "validator-43",
+      "EventTriggerSection": "",
+      "Id": "7769487207910044"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "validator-43",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "WindowClosed",
+      "EventTriggerId": "navigationfunction-37",
+      "EventTriggerSection": "",
+      "Id": "1512197976608527"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.SupplierTaskList.Thing",
+      "EventHandlerService": "updateCertificateReportingObjectCustomWidget",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-22",
+      "EventTriggerSection": "",
+      "Id": "421515201127894"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "validator-34",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "updateCertificateReportingObjectCustomWidget",
+      "EventTriggerSection": "Things_IK.SupplierTaskList.Thing",
+      "Id": "8502776891475757"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "statusmessage-44",
+      "EventHandlerService": "ShowMessage",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "False",
+      "EventTriggerId": "validator-34",
+      "EventTriggerSection": "",
+      "Id": "8591375123734808"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-46",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-22",
+      "EventTriggerSection": "",
+      "Id": "8443663479821898"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-47",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "updateCertificateReportingObjectCustomWidget",
+      "EventTriggerSection": "Things_IK.SupplierTaskList.Thing",
+      "Id": "3422704624425642"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_CustomFileRepoistory",
+      "EventHandlerService": "DeleteFolder",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "True",
+      "EventTriggerId": "validator-34",
+      "EventTriggerSection": "",
+      "Id": "4967178633553422"
+    }
+  ],
+  "RunTimePermissions": {},
+  "UI": {
+    "Properties": {
+      "AddToDashboardButton": "SimplePlus",
+      "AddToDashboardButtonStyle": "DefaultAddToDashboardButtonStyle",
+      "Area": "Mashup",
+      "BGImage": "",
+      "BGImageRepeat": "no-repeat",
+      "BGImageSize": "auto",
+      "Columns": 0,
+      "ConfigureGadgetButton": "SimpleGear",
+      "ConfigureGadgetButtonStyle": "DefaultConfigureGadgetButtonStyle",
+      "DisplayName": "Mashup",
+      "EnableParameterEditing": false,
+      "Height": 618,
+      "Id": "mashup-root",
+      "IgnoreWarningsInViewMashup": false,
+      "IsPrintLayout": false,
+      "Left": 0,
+      "MashupResolution": "1024x768",
+      "MashupToEditGadget": "DefaultMashupToEditGadget",
+      "MinHeight": 0,
+      "MinWidth": 0,
+      "ResponsiveLayout": true,
+      "Rows": 0,
+      "ShowDataLoading": true,
+      "Style": "DefaultMashupStyle",
+      "StyleProperties": {
+        "data": {},
+        "meta": {
+          "type": "WidgetStyler",
+          "version": "1.0"
+        }
+      },
+      "StyleTheme": "IK.CVM.Theme",
+      "Title": "",
+      "TitleBar": false,
+      "TitleBarStyle": "DefaultTitleBarStyle",
+      "TitleBarText": "Gadget Title Here",
+      "Top": 0,
+      "Type": "mashup",
+      "UseMasterTheme": false,
+      "UseTheme": false,
+      "UseThemeForHybrids": false,
+      "Visible": true,
+      "Width": 1024,
+      "Z-index": 10,
+      "__TypeDisplayName": "Mashup",
+      "_currentParameterDefs": [
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "project_number"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "project_name"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "bu_code_owner"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "bu_type"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "OUT",
+            "isMandatory": false
+          },
+          "BaseType": "BOOLEAN",
+          "Description": "",
+          "ParameterName": "draftDeleted"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "OUT",
+            "isMandatory": false
+          },
+          "BaseType": "BOOLEAN",
+          "Description": "",
+          "ParameterName": "taskVerified"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "dataShape": "IK.VerificationAggregated.DataShape",
+            "isMandatory": false
+          },
+          "BaseType": "INFOTABLE",
+          "Description": "",
+          "ParameterName": "task_details"
+        }
+      ],
+      "id_index": 48,
+      "supportsAutoResize": true
+    },
+    "Widgets": [
+      {
+        "Properties": {
+          "Area": "UI",
+          "DisplayName": "container-2",
+          "EnableExpandCollapse": false,
+          "ExpandCollapseTabLocation": "inside",
+          "Expanded": true,
+          "Id": "flexcontainer-2",
+          "LastContainer": true,
+          "Overlay": false,
+          "ResponsiveLayout": true,
+          "ShowDataLoading": true,
+          "ShowExpandCollapseTab": false,
+          "SourceURL": "",
+          "Style": "DefaultContainerStyle",
+          "StyleProperties": {},
+          "Type": "flexcontainer",
+          "UseTheme": true,
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "Responsive Container",
+          "align-content": "flex-start",
+          "align-items": "flex-start",
+          "flex-basis": "auto",
+          "flex-direction": "column",
+          "flex-grow": 1,
+          "flex-max-height": "",
+          "flex-max-width": "",
+          "flex-min-height": "",
+          "flex-min-width": "",
+          "flex-shrink": 1,
+          "flex-size": "default",
+          "flex-wrap": "nowrap",
+          "iconClass": "widgets-flexcontainer",
+          "justify-content": "flex-start",
+          "positioning": "responsive",
+          "userCannotRemove": true
+        },
+        "Widgets": [
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-4",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-4",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": false,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "25px",
+              "flex-max-width": "",
+              "flex-min-height": "25px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": []
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-3",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-3",
+              "LastContainer": true,
+              "Overlay": false,
+              "ResponsiveLayout": false,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "",
+              "flex-max-width": "",
+              "flex-min-height": "",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "default",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer",
+              "isLocked": true,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-8",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-8",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "25px",
+                  "flex-min-height": "",
+                  "flex-min-width": "25px",
+                  "flex-shrink": 1,
+                  "flex-size": "fixed",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer-fixed",
+                  "isLocked": false,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": []
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-6",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-6",
+                  "LastContainer": true,
+                  "Overlay": false,
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "column",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "",
+                  "flex-min-height": "",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "default",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer",
+                  "isLocked": true,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": [
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-10",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-10",
+                      "LastContainer": false,
+                      "Overlay": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-start",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "40px",
+                      "flex-max-width": "",
+                      "flex-min-height": "40px",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "fixed",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer-fixed",
+                      "isLocked": false,
+                      "justify-content": "space-between",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-11",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-11",
+                          "LabelText": "Verify",
+                          "LabelType": "large-header",
+                          "LastContainer": false,
+                          "Left": 132.01171875,
+                          "Margin": "0",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 20.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "ButtonType": "transparent",
+                          "ContextID": "",
+                          "Disabled": false,
+                          "DisplayName": "ptcs-button-25",
+                          "Icon": "/Thingworx/MediaEntities/IKEA.Crosscloseicon",
+                          "Id": "ptcsbutton-25",
+                          "Label": "",
+                          "LabelAlignment": "center",
+                          "LastContainer": false,
+                          "Left": 247.01171875,
+                          "Margin": "0",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "TabSequence": 0,
+                          "Top": 20.76171875,
+                          "Type": "ptcsbutton",
+                          "UseTheme": true,
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Button"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-9",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-9",
+                      "LastContainer": false,
+                      "Overlay": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-end",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "35px",
+                      "flex-max-width": "",
+                      "flex-min-height": "35px",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "fixed",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer-fixed",
+                      "isLocked": false,
+                      "justify-content": "flex-start",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-13",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-13",
+                          "LabelText": "Certificate requirements",
+                          "LabelType": "title",
+                          "LastContainer": false,
+                          "Left": 67.01171875,
+                          "Margin": "5 0 5 0",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 15.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-16",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-16",
+                      "LastContainer": false,
+                      "Overlay": false,
+                      "ResponsiveLayout": true,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-start",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "29px",
+                      "flex-max-width": "",
+                      "flex-min-height": "29px",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "fixed",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer-fixed",
+                      "isLocked": false,
+                      "justify-content": "flex-start",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-17",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-17",
+                          "LabelText": "Label",
+                          "LabelType": "header",
+                          "LastContainer": false,
+                          "Left": 107.01171875,
+                          "Margin": "5 5 5 0",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 10.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "CustomClass": "customLabel10",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-18",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-18",
+                          "LabelText": "Label",
+                          "LabelType": "label",
+                          "LastContainer": false,
+                          "Left": 132.01171875,
+                          "Margin": "5",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 10.76171875,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisplayName": "infotablerowcount-27",
+                          "Id": "infotablerowcount-27",
+                          "LastContainer": false,
+                          "Left": 159.00390625,
+                          "Margin": "5",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 10.76171875,
+                          "Type": "infotable_row_count",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Infotable Row Count"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisplayName": "infotablerowcount-30",
+                          "Id": "infotablerowcount-30",
+                          "LastContainer": false,
+                          "Left": 409.00390625,
+                          "Margin": "5",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 15.76171875,
+                          "Type": "infotable_row_count",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Infotable Row Count"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-35",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-35",
+                      "LastContainer": false,
+                      "Overlay": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-start",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "400px",
+                      "flex-max-width": "",
+                      "flex-min-height": "400px",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "fixed",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer-fixed",
+                      "isLocked": false,
+                      "justify-content": "flex-start",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisplayName": "kendouicertificateverify-36",
+                          "Height": 400,
+                          "Id": "kendouicertificateverify-36",
+                          "LastContainer": false,
+                          "Left": 139.00390625,
+                          "Margin": "0",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 45.76171875,
+                          "Type": "kendouicertificateverify",
+                          "UpdatedData": "Updated data",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "KendoUICertificateVerify"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-19",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-19",
+                      "LastContainer": true,
+                      "Overlay": false,
+                      "ResponsiveLayout": true,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-end",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "",
+                      "flex-max-width": "",
+                      "flex-min-height": "",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "default",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer",
+                      "isLocked": true,
+                      "justify-content": "flex-end",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "AlternateText": "",
+                          "Area": "UI",
+                          "Disabled": false,
+                          "DisplayName": "ptcs-icon-48",
+                          "Height": 34,
+                          "Id": "ptcsicon-48",
+                          "LastContainer": false,
+                          "Left": 747,
+                          "Margin": "0 10 0 0",
+                          "Placeholder": true,
+                          "PreventCaching": false,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Size": "small",
+                          "SourceURL": "/Thingworx/MediaEntities/IK.LoadingIcon.Media",
+                          "Top": 25.333328247070312,
+                          "Type": "ptcsicon",
+                          "UseTheme": true,
+                          "Visible": false,
+                          "Width": 34,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Icon"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "ButtonType": "secondary",
+                          "ContextID": "",
+                          "Disabled": false,
+                          "DisplayName": "ptcs-button-21",
+                          "Height": 34,
+                          "Id": "ptcsbutton-21",
+                          "Label": "Cancel",
+                          "LabelAlignment": "center",
+                          "LastContainer": false,
+                          "Left": 209.00390625,
+                          "Margin": "0 10 0 0",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "TabSequence": 0,
+                          "Top": 20.76171875,
+                          "Type": "ptcsbutton",
+                          "UseTheme": true,
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Button"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "ButtonType": "primary",
+                          "ContextID": "",
+                          "Disabled": false,
+                          "DisplayName": "ptcs-button-22",
+                          "Id": "ptcsbutton-22",
+                          "Label": "Verify",
+                          "LabelAlignment": "center",
+                          "LastContainer": false,
+                          "Left": 174.00390625,
+                          "Margin": "0",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "TabSequence": 0,
+                          "Top": 15.76171875,
+                          "Type": "ptcsbutton",
+                          "UseTheme": true,
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Button"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-7",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-7",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "25px",
+                  "flex-min-height": "",
+                  "flex-min-width": "25px",
+                  "flex-shrink": 1,
+                  "flex-size": "fixed",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer-fixed",
+                  "isLocked": false,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": []
+              }
+            ]
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-5",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-5",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": true,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "25px",
+              "flex-max-width": "",
+              "flex-min-height": "25px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": []
+          }
+        ]
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "countAvailableTasks",
+          "Expression": "result = input + \" Requirements available\";",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-28",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "STRING",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "NUMBER",
+              "Description": "",
+              "ParameterName": "input",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "countSelectedTasks",
+          "Expression": "input = selectedRowsCount;\nresult = \"(\" + input + \" selected)\";",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-31",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "NUMBER",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "NUMBER",
+              "DefaultValue": "0",
+              "Description": "",
+              "ParameterName": "selectedRowsCount",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DisplayName": "isTaskVerified",
+          "Expression": "result = input;",
+          "Height": 28,
+          "Id": "validator-34",
+          "LastContainer": false,
+          "Left": null,
+          "Output": true,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "validator",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Validator",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "BOOLEAN",
+              "DefaultValue": "false",
+              "Description": "",
+              "ParameterName": "input",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "ClickOutsideToClose": false,
+          "CloseButton": false,
+          "Description": "",
+          "DisplayName": "FileUpload",
+          "Id": "navigationfunction-37",
+          "LastContainer": false,
+          "Left": null,
+          "MashupParameters": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "unique_id",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "isMandatory": "false"
+                },
+                "baseType": "STRING",
+                "description": "",
+                "name": "unique_id",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "Description": "",
+              "ParameterName": "updatedData",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "dataShape": "IK.VerificationAggregated.DataShape",
+                  "isMandatory": "false"
+                },
+                "baseType": "INFOTABLE",
+                "description": "",
+                "name": "updatedData",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "BOOLEAN",
+              "Description": "",
+              "ParameterName": "fileAdded",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "OUT",
+                  "isMandatory": "false"
+                },
+                "baseType": "BOOLEAN",
+                "description": "",
+                "name": "fileAdded",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "JSON",
+              "Description": "",
+              "ParameterName": "uploaded_file_data",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "OUT",
+                  "isMandatory": "false"
+                },
+                "baseType": "JSON",
+                "description": "",
+                "name": "uploaded_file_data",
+                "ordinal": 0
+              }
+            }
+          ],
+          "MissingMashupMessage": "",
+          "PopupHeight": "300",
+          "PopupScrollbar": "auto",
+          "PopupTitle": "",
+          "PopupWidth": "910",
+          "ReloadOnReplace": false,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "TargetMashup": "IK.VerificationReportingCertificateFileUploadForCustomWidget.Mashup",
+          "TargetWindowType": "modal-popup",
+          "Text": "tw.navigationfunction-ide.properties.text.default-value",
+          "Top": null,
+          "Type": "navigationfunction",
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "navigationfunction",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "BOOLEAN",
+              "DefaultValue": false,
+              "Description": "",
+              "ParameterName": "fileAdded",
+              "bindingDirection": "Source",
+              "bindingType": "Property",
+              "isBindingSource": true,
+              "isBindingTarget": false,
+              "shown": true
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "unique_id",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "DefaultValue": {
+                "dataShape": {
+                  "fieldDefinitions": {
+                    "SendRequestMashupName": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "MASHUPNAME",
+                      "description": "",
+                      "name": "SendRequestMashupName",
+                      "ordinal": 59
+                    },
+                    "ValidationMashupName": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "MASHUPNAME",
+                      "description": "",
+                      "name": "ValidationMashupName",
+                      "ordinal": 24
+                    },
+                    "action": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "action",
+                      "ordinal": 47
+                    },
+                    "additional_information": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "additional_information",
+                      "ordinal": 45
+                    },
+                    "applies_to_material": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "applies_to_material",
+                      "ordinal": 9
+                    },
+                    "applies_to_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "applies_to_name",
+                      "ordinal": 10
+                    },
+                    "applies_to_name_html": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "applies_to_name_html",
+                      "ordinal": 62
+                    },
+                    "applies_to_part": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "applies_to_part",
+                      "ordinal": 83
+                    },
+                    "batch_number": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "batch_number",
+                      "ordinal": 40
+                    },
+                    "certificate_comments": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certificate_comments",
+                      "ordinal": 92
+                    },
+                    "certificate_file_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certificate_file_name",
+                      "ordinal": 93
+                    },
+                    "certificate_file_path": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certificate_file_path",
+                      "ordinal": 94
+                    },
+                    "certificate_id": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certificate_id",
+                      "ordinal": 55
+                    },
+                    "certificate_issuer": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certificate_issuer",
+                      "ordinal": 85
+                    },
+                    "certificate_issuer_data": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "certificate_issuer_data",
+                      "ordinal": 86
+                    },
+                    "certificate_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certificate_name",
+                      "ordinal": 84
+                    },
+                    "certificate_type": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certificate_type",
+                      "ordinal": 87
+                    },
+                    "certificate_type_data": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "certificate_type_data",
+                      "ordinal": 88
+                    },
+                    "certificate_valid_from": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "DATETIME",
+                      "description": "",
+                      "name": "certificate_valid_from",
+                      "ordinal": 90
+                    },
+                    "certificate_valid_to": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "DATETIME",
+                      "description": "",
+                      "name": "certificate_valid_to",
+                      "ordinal": 91
+                    },
+                    "certification_method": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certification_method",
+                      "ordinal": 53
+                    },
+                    "certifier": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "certifier",
+                      "ordinal": 54
+                    },
+                    "certifier_data": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "certifier_data",
+                      "ordinal": 89
+                    },
+                    "child_supplier": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "child_supplier",
+                      "ordinal": 28
+                    },
+                    "comment": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "comment",
+                      "name": "comment",
+                      "ordinal": 37
+                    },
+                    "compliant_in_production": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "DATETIME",
+                      "description": "",
+                      "name": "compliant_in_production",
+                      "ordinal": 60
+                    },
+                    "compliant_in_production_string": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "compliant_in_production_string",
+                      "ordinal": 61
+                    },
+                    "connected_article": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "connected_article",
+                      "ordinal": 66
+                    },
+                    "connected_article_count": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "connected_article_count",
+                      "ordinal": 68
+                    },
+                    "connected_part": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "connected_part",
+                      "ordinal": 67
+                    },
+                    "date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "date",
+                      "ordinal": 48
+                    },
+                    "declarant": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "declarant",
+                      "ordinal": 30
+                    },
+                    "delegated_to": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "delegated_to",
+                      "ordinal": 29
+                    },
+                    "delegation_mashup_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "MASHUPNAME",
+                      "description": "",
+                      "name": "delegation_mashup_name",
+                      "ordinal": 50
+                    },
+                    "grouping_section_id": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "grouping_section_id",
+                      "ordinal": 70
+                    },
+                    "has_feedback": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "BOOLEAN",
+                      "description": "",
+                      "name": "has_feedback",
+                      "ordinal": 35
+                    },
+                    "id_article": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "id_article",
+                      "name": "id_article",
+                      "ordinal": 5
+                    },
+                    "id_part": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "id_part",
+                      "name": "id_part",
+                      "ordinal": 6
+                    },
+                    "id_rvs": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "id_rvs",
+                      "name": "id_rvs",
+                      "ordinal": 7
+                    },
+                    "id_rvs_verified": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "id_rvs_verified",
+                      "name": "id_rvs_verified",
+                      "ordinal": 8
+                    },
+                    "id_verification": {
+                      "aspects": {},
+                      "baseType": "INTEGER",
+                      "description": "id_verification",
+                      "name": "id_verification",
+                      "ordinal": 4
+                    },
+                    "id_verification_result": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INTEGER",
+                      "description": "id_verification_result",
+                      "name": "id_verification_result",
+                      "ordinal": 3
+                    },
+                    "isSelected": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "BOOLEAN",
+                      "description": "",
+                      "name": "isSelected",
+                      "ordinal": 1
+                    },
+                    "is_verified": {
+                      "aspects": {},
+                      "baseType": "BOOLEAN",
+                      "description": "is_verified",
+                      "name": "is_verified",
+                      "ordinal": 36
+                    },
+                    "latest_implementation_date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "Latest implementation type",
+                      "name": "latest_implementation_date",
+                      "ordinal": 21
+                    },
+                    "material_description": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "material_description",
+                      "ordinal": 41
+                    },
+                    "material_identification_code": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "material_identification_code",
+                      "ordinal": 42
+                    },
+                    "measuring_unit": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "measuring_unit",
+                      "ordinal": 16
+                    },
+                    "parent_id": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "parent_id",
+                      "ordinal": 72
+                    },
+                    "parent_supplier": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "parent_supplier",
+                      "ordinal": 27
+                    },
+                    "popup_height": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INTEGER",
+                      "description": "",
+                      "name": "popup_height",
+                      "ordinal": 26
+                    },
+                    "popup_width": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INTEGER",
+                      "description": "",
+                      "name": "popup_width",
+                      "ordinal": 25
+                    },
+                    "producer": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "producer",
+                      "ordinal": 11
+                    },
+                    "reporting_frequency": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "reporting_frequency",
+                      "ordinal": 23
+                    },
+                    "reporting_object_oid": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "reporting_object_oid",
+                      "ordinal": 69
+                    },
+                    "requestor": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requestor",
+                      "ordinal": 44
+                    },
+                    "requirement_description": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "requirement_description",
+                      "ordinal": 65
+                    },
+                    "requirement_source": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_source",
+                      "ordinal": 18
+                    },
+                    "requirement_subtype": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "Requirement subtype",
+                      "name": "requirement_subtype",
+                      "ordinal": 14
+                    },
+                    "requirement_text": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "Requirement text",
+                      "name": "requirement_text",
+                      "ordinal": 15
+                    },
+                    "requirement_title": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_title",
+                      "ordinal": 12
+                    },
+                    "requirement_type": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "Requirement type",
+                      "name": "requirement_type",
+                      "ordinal": 13
+                    },
+                    "requirement_valid_from": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_valid_from",
+                      "ordinal": 19
+                    },
+                    "requirement_valid_to": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_valid_to",
+                      "ordinal": 20
+                    },
+                    "result": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "result",
+                      "ordinal": 46
+                    },
+                    "sample_description": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "sample_description",
+                      "ordinal": 43
+                    },
+                    "sample_production_date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "DATETIME",
+                      "description": "",
+                      "name": "sample_production_date",
+                      "ordinal": 82
+                    },
+                    "sub_row_count": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "sub_row_count",
+                      "ordinal": 71
+                    },
+                    "supply_object_id": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "supply_object_id",
+                      "ordinal": 63
+                    },
+                    "task_status": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "task_status",
+                      "ordinal": 34
+                    },
+                    "test_data_to_be_reported": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "test_data_to_be_reported",
+                      "ordinal": 39
+                    },
+                    "test_labs": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "test_labs",
+                      "ordinal": 38
+                    },
+                    "test_labs_data": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "test_labs_data",
+                      "ordinal": 80
+                    },
+                    "test_method": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "test_method",
+                      "ordinal": 51
+                    },
+                    "test_report_file_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "test_report_file_name",
+                      "ordinal": 76
+                    },
+                    "test_report_file_path": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "test_report_file_path",
+                      "ordinal": 77
+                    },
+                    "test_report_id": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "test_report_id",
+                      "ordinal": 73
+                    },
+                    "test_report_issue_date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "DATETIME",
+                      "description": "",
+                      "name": "test_report_issue_date",
+                      "ordinal": 74
+                    },
+                    "test_report_validity_period": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "test_report_validity_period",
+                      "ordinal": 75
+                    },
+                    "trade_good_id": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "trade_good_id",
+                      "ordinal": 58
+                    },
+                    "trade_good_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "trade_good_name",
+                      "ordinal": 56
+                    },
+                    "trade_good_type": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "trade_good_type",
+                      "ordinal": 57
+                    },
+                    "uid": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "uid",
+                      "ordinal": 2
+                    },
+                    "unique_id": {
+                      "aspects": {
+                        "isPrimaryKey": true
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "unique_id",
+                      "ordinal": 52
+                    },
+                    "units_data": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "units_data",
+                      "ordinal": 81
+                    },
+                    "value": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "value",
+                      "ordinal": 49
+                    },
+                    "verification_data_format": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "verification_data_format",
+                      "ordinal": 17
+                    },
+                    "verification_deadline": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "verification_deadline",
+                      "ordinal": 31
+                    },
+                    "verification_method": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "verification_method",
+                      "ordinal": 22
+                    },
+                    "verification_statement": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "verification_statement",
+                      "ordinal": 32
+                    },
+                    "verification_statement_value": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "verification_statement_value",
+                      "ordinal": 33
+                    },
+                    "verification_type": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "verification_type",
+                      "ordinal": 64
+                    }
+                  },
+                  "name": "IK.VerificationAggregated.DataShape"
+                },
+                "rows": []
+              },
+              "Description": "",
+              "ParameterName": "updatedData",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "JSON",
+              "Description": "",
+              "ParameterName": "uploaded_file_data",
+              "bindingDirection": "Source",
+              "bindingType": "Property",
+              "isBindingSource": true,
+              "isBindingTarget": false,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "ClickOutsideToClose": false,
+          "CloseButton": false,
+          "DisplayName": "ReqDesc",
+          "Id": "navigationfunction-38",
+          "LastContainer": false,
+          "Left": null,
+          "MashupParameters": [],
+          "MissingMashupMessage": "",
+          "PopupHeight": "550",
+          "PopupScrollbar": "auto",
+          "PopupTitle": "",
+          "PopupWidth": "1350",
+          "ReloadOnReplace": false,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "TargetMashup": "IK.RequirementDescriptionPopup.Mashup",
+          "TargetWindowType": "modal-popup",
+          "Text": "tw.navigationfunction-ide.properties.text.default-value",
+          "Top": null,
+          "Type": "navigationfunction",
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "navigationfunction",
+          "_currentParameterDefs": []
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "generateName",
+          "Expression": "result = \"/CVM/ReportingObjects/\"+username;",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-42",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "STRING",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "username",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DisplayName": "isfileAdded",
+          "Expression": "result = fileAdded;",
+          "Height": 28,
+          "Id": "validator-43",
+          "LastContainer": false,
+          "Left": null,
+          "Output": true,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "validator",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Validator",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "BOOLEAN",
+              "DefaultValue": "false",
+              "Description": "",
+              "ParameterName": "fileAdded",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "DisplayName": "checkDataFilled",
+          "Height": 28,
+          "Id": "statusmessage-44",
+          "LastContainer": false,
+          "Left": null,
+          "Message": "Please fill all the fields of selected tasks.",
+          "MessageType": "error",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "statusmessage",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Status Message"
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "DataShape": "",
+          "DataType": "BOOLEAN",
+          "DisplayName": "loadingIconVisibility",
+          "Id": "eventsrouter-45",
+          "LastContainer": false,
+          "Left": null,
+          "NumberOfInputs": "2",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "eventsrouter",
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "Events Router"
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "showLoadingIcon",
+          "Expression": "result = true;",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-46",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "BOOLEAN",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": []
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "hideLoadingIcon",
+          "Expression": "result = false;",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-47",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "BOOLEAN",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": []
+        },
+        "Widgets": []
+      }
+    ]
+  },
+  "mashupType": "mashup"
+}]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

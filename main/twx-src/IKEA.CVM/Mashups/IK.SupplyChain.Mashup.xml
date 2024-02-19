@@ -1,0 +1,2558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="IK.SupplyChain.Mashup"
+         projectName="IKEA.CVM"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="project_name"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="project_number"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[{
+  "CustomMashupCss": "#root_mashupcontainer-17_navigationfunction-20-popup{\n    top:0 !important;\n    left: calc(100% - 313px) !important;\n    right: 0 !important;\n    height: 100% !important;\n} \n#root_mashupcontainer-17_navigationfunction-20-popup-bounding-box{\n\theight: 100% !important;\n}\n\n/*ptcs-textfield::part(text-box)[disabled]{\n    border-width:1px ;\n    border-color :none ;\n    border-radius:0 20px 20px 0 ;\n    padding-top:0px ;\n    padding-left:0px ;  \n    background:#dfdfdf !important;\n    border-color:#dfdfdf !important ;\n}\n.customSearchTextBox ptcs-textfield::part(label)[disabled]{\n     display:none ;\n}\n.customSearchTextBox .widget-ptcstextfield:not([no-wc-style])[disabled]::part(hint-text){\n    font: normal normal normal 16px/22px Noto IKEA Latin;\n    color: #767676;\n}\n\n.customSearchicon .widget-ptcsicon:not([no-wc-style])[disabled].widget-content{\n    border-width:1px 1px 1px 0px ;\n    border-radius:20px 0 0 20px ;\n    padding-right:10px ;  \n    background:#dfdfdf ;\n    border-color:#dfdfdf ;\n}\n */",
+  "Data": {
+    "Session": {
+      "DataName": "Session",
+      "EntityName": "",
+      "EntityType": "Session",
+      "Id": "session",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "SessionInterface",
+          "Name": "GetGlobalSessionValues",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetGlobalSessionValues"
+        }
+      ]
+    },
+    "UserExtensions": {
+      "DataName": "UserExtensions",
+      "EntityName": "",
+      "EntityType": "UserExtensions",
+      "Id": "UserExtensions",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "UserExtensionInterface",
+          "Name": "GetCurrentUserExtensionProperties",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetCurrentUserExtensionProperties"
+        }
+      ]
+    }
+  },
+  "DataBindings": [
+    {
+      "Id": "4431327572597834",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "SelectedValue",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Name",
+          "TargetPropertyBaseType": "MASHUPNAME",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "radiobuttonlist-14",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "mashupcontainer-15",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6977657069077452",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Visible",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "validator-16",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcsicon-11",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5542099621379166",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Visible",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "validator-16",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "radiobuttonlist-14",
+      "TargetSection": ""
+    },
+    {
+      "Id": "2644653273066553",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "SelectedValue",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-17",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "radiobuttonlist-14",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6375967834370878",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "project_number",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "project_number",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "validator-16",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5272836718106791",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Visible",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "validator-16",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcsbutton-13",
+      "TargetSection": ""
+    },
+    {
+      "Id": "3518217680172699",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Visible",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "validator-16",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcsdivider-19",
+      "TargetSection": ""
+    },
+    {
+      "Id": "941510880456808",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "project_number",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "project_number",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "mashupcontainer-15",
+      "TargetSection": ""
+    },
+    {
+      "Id": "3766151482916452",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "project_name",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "project_name",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "mashupcontainer-15",
+      "TargetSection": ""
+    },
+    {
+      "Id": "7265401740189175",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "SelectedValue",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "mashup",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "radiobuttonlist-14",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "expression-21",
+      "TargetSection": ""
+    },
+    {
+      "Id": "3309252787490098",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Disabled",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-21",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcsicon-11",
+      "TargetSection": ""
+    },
+    {
+      "Id": "2873163690418791",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Disabled",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-21",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcsbutton-13",
+      "TargetSection": ""
+    },
+    {
+      "Id": "7327142340706851",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Disabled",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-21",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcstextfield-22",
+      "TargetSection": ""
+    },
+    {
+      "Id": "8142314786306283",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Text",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "searchText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceDetails": "",
+      "SourceId": "ptcstextfield-22",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "mashupcontainer-15",
+      "TargetSection": ""
+    },
+    {
+      "Id": "1219093027125968",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Visible",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "validator-16",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcstextfield-22",
+      "TargetSection": ""
+    }
+  ],
+  "DesignTimePermissions": {},
+  "Events": [
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "validator-16",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "Loaded",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "7691209529729663"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-17",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "Loaded",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "8675737580545990"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "validator-16",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "project_numberChanged",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "2495021250087026"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "navigationfunction-20",
+      "EventHandlerService": "Navigate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-13",
+      "EventTriggerSection": "",
+      "Id": "5076930436948668"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-21",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "SelectionChanged",
+      "EventTriggerId": "radiobuttonlist-14",
+      "EventTriggerSection": "",
+      "Id": "6634246631463230"
+    }
+  ],
+  "RunTimePermissions": {},
+  "UI": {
+    "Properties": {
+      "AddToDashboardButton": "SimplePlus",
+      "AddToDashboardButtonStyle": "DefaultAddToDashboardButtonStyle",
+      "Area": "Mashup",
+      "BGImage": "",
+      "BGImageRepeat": "no-repeat",
+      "BGImageSize": "auto",
+      "Columns": 0,
+      "ConfigureGadgetButton": "SimpleGear",
+      "ConfigureGadgetButtonStyle": "DefaultConfigureGadgetButtonStyle",
+      "DisplayName": "Mashup",
+      "EnableParameterEditing": false,
+      "Height": 618,
+      "Id": "mashup-root",
+      "IgnoreWarningsInViewMashup": false,
+      "IsPrintLayout": false,
+      "Left": 0,
+      "MashupToEditGadget": "DefaultMashupToEditGadget",
+      "MinHeight": 0,
+      "MinWidth": 0,
+      "ResponsiveLayout": true,
+      "Rows": 0,
+      "ShowDataLoading": true,
+      "Style": "DefaultMashupStyle",
+      "StyleProperties": {
+        "data": {
+          "ptcsbutton-13": {
+            "parts": {
+              "$": {
+                "disabled": {
+                  "background": "#dfdfdf",
+                  "border-color": "#dfdfdf"
+                }
+              }
+            },
+            "widget": "ptcs-button"
+          },
+          "ptcsdivider-19": {
+            "parts": {
+              "$": {
+                "$": {
+                  "padding-bottom": "25px",
+                  "padding-top": "11px"
+                }
+              },
+              "line": {
+                "$": {
+                  "background": "#DFDFDF"
+                }
+              }
+            },
+            "widget": "ptcs-divider"
+          },
+          "ptcstextfield-22": {
+            "parts": {
+              "text-box": {
+                "disabled+focus": {
+                  "background": "#dfdfdf",
+                  "border-color": "#DFDFDF"
+                },
+                "hover": {
+                  "background": "#f5f5f5",
+                  "border-color": "#f5f5f5"
+                }
+              }
+            },
+            "widget": "ptcs-textfield"
+          }
+        },
+        "meta": {
+          "type": "WidgetStyler",
+          "version": "1.0"
+        }
+      },
+      "StyleTheme": "IK.CVM.Theme",
+      "Title": "",
+      "TitleBar": false,
+      "TitleBarStyle": "DefaultTitleBarStyle",
+      "TitleBarText": "Gadget Title Here",
+      "Top": 0,
+      "Type": "mashup",
+      "UseMasterTheme": false,
+      "UseTheme": false,
+      "UseThemeForHybrids": false,
+      "Visible": true,
+      "Width": 1024,
+      "Z-index": 10,
+      "__TypeDisplayName": "Mashup",
+      "_currentParameterDefs": [
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "project_name"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "project_number"
+        }
+      ],
+      "id_index": 22,
+      "supportsAutoResize": true
+    },
+    "Widgets": [
+      {
+        "Properties": {
+          "Area": "UI",
+          "DisplayName": "container-2",
+          "EnableExpandCollapse": false,
+          "ExpandCollapseTabLocation": "inside",
+          "Expanded": true,
+          "Id": "flexcontainer-2",
+          "LastContainer": true,
+          "Overlay": false,
+          "ResponsiveLayout": true,
+          "ShowDataLoading": true,
+          "ShowExpandCollapseTab": false,
+          "SourceURL": "",
+          "Style": "DefaultContainerStyle",
+          "StyleProperties": {},
+          "Type": "flexcontainer",
+          "UseTheme": true,
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "Responsive Container",
+          "align-content": "flex-start",
+          "align-items": "flex-start",
+          "flex-basis": "auto",
+          "flex-direction": "column",
+          "flex-grow": 1,
+          "flex-max-height": "",
+          "flex-max-width": "",
+          "flex-min-height": "",
+          "flex-min-width": "",
+          "flex-shrink": 1,
+          "flex-size": "default",
+          "flex-wrap": "nowrap",
+          "iconClass": "widgets-flexcontainer",
+          "justify-content": "flex-start",
+          "positioning": "responsive",
+          "userCannotRemove": true
+        },
+        "Widgets": [
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-4",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-4",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": false,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "column",
+              "flex-grow": 1,
+              "flex-max-height": "60px",
+              "flex-max-width": "",
+              "flex-min-height": "60px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisclosureControl": "show-more",
+                  "DisplayName": "ptcs-label-5",
+                  "HorizontalAlignment": "left",
+                  "Id": "ptcslabel-5",
+                  "LabelText": "Manage supply chain",
+                  "LabelType": "header",
+                  "LastContainer": false,
+                  "Left": 87.01388549804688,
+                  "Margin": "0",
+                  "MultiLine": true,
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "Top": 26.458328247070312,
+                  "Type": "ptcslabel",
+                  "UseTheme": true,
+                  "VerticalAlignment": "flex-start",
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Label",
+                  "overflowShowLessTxt": "[[showLess]]",
+                  "overflowShowMoreTxt": "[[showMore]]"
+                },
+                "Widgets": []
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisclosureControl": "show-more",
+                  "DisplayName": "ptcs-label-6",
+                  "HorizontalAlignment": "left",
+                  "Id": "ptcslabel-6",
+                  "LabelText": "Supply chain",
+                  "LabelType": "large-header",
+                  "LastContainer": false,
+                  "Left": 102.01388549804688,
+                  "Margin": "0",
+                  "MultiLine": true,
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "Top": 26.458328247070312,
+                  "Type": "ptcslabel",
+                  "UseTheme": true,
+                  "VerticalAlignment": "flex-start",
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Label",
+                  "overflowShowLessTxt": "[[showLess]]",
+                  "overflowShowMoreTxt": "[[showMore]]"
+                },
+                "Widgets": []
+              }
+            ]
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-7",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-7",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": true,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "50px",
+              "flex-max-width": "",
+              "flex-min-height": "50px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-8",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-8",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "center",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "",
+                  "flex-min-height": "",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "default",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer",
+                  "isLocked": false,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": [
+                  {
+                    "Properties": {
+                      "AlternateText": "",
+                      "Area": "UI",
+                      "CustomClass": "customSearchicon",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-icon-11",
+                      "Height": 34,
+                      "Id": "ptcsicon-11",
+                      "LastContainer": false,
+                      "Left": 39.02777099609375,
+                      "Margin": "0",
+                      "Placeholder": true,
+                      "PreventCaching": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "Size": "small",
+                      "SourceURL": "/Thingworx/MediaEntities/IK.Media.SearchIcon",
+                      "Top": 20.017358779907227,
+                      "Type": "ptcsicon",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Width": 34,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Icon"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "Counter": false,
+                      "CustomClass": "customSearchTextBox",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-textfield-22",
+                      "HintText": "Search",
+                      "Id": "ptcstextfield-22",
+                      "Label": "",
+                      "LabelAlignment": "left",
+                      "LastContainer": false,
+                      "Left": 139.02777099609375,
+                      "Margin": "0",
+                      "MaxNumberOfCharacters": 100,
+                      "Password": false,
+                      "ReadOnly": false,
+                      "ResponsiveLayout": false,
+                      "ShowClearText": true,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "TextAlignment": "left",
+                      "Top": 11.458328247070312,
+                      "Type": "ptcstextfield",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Width": 273,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Text Field"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonType": "tertiary",
+                      "ContextID": "",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-button-13",
+                      "Icon": "/Thingworx/MediaEntities/IK.FilterIcon.Media",
+                      "Id": "ptcsbutton-13",
+                      "Label": "",
+                      "LabelAlignment": "center",
+                      "LastContainer": false,
+                      "Left": 279.02777099609375,
+                      "Margin": "5 5 5 15",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "Top": 36.45832824707031,
+                      "Type": "ptcsbutton",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Width": 40,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button"
+                    },
+                    "Widgets": []
+                  }
+                ]
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-9",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-9",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "center",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "",
+                  "flex-min-height": "",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "default",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer",
+                  "isLocked": false,
+                  "justify-content": "flex-end",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": [
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonStates": "IK.SupplyChainView.StateDefinition",
+                      "ButtonTextOverflow": "wrap",
+                      "CustomClass": "customButtonBar",
+                      "DisplayName": "buttonbar-14",
+                      "Height": 35,
+                      "Id": "radiobuttonlist-14",
+                      "LastContainer": false,
+                      "Left": 119.02777099609375,
+                      "Margin": "0 5 0 0",
+                      "Orientation": "horz",
+                      "RadioButtonDepressedStyle": {
+                        "backgroundColor": "rgba(223,223,223,1)",
+                        "displayString": "",
+                        "fontEmphasisBold": false,
+                        "fontEmphasisItalic": false,
+                        "fontEmphasisUnderline": false,
+                        "foregroundColor": "",
+                        "image": "",
+                        "lineColor": "",
+                        "lineStyle": "solid",
+                        "lineThickness": 1,
+                        "secondaryBackgroundColor": "",
+                        "textSize": "normal"
+                      },
+                      "RadioButtonStyle": {
+                        "backgroundColor": "rgba(255,255,255,1)",
+                        "displayString": "",
+                        "fontEmphasisBold": false,
+                        "fontEmphasisItalic": false,
+                        "fontEmphasisUnderline": false,
+                        "foregroundColor": "",
+                        "image": "",
+                        "lineColor": "rgba(223,223,223,1)",
+                        "lineStyle": "solid",
+                        "lineThickness": 1,
+                        "secondaryBackgroundColor": "",
+                        "textSize": "normal"
+                      },
+                      "ReadOnly": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "ToolTipStyle": "DefaultTooltipStyle",
+                      "Top": 6.4583282470703125,
+                      "Type": "radiobuttonlist",
+                      "Visible": true,
+                      "Width": 100,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button Bar",
+                      "__supportsTooltip": true
+                    },
+                    "Widgets": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "CustomClass": "customContainerOverFlow",
+              "DisplayName": "container-18",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-18",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": true,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "14px",
+              "flex-max-width": "",
+              "flex-min-height": "14px",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "ptcs-divider-19",
+                  "Height": 50,
+                  "Id": "ptcsdivider-19",
+                  "LastContainer": false,
+                  "Left": 229.02777099609375,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "Top": 36.45832824707031,
+                  "Type": "ptcsdivider",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Width": 300,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Divider"
+                },
+                "Widgets": []
+              }
+            ]
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-3",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-3",
+              "LastContainer": true,
+              "Overlay": false,
+              "ResponsiveLayout": false,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "",
+              "flex-max-width": "",
+              "flex-min-height": "",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "default",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer",
+              "isLocked": true,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "mashupcontainer-15",
+                  "Height": 300,
+                  "Id": "mashupcontainer-15",
+                  "LastContainer": false,
+                  "Left": 74.02777099609375,
+                  "MashupParameters": [],
+                  "Name": "",
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "TabSequenceGroup": 0,
+                  "Top": 46.45832824707031,
+                  "Type": "mashupcontainer",
+                  "Visible": true,
+                  "Width": 400,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Contained Mashup"
+                },
+                "Widgets": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DisplayName": "isSupplierDefined",
+          "Expression": "result = (project_number && project_number.length>0)?true:false;",
+          "Height": 28,
+          "Id": "validator-16",
+          "LastContainer": false,
+          "Left": null,
+          "Output": true,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "validator",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Validator",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "project_number",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "setDefaultView",
+          "Expression": "result = \"IK.SupplyChainListView.Mashup\";",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-17",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "STRING",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": []
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "ClickOutsideToClose": false,
+          "CloseButton": false,
+          "DisplayName": "filterSupplyChain",
+          "Id": "navigationfunction-20",
+          "LastContainer": false,
+          "Left": null,
+          "MashupParameters": [
+            {
+              "BaseType": "INFOTABLE",
+              "Description": "",
+              "ParameterName": "existing_selected_filters",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "dataShape": "IK.SupplierTasklistFilterList.DataShape",
+                  "isMandatory": "false"
+                },
+                "baseType": "INFOTABLE",
+                "description": "",
+                "name": "existing_selected_filters",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "Description": "",
+              "ParameterName": "selected_filters",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "OUT",
+                  "dataShape": "IK.SupplierTasklistFilterList.DataShape",
+                  "isMandatory": "false"
+                },
+                "baseType": "INFOTABLE",
+                "description": "",
+                "name": "selected_filters",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "filterCondition",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "isMandatory": "false"
+                },
+                "baseType": "STRING",
+                "description": "",
+                "name": "filterCondition",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "Description": "",
+              "ParameterName": "general_dropdown_list",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "dataShape": "IK.ColumnDefinition.DataShape",
+                  "isMandatory": "false"
+                },
+                "baseType": "INFOTABLE",
+                "description": "",
+                "name": "general_dropdown_list",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "selected_tab_value",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "isMandatory": "false"
+                },
+                "baseType": "STRING",
+                "description": "",
+                "name": "selected_tab_value",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "Description": "",
+              "ParameterName": "details_dropdown_list",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "dataShape": "IK.ColumnDefinition.DataShape",
+                  "isMandatory": "false"
+                },
+                "baseType": "INFOTABLE",
+                "description": "",
+                "name": "details_dropdown_list",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "Description": "",
+              "ParameterName": "tasks",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "dataShape": "IK.VerificationAggregated.DataShape",
+                  "isMandatory": "false"
+                },
+                "baseType": "INFOTABLE",
+                "description": "",
+                "name": "tasks",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "BOOLEAN",
+              "Description": "",
+              "ParameterName": "filterApplied",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "OUT",
+                  "isMandatory": "false"
+                },
+                "baseType": "BOOLEAN",
+                "description": "",
+                "name": "filterApplied",
+                "ordinal": 0
+              }
+            }
+          ],
+          "MissingMashupMessage": "",
+          "PopupHeight": "400",
+          "PopupScrollbar": "auto",
+          "PopupTitle": "",
+          "PopupWidth": "313",
+          "ReloadOnReplace": false,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "TargetMashup": "IK.SupplyChainFilter.Mashup",
+          "TargetWindowType": "modal-popup",
+          "Text": "tw.navigationfunction-ide.properties.text.default-value",
+          "Top": null,
+          "Type": "navigationfunction",
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "navigationfunction",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "INFOTABLE",
+              "DefaultValue": {
+                "dataShape": {
+                  "fieldDefinitions": {
+                    "configuration": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "JSON",
+                      "description": "",
+                      "name": "configuration",
+                      "ordinal": 2
+                    },
+                    "name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "name",
+                      "ordinal": 1
+                    },
+                    "state": {
+                      "aspects": {
+                        "defaultValue": "disabled",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "state",
+                      "ordinal": 3
+                    }
+                  },
+                  "name": "IK.ColumnDefinition.DataShape"
+                },
+                "rows": []
+              },
+              "Description": "",
+              "ParameterName": "details_dropdown_list",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "DefaultValue": {
+                "dataShape": {
+                  "fieldDefinitions": {
+                    "applies_to_material": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "applies_to_material",
+                      "ordinal": 2
+                    },
+                    "applies_to_name": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "applies_to_name",
+                      "ordinal": 3
+                    },
+                    "filtered_tasks": {
+                      "aspects": {
+                        "dataShape": "IK.VerificationAggregated.DataShape",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "filtered_tasks",
+                      "ordinal": 1
+                    },
+                    "measuring_unit": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "measuring_unit",
+                      "ordinal": 9
+                    },
+                    "pass_fail_criteria": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "pass_fail_criteria",
+                      "ordinal": 8
+                    },
+                    "producer": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "producer",
+                      "ordinal": 4
+                    },
+                    "reporting_frequency": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "reporting_frequency",
+                      "ordinal": 12
+                    },
+                    "requirement_source": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "requirement_source",
+                      "ordinal": 16
+                    },
+                    "requirement_subtype": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "requirement_subtype",
+                      "ordinal": 14
+                    },
+                    "requirement_title": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "requirement_title",
+                      "ordinal": 5
+                    },
+                    "requirement_type": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "requirement_type",
+                      "ordinal": 7
+                    },
+                    "requirement_valid_from_date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_valid_from_date",
+                      "ordinal": 17
+                    },
+                    "requirement_valid_to_date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_valid_to_date",
+                      "ordinal": 18
+                    },
+                    "verification_data_format": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "verification_data_format",
+                      "ordinal": 10
+                    },
+                    "verification_method": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "verification_method",
+                      "ordinal": 15
+                    },
+                    "verification_status": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "verification_status",
+                      "ordinal": 6
+                    }
+                  },
+                  "name": "IK.SupplierTasklistFilterList.DataShape"
+                },
+                "rows": []
+              },
+              "Description": "",
+              "ParameterName": "existing_selected_filters",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "BOOLEAN",
+              "DefaultValue": false,
+              "Description": "",
+              "ParameterName": "filterApplied",
+              "bindingDirection": "Source",
+              "bindingType": "Property",
+              "isBindingSource": true,
+              "isBindingTarget": false,
+              "shown": true
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "filterCondition",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "DefaultValue": {
+                "dataShape": {
+                  "fieldDefinitions": {
+                    "configuration": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "JSON",
+                      "description": "",
+                      "name": "configuration",
+                      "ordinal": 2
+                    },
+                    "name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "name",
+                      "ordinal": 1
+                    },
+                    "state": {
+                      "aspects": {
+                        "defaultValue": "disabled",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "state",
+                      "ordinal": 3
+                    }
+                  },
+                  "name": "IK.ColumnDefinition.DataShape"
+                },
+                "rows": []
+              },
+              "Description": "",
+              "ParameterName": "general_dropdown_list",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "DefaultValue": {
+                "dataShape": {
+                  "fieldDefinitions": {
+                    "applies_to_material": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "applies_to_material",
+                      "ordinal": 2
+                    },
+                    "applies_to_name": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "applies_to_name",
+                      "ordinal": 3
+                    },
+                    "filtered_tasks": {
+                      "aspects": {
+                        "dataShape": "IK.VerificationAggregated.DataShape",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "filtered_tasks",
+                      "ordinal": 1
+                    },
+                    "measuring_unit": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "measuring_unit",
+                      "ordinal": 9
+                    },
+                    "pass_fail_criteria": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "pass_fail_criteria",
+                      "ordinal": 8
+                    },
+                    "producer": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "producer",
+                      "ordinal": 4
+                    },
+                    "reporting_frequency": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "reporting_frequency",
+                      "ordinal": 12
+                    },
+                    "requirement_source": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "requirement_source",
+                      "ordinal": 16
+                    },
+                    "requirement_subtype": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "requirement_subtype",
+                      "ordinal": 14
+                    },
+                    "requirement_title": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "requirement_title",
+                      "ordinal": 5
+                    },
+                    "requirement_type": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "requirement_type",
+                      "ordinal": 7
+                    },
+                    "requirement_valid_from_date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_valid_from_date",
+                      "ordinal": 17
+                    },
+                    "requirement_valid_to_date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_valid_to_date",
+                      "ordinal": 18
+                    },
+                    "verification_data_format": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "verification_data_format",
+                      "ordinal": 10
+                    },
+                    "verification_method": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "verification_method",
+                      "ordinal": 15
+                    },
+                    "verification_status": {
+                      "aspects": {
+                        "dataShape": "GenericStringList",
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INFOTABLE",
+                      "description": "",
+                      "name": "verification_status",
+                      "ordinal": 6
+                    }
+                  },
+                  "name": "IK.SupplierTasklistFilterList.DataShape"
+                },
+                "rows": []
+              },
+              "Description": "",
+              "ParameterName": "selected_filters",
+              "bindingDirection": "Source",
+              "bindingType": "Property",
+              "isBindingSource": true,
+              "isBindingTarget": false,
+              "shown": true
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "selected_tab_value",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "INFOTABLE",
+              "DefaultValue": {
+                "dataShape": {
+                  "fieldDefinitions": {
+                    "SendRequestMashupName": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "MASHUPNAME",
+                      "description": "",
+                      "name": "SendRequestMashupName",
+                      "ordinal": 67
+                    },
+                    "ValidationMashupName": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "MASHUPNAME",
+                      "description": "",
+                      "name": "ValidationMashupName",
+                      "ordinal": 29
+                    },
+                    "action": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "action",
+                      "ordinal": 55
+                    },
+                    "additional_information": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "additional_information",
+                      "ordinal": 53
+                    },
+                    "applies_to_material": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "applies_to_material",
+                      "ordinal": 9
+                    },
+                    "applies_to_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "applies_to_name",
+                      "ordinal": 10
+                    },
+                    "batch_number": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "batch_number",
+                      "ordinal": 48
+                    },
+                    "certificate_id": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certificate_id",
+                      "ordinal": 63
+                    },
+                    "certification_method": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "certification_method",
+                      "ordinal": 61
+                    },
+                    "certifier": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "certifier",
+                      "ordinal": 62
+                    },
+                    "child_supplier": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "child_supplier",
+                      "ordinal": 33
+                    },
+                    "comment": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "comment",
+                      "name": "comment",
+                      "ordinal": 42
+                    },
+                    "compliant_in_production": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "DATETIME",
+                      "description": "",
+                      "name": "compliant_in_production",
+                      "ordinal": 68
+                    },
+                    "compliant_in_production_string": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "compliant_in_production_string",
+                      "ordinal": 69
+                    },
+                    "date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "date",
+                      "ordinal": 56
+                    },
+                    "declarant": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "declarant",
+                      "ordinal": 35
+                    },
+                    "delegated_to": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "delegated_to",
+                      "ordinal": 34
+                    },
+                    "delegation_mashup_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "MASHUPNAME",
+                      "description": "",
+                      "name": "delegation_mashup_name",
+                      "ordinal": 58
+                    },
+                    "file_content": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "TEXT",
+                      "description": "",
+                      "name": "file_content",
+                      "ordinal": 45
+                    },
+                    "file_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "file_name",
+                      "ordinal": 44
+                    },
+                    "has_feedback": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "BOOLEAN",
+                      "description": "",
+                      "name": "has_feedback",
+                      "ordinal": 40
+                    },
+                    "id_article": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "id_article",
+                      "name": "id_article",
+                      "ordinal": 5
+                    },
+                    "id_part": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "id_part",
+                      "name": "id_part",
+                      "ordinal": 6
+                    },
+                    "id_rvs": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "id_rvs",
+                      "name": "id_rvs",
+                      "ordinal": 7
+                    },
+                    "id_rvs_verified": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "id_rvs_verified",
+                      "name": "id_rvs_verified",
+                      "ordinal": 8
+                    },
+                    "id_verification": {
+                      "aspects": {},
+                      "baseType": "INTEGER",
+                      "description": "id_verification",
+                      "name": "id_verification",
+                      "ordinal": 4
+                    },
+                    "id_verification_result": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INTEGER",
+                      "description": "id_verification_result",
+                      "name": "id_verification_result",
+                      "ordinal": 3
+                    },
+                    "isSelected": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "BOOLEAN",
+                      "description": "",
+                      "name": "isSelected",
+                      "ordinal": 1
+                    },
+                    "is_verified": {
+                      "aspects": {},
+                      "baseType": "BOOLEAN",
+                      "description": "is_verified",
+                      "name": "is_verified",
+                      "ordinal": 41
+                    },
+                    "latest_implementation_date": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "Latest implementation type",
+                      "name": "latest_implementation_date",
+                      "ordinal": 26
+                    },
+                    "material_description": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "material_description",
+                      "ordinal": 49
+                    },
+                    "material_identification_code": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "material_identification_code",
+                      "ordinal": 50
+                    },
+                    "math_operator_1": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "math_operator_1",
+                      "ordinal": 17
+                    },
+                    "math_operator_2": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "math_operator_2",
+                      "ordinal": 19
+                    },
+                    "measuring_unit": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "measuring_unit",
+                      "ordinal": 20
+                    },
+                    "parent_supplier": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "parent_supplier",
+                      "ordinal": 32
+                    },
+                    "pass_fail_criteria": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "BOOLEAN",
+                      "description": "",
+                      "name": "pass_fail_criteria",
+                      "ordinal": 21
+                    },
+                    "popup_height": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INTEGER",
+                      "description": "",
+                      "name": "popup_height",
+                      "ordinal": 31
+                    },
+                    "popup_width": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "INTEGER",
+                      "description": "",
+                      "name": "popup_width",
+                      "ordinal": 30
+                    },
+                    "producer": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "producer",
+                      "ordinal": 11
+                    },
+                    "reporting_frequency": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "reporting_frequency",
+                      "ordinal": 28
+                    },
+                    "requestor": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requestor",
+                      "ordinal": 52
+                    },
+                    "requirement_source": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_source",
+                      "ordinal": 23
+                    },
+                    "requirement_subtype": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "Requirement subtype",
+                      "name": "requirement_subtype",
+                      "ordinal": 14
+                    },
+                    "requirement_text": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "Requirement text",
+                      "name": "requirement_text",
+                      "ordinal": 15
+                    },
+                    "requirement_title": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_title",
+                      "ordinal": 12
+                    },
+                    "requirement_type": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "Requirement type",
+                      "name": "requirement_type",
+                      "ordinal": 13
+                    },
+                    "requirement_valid_from": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_valid_from",
+                      "ordinal": 24
+                    },
+                    "requirement_valid_to": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "requirement_valid_to",
+                      "ordinal": 25
+                    },
+                    "result": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "result",
+                      "ordinal": 54
+                    },
+                    "sample_description": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "sample_description",
+                      "ordinal": 51
+                    },
+                    "task_status": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "task_status",
+                      "ordinal": 39
+                    },
+                    "test_data_to_be_reported": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "test_data_to_be_reported",
+                      "ordinal": 47
+                    },
+                    "test_labs": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "test_labs",
+                      "ordinal": 46
+                    },
+                    "test_method": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "test_method",
+                      "ordinal": 59
+                    },
+                    "text_result": {
+                      "aspects": {},
+                      "baseType": "STRING",
+                      "description": "text_result",
+                      "name": "text_result",
+                      "ordinal": 43
+                    },
+                    "trade_good_id": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "trade_good_id",
+                      "ordinal": 66
+                    },
+                    "trade_good_name": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "trade_good_name",
+                      "ordinal": 64
+                    },
+                    "trade_good_type": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "trade_good_type",
+                      "ordinal": 65
+                    },
+                    "uid": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "uid",
+                      "ordinal": 2
+                    },
+                    "unique_id": {
+                      "aspects": {
+                        "isPrimaryKey": true
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "unique_id",
+                      "ordinal": 60
+                    },
+                    "value": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "created for test report verification(dummy) ",
+                      "name": "value",
+                      "ordinal": 57
+                    },
+                    "value_1": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "NUMBER",
+                      "description": "",
+                      "name": "value_1",
+                      "ordinal": 16
+                    },
+                    "value_2": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "NUMBER",
+                      "description": "",
+                      "name": "value_2",
+                      "ordinal": 18
+                    },
+                    "verification_data_format": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "verification_data_format",
+                      "ordinal": 22
+                    },
+                    "verification_deadline": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "verification_deadline",
+                      "ordinal": 36
+                    },
+                    "verification_method": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "verification_method",
+                      "ordinal": 27
+                    },
+                    "verification_statement": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "HTML",
+                      "description": "",
+                      "name": "verification_statement",
+                      "ordinal": 37
+                    },
+                    "verification_statement_value": {
+                      "aspects": {
+                        "isPrimaryKey": false
+                      },
+                      "baseType": "STRING",
+                      "description": "",
+                      "name": "verification_statement_value",
+                      "ordinal": 38
+                    }
+                  },
+                  "name": "IK.VerificationAggregated.DataShape"
+                },
+                "rows": []
+              },
+              "Description": "",
+              "ParameterName": "tasks",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "disableSearch",
+          "Expression": "result = (mashup==\"IK.SupplyChainDiagramView.Mashup\")? true:false;",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-21",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "BOOLEAN",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "mashup",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      }
+    ]
+  },
+  "mashupType": "mashup"
+}]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

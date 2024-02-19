@@ -1,0 +1,2516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="IK.LegalReportingActionPopup.Mashup"
+         projectName="IKEA.CVM"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="article_number"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="legal_reporting_input"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="selected_rows"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="supplier_name"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="supplier_number"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="username"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[{
+  "CustomMashupCss": "",
+  "Data": {
+    "Session": {
+      "DataName": "Session",
+      "EntityName": "",
+      "EntityType": "Session",
+      "Id": "session",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "SessionInterface",
+          "Name": "GetGlobalSessionValues",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetGlobalSessionValues"
+        }
+      ]
+    },
+    "Things_CustomFileRepoistory": {
+      "DataName": "Things_CustomFileRepoistory",
+      "EntityName": "CustomFileRepoistory",
+      "EntityType": "Things",
+      "Id": "b54b84e5-9e61-47a7-8f8f-7cc0d5429c6e",
+      "RefreshInterval": 0,
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "1fc4a78c-cc94-4686-8851-1e8af44224db",
+          "Name": "DeleteFileAfter30Sec",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "DeleteFileAfter30Sec"
+        }
+      ]
+    },
+    "Things_IK.LegalReporting.Thing": {
+      "DataName": "Things_IK.LegalReporting.Thing",
+      "EntityName": "IK.LegalReporting.Thing",
+      "EntityType": "Things",
+      "Id": "33d5bb67-1079-4306-9228-abe851beb7ff",
+      "RefreshInterval": 0,
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "8d5c5f97-9367-432a-9987-f2b89fe6ce9b",
+          "Name": "getDataForActionPopup",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "getDataForActionPopup"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "1cab7140-4951-40d4-883a-c3ab38a9886b",
+          "Name": "exportEUTRLaceyReportToExcel",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "exportEUTRLaceyReportToExcel"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "1bbc0130-0737-4f14-bf3c-f5cc9101f1cc",
+          "Name": "exportEUTRLaceyReportToPDF",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "exportEUTRLaceyReportToPDF"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "0af764f6-0761-40de-835a-17c0d916bc25",
+          "Name": "generateEUTRLaceyData",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "generateEUTRLaceyData"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "457ce2b8-86c4-4880-9857-175668fc76bc",
+          "Name": "generateEUTRLaceyData1",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "generateEUTRLaceyData"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "9423c70e-6acb-471d-a1ee-e4e878d16a89",
+          "Name": "generateEUTRLaceyData2",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "generateEUTRLaceyData"
+        },
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "4c283f8e-a286-4678-ae70-4949d3c6d931",
+          "Name": "exportEUTRLaceyReportToPDF1",
+          "Parameters": {
+            "isLacey": true
+          },
+          "RefreshInterval": 0,
+          "Target": "exportEUTRLaceyReportToPDF"
+        }
+      ]
+    },
+    "UserExtensions": {
+      "DataName": "UserExtensions",
+      "EntityName": "",
+      "EntityType": "UserExtensions",
+      "Id": "UserExtensions",
+      "Services": [
+        {
+          "APIMethod": "post",
+          "Characteristic": "Services",
+          "Id": "UserExtensionInterface",
+          "Name": "GetCurrentUserExtensionProperties",
+          "Parameters": {},
+          "RefreshInterval": 0,
+          "Target": "GetCurrentUserExtensionProperties"
+        }
+      ]
+    }
+  },
+  "DataBindings": [
+    {
+      "Id": "7810319804507935",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "Data",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "getDataForActionPopup",
+      "SourceName": "getDataForActionPopup",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "UI",
+      "TargetId": "gridadvanced-16",
+      "TargetSection": ""
+    },
+    {
+      "Id": "4219756278588006",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "username",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "username",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "generateEUTRLaceyData2",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "1754452813885068",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "eutrLaceyData",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "generateEUTRLaceyData2",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "Data",
+      "TargetId": "exportEUTRLaceyReportToExcel",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "82253448636786",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "username",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "username",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "exportEUTRLaceyReportToExcel",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "7630351809366744",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "username",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "username",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "generateEUTRLaceyData1",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "5053984888100576",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "eutrLaceyData",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "generateEUTRLaceyData1",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "Data",
+      "TargetId": "exportEUTRLaceyReportToPDF1",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "8068886172987447",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "username",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "username",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "generateEUTRLaceyData",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "3945763986499649",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "",
+          "SourcePropertyBaseType": "INFOTABLE",
+          "SourcePropertyType": "InfoTable",
+          "TargetProperty": "eutrLaceyData",
+          "TargetPropertyBaseType": "INFOTABLE",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "generateEUTRLaceyData",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "Data",
+      "TargetId": "exportEUTRLaceyReportToPDF",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "1192354554790474",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "username",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "username",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "exportEUTRLaceyReportToPDF",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "5517918017051867",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "username",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "username",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "navigationfunction-28",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6305712117609217",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "LinkURL",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "eventsrouter-35",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcslink-33",
+      "TargetSection": ""
+    },
+    {
+      "Id": "7179225753621579",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "downloadLink",
+          "SourcePropertyBaseType": "HYPERLINK",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "Input1",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "exportEUTRLaceyReportToPDF1",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-35",
+      "TargetSection": ""
+    },
+    {
+      "Id": "8079257224126284",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "downloadLink",
+          "SourcePropertyBaseType": "HYPERLINK",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "Input2",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "exportEUTRLaceyReportToExcel",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-35",
+      "TargetSection": ""
+    },
+    {
+      "Id": "4102214270110391",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "downloadLink",
+          "SourcePropertyBaseType": "HYPERLINK",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "Input3",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "exportEUTRLaceyReportToPDF",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-35",
+      "TargetSection": ""
+    },
+    {
+      "Id": "8942356335822483",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "URL",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "eventsrouter-35",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "validator-36",
+      "TargetSection": ""
+    },
+    {
+      "Id": "5761174141823771",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "LabelText",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-38",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcslabel-11",
+      "TargetSection": ""
+    },
+    {
+      "Id": "7175566423467927",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "username",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "property",
+          "TargetProperty": "username",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Mashup",
+      "SourceId": "mashup-root",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "exportEUTRLaceyReportToPDF1",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "8582558618936721",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Visible",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "eventsrouter-42",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "ptcsicon-43",
+      "TargetSection": ""
+    },
+    {
+      "Id": "8437937341444155",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Input1",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-40",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-42",
+      "TargetSection": ""
+    },
+    {
+      "Id": "8526883849455426",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "BOOLEAN",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "Input2",
+          "TargetPropertyBaseType": "BOOLEAN",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "expression-41",
+      "SourceSection": "",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-42",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6082447038384074",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForLegalReporting",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "inputForLegalReporting",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "Data",
+      "TargetId": "getDataForActionPopup",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "896773360674067",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForLegalReporting",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "inputForLegalReporting",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "Data",
+      "TargetId": "exportEUTRLaceyReportToExcel",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "4058007801592705",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForLegalReporting",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "inputForLegalReporting",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "Data",
+      "TargetId": "exportEUTRLaceyReportToPDF",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "6090810032955599",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForLegalReporting",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "inputForLegalReporting",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "Data",
+      "TargetId": "exportEUTRLaceyReportToPDF1",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "8482945713985810",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForLegalReporting",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "inputForLegalReporting",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "Data",
+      "TargetId": "generateEUTRLaceyData",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "552886485513190",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForLegalReporting",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "inputForLegalReporting",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "Data",
+      "TargetId": "generateEUTRLaceyData1",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "8114821363726949",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForLegalReporting",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "inputForLegalReporting",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "Data",
+      "TargetId": "generateEUTRLaceyData2",
+      "TargetSection": "Things_IK.LegalReporting.Thing"
+    },
+    {
+      "Id": "1353283991117698",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForLegalReporting",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "inputForLegalReporting",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "UI",
+      "TargetId": "navigationfunction-28",
+      "TargetSection": ""
+    },
+    {
+      "Id": "6277022604389417",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "InputForLegalReporting",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "article_number",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Session",
+      "SourceDetails": "AllData",
+      "SourceId": "Session",
+      "SourceSection": "Session",
+      "TargetArea": "UI",
+      "TargetId": "expression-38",
+      "TargetSection": ""
+    },
+    {
+      "Id": "1214484311064869",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "path",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "Input1",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "exportEUTRLaceyReportToPDF",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-44",
+      "TargetSection": ""
+    },
+    {
+      "Id": "1947000044043944",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "path",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "Input2",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "exportEUTRLaceyReportToPDF1",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-44",
+      "TargetSection": ""
+    },
+    {
+      "Id": "8072249560384727",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "path",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Field",
+          "TargetProperty": "Input3",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "property"
+        }
+      ],
+      "SourceArea": "Data",
+      "SourceDetails": "AllData",
+      "SourceId": "exportEUTRLaceyReportToExcel",
+      "SourceSection": "Things_IK.LegalReporting.Thing",
+      "TargetArea": "UI",
+      "TargetId": "eventsrouter-44",
+      "TargetSection": ""
+    },
+    {
+      "Id": "8251855320079121",
+      "PropertyMaps": [
+        {
+          "SourceProperty": "Output",
+          "SourcePropertyBaseType": "STRING",
+          "SourcePropertyType": "Property",
+          "TargetProperty": "path",
+          "TargetPropertyBaseType": "STRING",
+          "TargetPropertyType": "Parameter"
+        }
+      ],
+      "SourceArea": "UI",
+      "SourceId": "eventsrouter-44",
+      "SourceSection": "",
+      "TargetArea": "Data",
+      "TargetId": "DeleteFileAfter30Sec",
+      "TargetSection": "Things_CustomFileRepoistory"
+    }
+  ],
+  "DesignTimePermissions": {},
+  "Events": [
+    {
+      "EventHandlerArea": "Mashup",
+      "EventHandlerId": "mashup-root",
+      "EventHandlerService": "CloseIfPopup",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-19",
+      "EventTriggerSection": "",
+      "Id": "4770005714275685"
+    },
+    {
+      "EventHandlerArea": "Mashup",
+      "EventHandlerId": "mashup-root",
+      "EventHandlerService": "CloseIfPopup",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-15",
+      "EventTriggerSection": "",
+      "Id": "557808907655956"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.LegalReporting.Thing",
+      "EventHandlerService": "getDataForActionPopup",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "Loaded",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "6006117311931677"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.LegalReporting.Thing",
+      "EventHandlerService": "exportEUTRLaceyReportToExcel",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "generateEUTRLaceyData2",
+      "EventTriggerSection": "Things_IK.LegalReporting.Thing",
+      "Id": "274722395194094"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.LegalReporting.Thing",
+      "EventHandlerService": "generateEUTRLaceyData2",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-26",
+      "EventTriggerSection": "",
+      "Id": "3371172703101681"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.LegalReporting.Thing",
+      "EventHandlerService": "generateEUTRLaceyData1",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-21",
+      "EventTriggerSection": "",
+      "Id": "1870184582724453"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.LegalReporting.Thing",
+      "EventHandlerService": "exportEUTRLaceyReportToPDF1",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "generateEUTRLaceyData1",
+      "EventTriggerSection": "Things_IK.LegalReporting.Thing",
+      "Id": "4687247421194292"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.LegalReporting.Thing",
+      "EventHandlerService": "generateEUTRLaceyData",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-25",
+      "EventTriggerSection": "",
+      "Id": "1639324886665201"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_IK.LegalReporting.Thing",
+      "EventHandlerService": "exportEUTRLaceyReportToPDF",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "generateEUTRLaceyData",
+      "EventTriggerSection": "Things_IK.LegalReporting.Thing",
+      "Id": "4313539119177455"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "navigationfunction-28",
+      "EventHandlerService": "Navigate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-27",
+      "EventTriggerSection": "",
+      "Id": "2172498681435873"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "ptcslink-33",
+      "EventHandlerService": "Navigate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "True",
+      "EventTriggerId": "validator-36",
+      "EventTriggerSection": "",
+      "Id": "2712145105312075"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "statusmessage-37",
+      "EventHandlerService": "ShowMessage",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "False",
+      "EventTriggerId": "validator-36",
+      "EventTriggerSection": "",
+      "Id": "5118207076897753"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "validator-36",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Changed",
+      "EventTriggerId": "eventsrouter-35",
+      "EventTriggerSection": "",
+      "Id": "7997588277079962"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-40",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-25",
+      "EventTriggerSection": "",
+      "Id": "5770248405941660"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-40",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-21",
+      "EventTriggerSection": "",
+      "Id": "2951582906986184"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-40",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "UI",
+      "EventTriggerEvent": "Clicked",
+      "EventTriggerId": "ptcsbutton-26",
+      "EventTriggerSection": "",
+      "Id": "8127359076480697"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-41",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "exportEUTRLaceyReportToExcel",
+      "EventTriggerSection": "Things_IK.LegalReporting.Thing",
+      "Id": "7397918542353291"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-41",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "exportEUTRLaceyReportToPDF",
+      "EventTriggerSection": "Things_IK.LegalReporting.Thing",
+      "Id": "2453333660190043"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-41",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "exportEUTRLaceyReportToPDF1",
+      "EventTriggerSection": "Things_IK.LegalReporting.Thing",
+      "Id": "6252906137751511"
+    },
+    {
+      "EventHandlerArea": "UI",
+      "EventHandlerId": "expression-38",
+      "EventHandlerService": "Evaluate",
+      "EventTriggerArea": "Mashup",
+      "EventTriggerEvent": "Loaded",
+      "EventTriggerId": "mashup-root",
+      "EventTriggerSection": "",
+      "Id": "763247245790294"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_CustomFileRepoistory",
+      "EventHandlerService": "DeleteFileAfter30Sec",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "exportEUTRLaceyReportToPDF",
+      "EventTriggerSection": "Things_IK.LegalReporting.Thing",
+      "Id": "3952472498817741"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_CustomFileRepoistory",
+      "EventHandlerService": "DeleteFileAfter30Sec",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "exportEUTRLaceyReportToPDF1",
+      "EventTriggerSection": "Things_IK.LegalReporting.Thing",
+      "Id": "6176429397575001"
+    },
+    {
+      "EventHandlerArea": "Data",
+      "EventHandlerId": "Things_CustomFileRepoistory",
+      "EventHandlerService": "DeleteFileAfter30Sec",
+      "EventTriggerArea": "Data",
+      "EventTriggerEvent": "ServiceInvokeCompleted",
+      "EventTriggerId": "exportEUTRLaceyReportToExcel",
+      "EventTriggerSection": "Things_IK.LegalReporting.Thing",
+      "Id": "8761972930104266"
+    }
+  ],
+  "RunTimePermissions": {},
+  "UI": {
+    "Properties": {
+      "AddToDashboardButton": "SimplePlus",
+      "AddToDashboardButtonStyle": "DefaultAddToDashboardButtonStyle",
+      "Area": "Mashup",
+      "BGImage": "",
+      "BGImageRepeat": "no-repeat",
+      "BGImageSize": "auto",
+      "Columns": 0,
+      "ConfigureGadgetButton": "SimpleGear",
+      "ConfigureGadgetButtonStyle": "DefaultConfigureGadgetButtonStyle",
+      "DisplayName": "Mashup",
+      "EnableParameterEditing": false,
+      "Height": 618,
+      "Id": "mashup-root",
+      "IgnoreWarningsInViewMashup": false,
+      "IsPrintLayout": false,
+      "Left": 0,
+      "MashupResolution": "1280x1024",
+      "MashupToEditGadget": "DefaultMashupToEditGadget",
+      "MinHeight": 0,
+      "MinWidth": 0,
+      "ResponsiveLayout": true,
+      "Rows": 0,
+      "ShowDataLoading": true,
+      "Style": "DefaultMashupStyle",
+      "StyleProperties": {
+        "data": {},
+        "meta": {
+          "type": "WidgetStyler",
+          "version": "1.0"
+        }
+      },
+      "StyleTheme": "IK.CVM.Theme",
+      "Title": "",
+      "TitleBar": false,
+      "TitleBarStyle": "DefaultTitleBarStyle",
+      "TitleBarText": "Gadget Title Here",
+      "Top": 0,
+      "Type": "mashup",
+      "UseMasterTheme": false,
+      "UseTheme": false,
+      "UseThemeForHybrids": false,
+      "Visible": true,
+      "Width": 1024,
+      "Z-index": 10,
+      "__TypeDisplayName": "Mashup",
+      "_currentParameterDefs": [
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "INFOTABLE",
+          "Description": "",
+          "ParameterName": "selected_rows"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "supplier_name"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "supplier_number"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "article_number"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "legal_reporting_input"
+        },
+        {
+          "Aspects": {
+            "bindingDirection": "IN",
+            "isMandatory": false
+          },
+          "BaseType": "STRING",
+          "Description": "",
+          "ParameterName": "username"
+        }
+      ],
+      "id_index": 44,
+      "supportsAutoResize": true
+    },
+    "Widgets": [
+      {
+        "Properties": {
+          "Area": "UI",
+          "DisplayName": "container-2",
+          "EnableExpandCollapse": false,
+          "ExpandCollapseTabLocation": "inside",
+          "Expanded": true,
+          "Id": "flexcontainer-2",
+          "LastContainer": true,
+          "Overlay": false,
+          "ResponsiveLayout": true,
+          "ShowDataLoading": true,
+          "ShowExpandCollapseTab": false,
+          "SourceURL": "",
+          "Style": "DefaultContainerStyle",
+          "StyleProperties": {},
+          "Type": "flexcontainer",
+          "UseTheme": true,
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "Responsive Container",
+          "align-content": "flex-start",
+          "align-items": "flex-start",
+          "flex-basis": "auto",
+          "flex-direction": "row",
+          "flex-grow": 1,
+          "flex-max-height": "",
+          "flex-max-width": "",
+          "flex-min-height": "",
+          "flex-min-width": "",
+          "flex-shrink": 1,
+          "flex-size": "default",
+          "flex-wrap": "nowrap",
+          "iconClass": "widgets-flexcontainer",
+          "justify-content": "flex-start",
+          "positioning": "responsive",
+          "userCannotRemove": true
+        },
+        "Widgets": [
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-4",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-4",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": false,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "",
+              "flex-max-width": "25px",
+              "flex-min-height": "",
+              "flex-min-width": "25px",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": []
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-3",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-3",
+              "LastContainer": true,
+              "Overlay": false,
+              "ResponsiveLayout": false,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "column",
+              "flex-grow": 1,
+              "flex-max-height": "",
+              "flex-max-width": "",
+              "flex-min-height": "",
+              "flex-min-width": "",
+              "flex-shrink": 1,
+              "flex-size": "default",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer",
+              "isLocked": true,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": [
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-20",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-20",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "25px",
+                  "flex-max-width": "",
+                  "flex-min-height": "25px",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "fixed",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer-fixed",
+                  "isLocked": false,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": []
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-6",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-6",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": false,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "50px",
+                  "flex-max-width": "",
+                  "flex-min-height": "50px",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "fixed",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer-fixed",
+                  "isLocked": false,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": [
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-12",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-12",
+                      "LastContainer": true,
+                      "Overlay": false,
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-start",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "",
+                      "flex-max-width": "",
+                      "flex-min-height": "",
+                      "flex-min-width": "",
+                      "flex-shrink": 1,
+                      "flex-size": "default",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer",
+                      "isLocked": true,
+                      "justify-content": "flex-start",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "DisclosureControl": "show-more",
+                          "DisplayName": "ptcs-label-11",
+                          "HorizontalAlignment": "left",
+                          "Id": "ptcslabel-11",
+                          "LabelText": "Label",
+                          "LabelType": "large-header",
+                          "LastContainer": false,
+                          "Left": 0,
+                          "Margin": "0",
+                          "MultiLine": true,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Top": 0,
+                          "Type": "ptcslabel",
+                          "UseTheme": true,
+                          "VerticalAlignment": "flex-start",
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Label",
+                          "overflowShowLessTxt": "[[showLess]]",
+                          "overflowShowMoreTxt": "[[showMore]]"
+                        },
+                        "Widgets": []
+                      },
+                      {
+                        "Properties": {
+                          "AlternateText": "",
+                          "Area": "UI",
+                          "Disabled": false,
+                          "DisplayName": "ptcs-icon-43",
+                          "Height": 34,
+                          "Id": "ptcsicon-43",
+                          "LastContainer": false,
+                          "Left": 99.02777099609375,
+                          "Margin": "0 0 0 10",
+                          "Placeholder": true,
+                          "PreventCaching": false,
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "Size": "small",
+                          "SourceURL": "/Thingworx/MediaEntities/IK.LoadingIcon.Media",
+                          "Top": 16.458328247070312,
+                          "Type": "ptcsicon",
+                          "UseTheme": true,
+                          "Visible": true,
+                          "Width": 34,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Icon"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "DisplayName": "container-13",
+                      "EnableExpandCollapse": false,
+                      "ExpandCollapseTabLocation": "inside",
+                      "Expanded": true,
+                      "Id": "flexcontainer-13",
+                      "LastContainer": false,
+                      "Overlay": false,
+                      "ResponsiveLayout": true,
+                      "ShowDataLoading": true,
+                      "ShowExpandCollapseTab": false,
+                      "SourceURL": "",
+                      "Style": "DefaultContainerStyle",
+                      "StyleProperties": {},
+                      "Type": "flexcontainer",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Responsive Container",
+                      "align-content": "flex-start",
+                      "align-items": "flex-start",
+                      "flex-basis": "auto",
+                      "flex-direction": "row",
+                      "flex-grow": 1,
+                      "flex-max-height": "",
+                      "flex-max-width": "72px",
+                      "flex-min-height": "",
+                      "flex-min-width": "72px",
+                      "flex-shrink": 1,
+                      "flex-size": "fixed",
+                      "flex-wrap": "nowrap",
+                      "iconClass": "widgets-flexcontainer-fixed",
+                      "isLocked": false,
+                      "justify-content": "flex-end",
+                      "positioning": "responsive",
+                      "userCannotRemove": false
+                    },
+                    "Widgets": [
+                      {
+                        "Properties": {
+                          "Area": "UI",
+                          "ButtonType": "transparent",
+                          "ContextID": "",
+                          "Disabled": false,
+                          "DisplayName": "ptcs-button-15",
+                          "Icon": "/Thingworx/MediaEntities/IKEA.Crosscloseicon",
+                          "Id": "ptcsbutton-15",
+                          "Label": "",
+                          "LabelAlignment": "center",
+                          "LastContainer": false,
+                          "Left": 433,
+                          "Margin": "0",
+                          "ResponsiveLayout": false,
+                          "ShowDataLoading": true,
+                          "TabSequence": 0,
+                          "Top": 0,
+                          "Type": "ptcsbutton",
+                          "UseTheme": true,
+                          "Visible": true,
+                          "Z-index": 10,
+                          "__TypeDisplayName": "Button"
+                        },
+                        "Widgets": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-7",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-7",
+                  "LastContainer": true,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "",
+                  "flex-max-width": "",
+                  "flex-min-height": "",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "default",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer",
+                  "isLocked": true,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": [
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "AutoScroll": true,
+                      "CellBorderStyle": "IK.SD.BlackFont11",
+                      "CellValidationErrorStyle": "DefaultGridAdvancedCellValidationErrorStyle",
+                      "CellValidationErrorTooltipStyle": "DefaultGridAdvancedCellValidationErrorTooltipStyle",
+                      "ColumnFormat": {
+                        "formatInfo": [
+                          {
+                            "Align": "left",
+                            "AllowEdit": false,
+                            "Description": "",
+                            "FieldName": "regulation_name",
+                            "FormatOptions": {
+                              "FormatString": "full",
+                              "formatInfo": {
+                                "StateFormats": []
+                              },
+                              "formatText": "View",
+                              "renderer": "STRING",
+                              "roundingEnabled": true,
+                              "showDependentField": false
+                            },
+                            "Title": "Regulation name",
+                            "ValidationExpression": "",
+                            "ValidationMessage": "",
+                            "Width": "auto",
+                            "headerTextAlignment": "left",
+                            "hidden": false,
+                            "inLayout": true
+                          },
+                          {
+                            "Align": "left",
+                            "AllowEdit": false,
+                            "Description": "",
+                            "FieldName": "report_type",
+                            "FormatOptions": {
+                              "FormatString": "full",
+                              "formatInfo": {
+                                "StateFormats": []
+                              },
+                              "formatText": "View",
+                              "renderer": "STRING",
+                              "roundingEnabled": true,
+                              "showDependentField": false
+                            },
+                            "Title": "Report type",
+                            "ValidationExpression": "",
+                            "ValidationMessage": "",
+                            "Width": "auto",
+                            "headerTextAlignment": "left",
+                            "hidden": false,
+                            "inLayout": true
+                          },
+                          {
+                            "Align": "left",
+                            "AllowEdit": false,
+                            "Description": "",
+                            "FieldName": "valid_from",
+                            "FormatOptions": {
+                              "FormatString": "full",
+                              "formatInfo": {
+                                "StateFormats": []
+                              },
+                              "formatText": "View",
+                              "renderer": "STRING",
+                              "roundingEnabled": true,
+                              "showDependentField": false
+                            },
+                            "Title": "Valid from",
+                            "ValidationExpression": "",
+                            "ValidationMessage": "",
+                            "Width": "auto",
+                            "headerTextAlignment": "left",
+                            "hidden": false,
+                            "inLayout": true
+                          },
+                          {
+                            "Align": "left",
+                            "AllowEdit": false,
+                            "Description": "",
+                            "FieldName": "status",
+                            "FormatOptions": {
+                              "FormatString": "raw",
+                              "formatInfo": {
+                                "StateFormats": []
+                              },
+                              "formatText": "View",
+                              "renderer": "HTML",
+                              "roundingEnabled": true,
+                              "showDependentField": false
+                            },
+                            "Title": "Status",
+                            "ValidationExpression": "",
+                            "ValidationMessage": "",
+                            "Width": "auto",
+                            "headerTextAlignment": "left",
+                            "hidden": false,
+                            "inLayout": true
+                          },
+                          {
+                            "Align": "left",
+                            "AllowEdit": false,
+                            "Description": "",
+                            "FieldName": "quick_action",
+                            "FormatOptions": {
+                              "FormatString": "unsanitized",
+                              "formatInfo": {
+                                "StateFormats": []
+                              },
+                              "formatText": "View",
+                              "renderer": "HTML",
+                              "roundingEnabled": true,
+                              "showDependentField": false
+                            },
+                            "Title": "Quick actions",
+                            "ValidationExpression": "",
+                            "ValidationMessage": "",
+                            "Width": "auto",
+                            "headerTextAlignment": "left",
+                            "hidden": false,
+                            "inLayout": true
+                          }
+                        ]
+                      },
+                      "Configuration": "",
+                      "ConfigurationId": 3,
+                      "CookiePersistence": true,
+                      "CustomClass": "customGridRowWithBottomBorder customGridRowPadding customGridHeaderPadding customGridVerticalAlignTop",
+                      "DataOverflow": "wrapped",
+                      "DataServiceBindingDef": {
+                        "dataName": "Things_IK.LegalReporting.Thing",
+                        "entityName": "IK.LegalReporting.Thing",
+                        "entityType": "Things",
+                        "sourceId": "getDataForActionPopup",
+                        "target": "getDataForActionPopup"
+                      },
+                      "DefaultSelectedRows": "",
+                      "DisplayName": "gridadvanced-16",
+                      "DisplayOnlyMode": false,
+                      "EditButtonsLocation": "top-right",
+                      "EnableAddDeleteButtons": false,
+                      "EnableCallbackOnSelectedRowsChange": true,
+                      "EnableContextMenu": true,
+                      "EnableEditButtons": false,
+                      "EnableFilterEventOnConfigChange": true,
+                      "EnableFooter": false,
+                      "EnableGridReset": false,
+                      "EnableGridSearch": false,
+                      "EnableKeyboardNavigation": true,
+                      "EnableSorting": false,
+                      "FocusStyle": "IK.SD.BlackFont11",
+                      "GridResetButtonLocation": "top-right",
+                      "GridSearchLocation": "top-left",
+                      "HeaderOverflow": "wrapped",
+                      "Height": 200,
+                      "IDFieldName": "id",
+                      "Id": "gridadvanced-16",
+                      "IsEditable": false,
+                      "LastContainer": false,
+                      "Left": 162.01171875,
+                      "MaxHeaderHeight": 100,
+                      "MinRowHeight": 50,
+                      "ResponsiveLayout": true,
+                      "RowAlternateBackgroundStyle": "IK.SD.BlackFont11",
+                      "RowBackgroundStyle": "IK.SD.BlackFont11",
+                      "RowBorderStyle": "IK.SD.BlackFont11",
+                      "RowFormat_StateParameters": [],
+                      "RowHoverStyle": "IK.SD.BlackFont11",
+                      "RowSelectedStyle": "IK.SD.BlackFont11",
+                      "RowSelection": "none",
+                      "SelectedRows": "",
+                      "ShowDataLoading": false,
+                      "SortAscendingStyle": "DefaultSortAscendingStyle",
+                      "SortDescendingStyle": "DefaultSortDescendingStyle",
+                      "TableFooterStyle": "DefaultGridAdvancedFooterStyle",
+                      "TableHeaderStyle": "IK.SD.HeaderGrid12",
+                      "TableWrapperStyle": "IK.SD.BlackFont11Bold",
+                      "ToolbarStyle": "DefaultToolbarStyle",
+                      "TooltipStyle": "DefaultTooltipStyle",
+                      "Top": 45.76171875,
+                      "Type": "gridadvanced",
+                      "UseTheme": false,
+                      "Visible": true,
+                      "Width": 400,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Grid Advanced"
+                    },
+                    "Widgets": []
+                  }
+                ]
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-8",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-8",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-end",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "51px",
+                  "flex-max-width": "",
+                  "flex-min-height": "51px",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "fixed",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer-fixed",
+                  "isLocked": false,
+                  "justify-content": "flex-end",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": [
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonType": "primary",
+                      "ContextID": "",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-button-25",
+                      "Id": "ptcsbutton-25",
+                      "Label": "EUTR - PDF",
+                      "LabelAlignment": "center",
+                      "LastContainer": false,
+                      "Left": 402,
+                      "Margin": "0",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "Top": 31,
+                      "Type": "ptcsbutton",
+                      "UseTheme": true,
+                      "Visible": false,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonType": "primary",
+                      "ContextID": "",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-button-21",
+                      "Id": "ptcsbutton-21",
+                      "Label": "Lacey - PDF",
+                      "LabelAlignment": "center",
+                      "LastContainer": false,
+                      "Left": 402,
+                      "Margin": "0",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "Top": 31,
+                      "Type": "ptcsbutton",
+                      "UseTheme": true,
+                      "Visible": false,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonType": "primary",
+                      "ContextID": "",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-button-26",
+                      "Id": "ptcsbutton-26",
+                      "Label": "Lacey / EUTR - excel",
+                      "LabelAlignment": "center",
+                      "LastContainer": false,
+                      "Left": 402,
+                      "Margin": "0",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "Top": 31,
+                      "Type": "ptcsbutton",
+                      "UseTheme": true,
+                      "Visible": false,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonType": "primary",
+                      "ContextID": "",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-button-27",
+                      "Id": "ptcsbutton-27",
+                      "Label": "Lacey / EUTR Webformat",
+                      "LabelAlignment": "center",
+                      "LastContainer": false,
+                      "Left": 402,
+                      "Margin": "0",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "Top": 31,
+                      "Type": "ptcsbutton",
+                      "UseTheme": true,
+                      "Visible": false,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Alignment": "left",
+                      "Area": "UI",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-link-33",
+                      "Id": "ptcslink-33",
+                      "LastContainer": false,
+                      "Left": 449.02777099609375,
+                      "LinkType": "primary",
+                      "Margin": "5",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "SingleLine": false,
+                      "TabSequence": 0,
+                      "TargetWindow": "_self",
+                      "Text": "Link",
+                      "Top": 26.458328247070312,
+                      "Type": "ptcslink",
+                      "UseTheme": true,
+                      "Visible": false,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Link"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonType": "tertiary",
+                      "ContextID": "",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-button-17",
+                      "Id": "ptcsbutton-17",
+                      "Label": "Download all reports",
+                      "LabelAlignment": "center",
+                      "LastContainer": false,
+                      "Left": 402,
+                      "Margin": "0 10 0 0",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "Top": 31,
+                      "Type": "ptcsbutton",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button"
+                    },
+                    "Widgets": []
+                  },
+                  {
+                    "Properties": {
+                      "Area": "UI",
+                      "ButtonType": "secondary",
+                      "ContextID": "",
+                      "Disabled": false,
+                      "DisplayName": "ptcs-button-19",
+                      "Id": "ptcsbutton-19",
+                      "Label": "Close",
+                      "LabelAlignment": "center",
+                      "LastContainer": false,
+                      "Left": 402,
+                      "Margin": "0",
+                      "ResponsiveLayout": false,
+                      "ShowDataLoading": true,
+                      "TabSequence": 0,
+                      "Top": 31,
+                      "Type": "ptcsbutton",
+                      "UseTheme": true,
+                      "Visible": true,
+                      "Z-index": 10,
+                      "__TypeDisplayName": "Button"
+                    },
+                    "Widgets": []
+                  }
+                ]
+              },
+              {
+                "Properties": {
+                  "Area": "UI",
+                  "DisplayName": "container-9",
+                  "EnableExpandCollapse": false,
+                  "ExpandCollapseTabLocation": "inside",
+                  "Expanded": true,
+                  "Id": "flexcontainer-9",
+                  "LastContainer": false,
+                  "Overlay": false,
+                  "ResponsiveLayout": true,
+                  "ShowDataLoading": true,
+                  "ShowExpandCollapseTab": false,
+                  "SourceURL": "",
+                  "Style": "DefaultContainerStyle",
+                  "StyleProperties": {},
+                  "Type": "flexcontainer",
+                  "UseTheme": true,
+                  "Visible": true,
+                  "Z-index": 10,
+                  "__TypeDisplayName": "Responsive Container",
+                  "align-content": "flex-start",
+                  "align-items": "flex-start",
+                  "flex-basis": "auto",
+                  "flex-direction": "row",
+                  "flex-grow": 1,
+                  "flex-max-height": "25px",
+                  "flex-max-width": "",
+                  "flex-min-height": "25px",
+                  "flex-min-width": "",
+                  "flex-shrink": 1,
+                  "flex-size": "fixed",
+                  "flex-wrap": "nowrap",
+                  "iconClass": "widgets-flexcontainer-fixed",
+                  "isLocked": false,
+                  "justify-content": "flex-start",
+                  "positioning": "responsive",
+                  "userCannotRemove": false
+                },
+                "Widgets": []
+              }
+            ]
+          },
+          {
+            "Properties": {
+              "Area": "UI",
+              "DisplayName": "container-5",
+              "EnableExpandCollapse": false,
+              "ExpandCollapseTabLocation": "inside",
+              "Expanded": true,
+              "Id": "flexcontainer-5",
+              "LastContainer": false,
+              "Overlay": false,
+              "ResponsiveLayout": true,
+              "ShowDataLoading": true,
+              "ShowExpandCollapseTab": false,
+              "SourceURL": "",
+              "Style": "DefaultContainerStyle",
+              "StyleProperties": {},
+              "Type": "flexcontainer",
+              "UseTheme": true,
+              "Visible": true,
+              "Z-index": 10,
+              "__TypeDisplayName": "Responsive Container",
+              "align-content": "flex-start",
+              "align-items": "flex-start",
+              "flex-basis": "auto",
+              "flex-direction": "row",
+              "flex-grow": 1,
+              "flex-max-height": "",
+              "flex-max-width": "25px",
+              "flex-min-height": "",
+              "flex-min-width": "25px",
+              "flex-shrink": 1,
+              "flex-size": "fixed",
+              "flex-wrap": "nowrap",
+              "iconClass": "widgets-flexcontainer-fixed",
+              "isLocked": false,
+              "justify-content": "flex-start",
+              "positioning": "responsive",
+              "userCannotRemove": false
+            },
+            "Widgets": []
+          }
+        ]
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "ClickOutsideToClose": false,
+          "CloseButton": true,
+          "DisplayName": "webFormat",
+          "Id": "navigationfunction-28",
+          "LastContainer": false,
+          "Left": null,
+          "MashupParameters": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "inputForLegalReporting",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "isMandatory": "false"
+                },
+                "baseType": "STRING",
+                "description": "",
+                "name": "inputForLegalReporting",
+                "ordinal": 0
+              }
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "username",
+              "ParmDef": {
+                "aspects": {
+                  "bindingDirection": "IN",
+                  "isMandatory": "false"
+                },
+                "baseType": "STRING",
+                "description": "",
+                "name": "username",
+                "ordinal": 0
+              }
+            }
+          ],
+          "MissingMashupMessage": "",
+          "PopupHeight": 0,
+          "PopupScrollbar": "auto",
+          "PopupTitle": "",
+          "PopupWidth": 0,
+          "ReloadOnReplace": false,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "TargetMashup": "IK.WebFormatPage.Mashup",
+          "TargetWindowType": "new",
+          "Text": "tw.navigationfunction-ide.properties.text.default-value",
+          "Top": null,
+          "Type": "navigationfunction",
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "navigationfunction",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "inputForLegalReporting",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            },
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "username",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "DataShape": "",
+          "DataType": "STRING",
+          "DisplayName": "linkURL",
+          "Id": "eventsrouter-35",
+          "LastContainer": false,
+          "Left": null,
+          "NumberOfInputs": "3",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "eventsrouter",
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "Events Router"
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DisplayName": "checkFileGenerated",
+          "Expression": "result = (URL)?true:false;",
+          "Height": 28,
+          "Id": "validator-36",
+          "LastContainer": false,
+          "Left": null,
+          "Output": true,
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "validator",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Validator",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "URL",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "DisplayName": "fileNotGenerated",
+          "Height": 28,
+          "Id": "statusmessage-37",
+          "LastContainer": false,
+          "Left": null,
+          "Message": "File Not Generated!",
+          "MessageType": "error",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "statusmessage",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Status Message"
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "passReportTitle",
+          "Expression": "result = \"Reports - \" +article_number.split(\"#_#\")[0];",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-38",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "STRING",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": [
+            {
+              "BaseType": "STRING",
+              "Description": "",
+              "ParameterName": "article_number",
+              "bindingDirection": "Target",
+              "bindingType": "Property",
+              "isBindingSource": false,
+              "isBindingTarget": true,
+              "shown": true
+            }
+          ]
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "showLoadingIcon",
+          "Expression": "result = true;",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-40",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "BOOLEAN",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": []
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "AutoEvaluate": false,
+          "DataChangeType": "ALWAYS",
+          "DisplayName": "hideLoadingIcon",
+          "Expression": "result = false;",
+          "FireOnFirstValue": false,
+          "Height": 28,
+          "Id": "expression-41",
+          "LastContainer": false,
+          "Left": null,
+          "OutputBaseType": "BOOLEAN",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "expression",
+          "Visible": true,
+          "Width": 200,
+          "Z-index": 10,
+          "__TypeDisplayName": "Expression",
+          "_currentParameterDefs": []
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "DataShape": "",
+          "DataType": "BOOLEAN",
+          "DisplayName": "loadingIconVisibility",
+          "Id": "eventsrouter-42",
+          "LastContainer": false,
+          "Left": null,
+          "NumberOfInputs": "2",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "eventsrouter",
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "Events Router"
+        },
+        "Widgets": []
+      },
+      {
+        "Properties": {
+          "Area": "UI",
+          "DataShape": "",
+          "DataType": "STRING",
+          "DisplayName": "path",
+          "Id": "eventsrouter-44",
+          "LastContainer": false,
+          "Left": null,
+          "NumberOfInputs": "3",
+          "ResponsiveLayout": false,
+          "ShowDataLoading": true,
+          "Top": null,
+          "Type": "eventsrouter",
+          "Visible": true,
+          "Z-index": 10,
+          "__TypeDisplayName": "Events Router"
+        },
+        "Widgets": []
+      }
+    ]
+  },
+  "mashupType": "mashup"
+}]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>
