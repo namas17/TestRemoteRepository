@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ universal="password">
+    <Projects>
+        <Project
+         artifactId=""
+         aspect.projectType="Component"
+         description=""
+         documentationContent=""
+         groupId=""
+         homeMashup=""
+         minPlatformVersion=""
+         name="GitTest"
+         packageVersion="1.0.0"
+         projectName="GitTest"
+         publishResult=""
+         state="DRAFT"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Project>
+    </Projects>
+</Entities>
